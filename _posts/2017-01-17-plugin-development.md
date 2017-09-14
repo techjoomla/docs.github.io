@@ -3,7 +3,7 @@ date: 2017-01-15
 title: Writing your own API Plugin
 description: API framework for Joomla
 categories:
-  - com_api
+  - APIs
 type: Document
 ---
 
