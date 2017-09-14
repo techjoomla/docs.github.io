@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="generator" content="Jekyll v3.4.3">
+
+		<link rel="stylesheet" href="/css/screen.css">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="/touch-icon.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="/images/favicon.png">
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400italic,400,300italic,300,700,700italic|Open+Sans:400italic,600italic,700italic,700,600,400|Inconsolata:400,700">
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+		<!-- Begin Jekyll SEO tag v2.1.0 -->
+<title>Introduction - Techjoomla</title>
+<meta property="og:title" content="Introduction" />
+<meta name="description" content="API framework for Joomla" />
+<meta property="og:description" content="API framework for Joomla" />
+<link rel="canonical" href="http://localhost:4000/com_api/introduction/" />
+<meta property="og:url" content="http://localhost:4000/com_api/introduction/" />
+<meta property="og:site_name" content="Techjoomla" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-01-15T00:00:00+05:30" />
+<script type="application/ld+json">
+{"@context": "http://schema.org",
+"@type": "BlogPosting",
+"headline": "Introduction",
+"datePublished": "2017-01-15T00:00:00+05:30",
+"description": "API framework for Joomla",
+"publisher": {"@type": "Organization",
+"logo": {"@type": "ImageObject",
+"url": "http://localhost:4000/techjoomla.png"}},
+"url": "http://localhost:4000/com_api/introduction/"}</script>
+<!-- End Jekyll SEO tag -->
+
+		<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Techjoomla" />
+
+		
+	</head>
+
+	<body class="">
+		<header>
+			<div class="wrapper">
+				<section class="top-bar">
+					<div class="logo"><a href="/"><img src="/images/techjoomla.png" alt="Techjoomla">
+</a></div>
+					<a class="nav-toggle" id="open-nav" href="#">&#9776;</a>
+<nav>
+	<a class="editor-link btn" href="cloudcannon:collections/_data/navigation.yml" class="btn" style="padding: 5px;"><strong>&#9998;</strong> Edit navigation</a>
+	
+	
+
+		
+		<a href="/" class="">Documentation</a>
+	
+	
+
+		
+		<a href="/videos/" class="">Videos</a>
+	
+	
+
+		
+		<a href="/faq/" class="">FAQ</a>
+	
+	<a href="https://github.com/techjoomla" target="_blank">Github</a>
+	<a href="https://techjoomla.com/" target="_blank">Our Website</a>
+	
+</nav>
+
+				</section>
+				<section class="hero_search">
+					<h1>Documentation</h1>
+					<p>Everything you need to know about running Techjoomla products.</p>
+					<form action="/search/" method="get">
+	<input type="search" name="q"  placeholder="What would you like to know?" autofocus>
+	<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg>
+	<input type="submit" value="Search" style="display: none;">
+</form>
+				</section>
+			</div>
+
+		</header>
+		<section class="content">
+			<div class="wrapper">
+				<section class="tutorial">
+	
+	<section class="sidebar sticky">
+		<ul>
+			
+			
+				<li><a href="#introduction">Introduction</a></li>
+			
+				<li><a href="#using-apis">Using APIs</a></li>
+			
+				<li><a href="#plugin-terms">Plugin Terms</a></li>
+			
+				<li><a href="#calling-resources">Calling resources</a></li>
+			
+				<li><a href="#overriding-output">Overriding Output</a></li>
+			
+		</ul>
+	</section>
+	
+	<section class="tutorial-content">
+		<!--<h1>Introduction</h1>-->
+
+		
+		
+		<div class="tutorial-main">
+			<h1 id="api-framework-for-joomla">API framework for Joomla</h1>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>com_api is a quick and easy way to add REST APIs to Joomla. Extendible via plugins, you an easily add support for more Joomla extensions. To get started, download the component and install the API plugins you need. Enable the plugins and you are ready to fetch your content via APIs</p>
+
+<h2 id="using-apis">Using APIs</h2>
+
+<p>To add additional resources to the API, plugins need to be created. Each plugin can provide multiple API resources. Plugins are a convenient way to group several resources. Eg: A single plugin could be created for Quick2Cart with separate resources for products, cart, checkout, orders etc.</p>
+
+<h2 id="plugin-terms">Plugin Terms</h2>
+
+<h3 id="app">app</h3>
+<p>An app is essentially a Joomla plugin. However the plugin itself does nothing more than load the resources it contains. So the app is mainly used to package the API plugin and to enable adding any API specific parameters. Each app will have one or more resources.</p>
+
+<h3 id="resource">resource</h3>
+<p>Resources are files that have code to accept input and set the API output. You will usually have multiple resources in an app. A common use case is for an extension like Easysocial or Jomsocial to have a single app. The app contains resources for various objects like groups, events, photos, newsfeed etc. The resource will contain the methods <code class="highlighter-rouge">get()</code> <code class="highlighter-rouge">post()</code> <code class="highlighter-rouge">delete()</code> to perform CRUD operations on that type of object.</p>
+
+<h3 id="key--token">key / token</h3>
+<p>The key is used to access authenticated resources. The admin section allows you to create keys. It’s also possible to use the <code class="highlighter-rouge">/api/user/login</code> API to login using username and password and get a token in response.</p>
+
+<h2 id="calling-resources">Calling resources</h2>
+
+<h3 id="api-urls">API URLs</h3>
+<p>The URL to access any route is of the format -</p>
+
+<p><code class="highlighter-rouge">/api/{plugin}/{resource}</code></p>
+
+<p>Tip : If your resource expects an <code class="highlighter-rouge">id</code> parameter in the URL, you can use <code class="highlighter-rouge">/api/{plugin}/{resource}/{id}</code> as the API url. Other querystring need to be sent as is.</p>
+
+<p>To enable SEF URLs for endpoints, make sure you have created a Joomla menu of the type API &gt; API Endpoint. If you create the menu using any other alias than <code class="highlighter-rouge">api</code> make sure you use the apppropriate slug in the endpoint. If you do not have SEF URLs enabled, use  the endpoint URL as index.php?option=com_api&amp;app={app}&amp;resource={resource}&amp;format=raw.</p>
+
+<h3 id="authentication">Authentication</h3>
+<p>The API token is used for authentication. The token needs to be passed via the Authorization header using the Bearer scheme eg: <code class="highlighter-rouge">Authorization: Bearer &lt;token&gt;</code>. Previous versions also allowed passing the token as a querystring variable with the name <code class="highlighter-rouge">key</code>. The querystring approach will be deprecated in the future version. It is possible for an app to make an entire resource or a specific HTTP method in a resource public</p>
+
+<p>Note : Sometimes Apache does not pass on the Authorization header, in such cases send then token using the X-Authorization header i.e. <code class="highlighter-rouge">X-Authorization: Bearer {token}</code></p>
+
+<h3 id="output-format">Output Format</h3>
+<p>The default output format is JSON. However it’s also possible to get XML output by setting the <code class="highlighter-rouge">Accept: application/xml</code> header.</p>
+
+<h2 id="overriding-output">Overriding Output</h2>
+<p>If you wish to modify the ‘envelope’ of the response, you can copy the file <code class="highlighter-rouge">components/com_api/libraries/response/jsonresponse.php</code> into <code class="highlighter-rouge">templates/{your template}/json/api.php</code> and modify the structure of the output. A similar override is possible for XML as well.</p>
+
+<h1 id="writing-your-own-api-plugin">Writing your own API Plugin</h1>
+<p>Each resorce can support the GET, POST and DELETE operations. These are exposed by creating methods of the same name, i.e. <code class="highlighter-rouge">get()</code> <code class="highlighter-rouge">post()</code> and <code class="highlighter-rouge">delete()</code> in each of the resources. If a resouce URL is accessed via HTTP POST, the post() method is called, and similarly for the rest.</p>
+
+<h3 id="api-plugin-file-structure">API plugin file structure</h3>
+<ul>
+  <li>language/en-GB - Resource folder having resource file, keep name same as plugin name.
+    <ul>
+      <li>en-GB.plg_api_users.ini - add plugin language constant.</li>
+      <li>en-GB.plg_api_users.sys.ini</li>
+    </ul>
+  </li>
+  <li>users - Resource folder having resource file, keep name same as plugin name.
+    <ul>
+      <li>login.php - Resource file</li>
+      <li>users.php - Resource file</li>
+    </ul>
+  </li>
+  <li>users.php - plugin file</li>
+  <li>users.xml - xml file</li>
+</ul>
+
+<p>You can add multiple resource in resource folder and use them for different purpose. Usually, each resource will map to an object type for your extension.</p>
+
+<h3 id="create-plugin-entry-file-usersphp-file">Create plugin entry file users.php file</h3>
+<p>This is the entry file for the API plugin, the things that re deifned in the file are resource locations, and making certain resources public. Below is the code for the file -</p>
+
+<div class="language-php highlighter-rouge"><pre class="highlight"><code>jimport('joomla.plugin.plugin');
+//class structure example
+class plgAPIUsers extends ApiPlugin
+{
+	public function __construct(<span class="err">&amp;</span>$subject, $config = array())
+	{
+		parent::__construct($subject, $config = array());
+		
+		// Set resource path
+		ApiResource::addIncludePath(dirname(__FILE__).'/users');
+		
+		// Load language files
+		$lang = JFactory::getLanguage(); 
+		$lang-&gt;load('com_users', JPATH_ADMINISTRATOR, '', true);
+		
+		// Set the login resource to be public
+		$this-&gt;setResourceAccess('login', 'public', 'post');
+	}
+}
+</code></pre>
+</div>
+
+<h3 id="create-resource-file-loginphp-file">Create resource file login.php file</h3>
+<p>Although you can place the resource files anywhere, the recommended approach is to place them within a folder inside your plugin.  Below is example code for a resource file. Notice how the methods get() and post() are implemented. The methods may return an array or an object which will be automatically converted to JSON or XML.</p>
+
+<div class="language-php highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="k">class</span> <span class="nc">UsersApiResourceLogin</span> <span class="k">extends</span> <span class="nx">ApiResource</span>
+<span class="p">{</span>
+	<span class="k">public</span> <span class="k">function</span> <span class="nf">get</span><span class="p">()</span>
+	<span class="p">{</span>
+        <span class="nv">$result</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\stdClass</span><span class="p">;</span>
+        <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">id</span> <span class="o">=</span> <span class="mi">45</span><span class="p">;</span>
+        <span class="nv">$result</span><span class="o">-&gt;</span><span class="na">name</span> <span class="o">=</span> <span class="s2">"John Doe"</span>
+		 
+		<span class="nv">$this</span><span class="o">-&gt;</span><span class="na">plugin</span><span class="o">-&gt;</span><span class="na">setResponse</span><span class="p">(</span> <span class="nv">$result</span> <span class="p">);</span>
+	<span class="p">}</span>
+
+	<span class="k">public</span> <span class="k">function</span> <span class="nf">post</span><span class="p">()</span>
+	<span class="p">{</span>
+		<span class="c1">// Add your code here
+</span>		
+		<span class="nv">$this</span><span class="o">-&gt;</span><span class="na">plugin</span><span class="o">-&gt;</span><span class="na">setResponse</span><span class="p">(</span> <span class="nv">$result</span> <span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>The array or object from the plugin should be set via <code class="highlighter-rouge">$this-&gt;plugin-&gt;setResponse()</code>.</p>
+
+<h3 id="error-handling">Error Handling</h3>
+<p>It is possible to send HTTP errors with the right HTTP codes using the <code class="highlighter-rouge">APIError::raiseError()</code> method. Depending on the type of error you can raise different Exceptions that set the appropriate HTTP code.</p>
+
+<div class="language-php highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+	<span class="k">public</span> <span class="k">function</span> <span class="nf">post</span><span class="p">()</span>
+	<span class="p">{</span>
+		<span class="c1">// Validation Error sets HTTP 400
+</span>		<span class="nx">ApiError</span><span class="o">::</span><span class="na">raiseError</span><span class="p">(</span><span class="mi">10001</span><span class="p">,</span> <span class="s2">"Invalid Email"</span><span class="p">,</span> <span class="s1">'APIValidationException'</span><span class="p">);</span>
+
+		<span class="c1">// Access Error sets HTTP 403
+</span>		<span class="nx">ApiError</span><span class="o">::</span><span class="na">raiseError</span><span class="p">(</span><span class="mi">11001</span><span class="p">,</span> <span class="s2">"Not authorised"</span><span class="p">,</span> <span class="s1">'APIUnauthorisedException'</span><span class="p">);</span>
+
+		<span class="c1">// Not Found Error sets HTTP 404
+</span>		<span class="nx">ApiError</span><span class="o">::</span><span class="na">raiseError</span><span class="p">(</span><span class="mi">12001</span><span class="p">,</span> <span class="s2">"Record not found"</span><span class="p">,</span> <span class="s1">'APINotFoundException'</span><span class="p">);</span>
+
+		<span class="c1">// General Error sets HTTP 400
+</span>		<span class="nx">ApiError</span><span class="o">::</span><span class="na">raiseError</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="s2">"Bad Request"</span><span class="p">,</span> <span class="s1">'APIException'</span><span class="p">);</span>
+
+	<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>You are free to specify your own error code and message. It is also possible to add more Exceptions in the <code class="highlighter-rouge">components/com_api/libraries/exceptions</code> folder. When using <code class="highlighter-rouge">APIError::raiseError()</code> there is no need to use <code class="highlighter-rouge">$this-&gt;plugin-&gt;setResponse()</code> since com_api handles the response and setting the http code.</p>
+
+<p>Note : The exception classes extend PHP’s <code class="highlighter-rouge">Exception</code> class. So you will need to use numeric only codes, since PHP does not support non-numeric Exception codes.</p>
+
+<h3 id="private-and-public-resources">Private and public resources</h3>
+
+<p>Unless specified, all resources are private, which means an API token is needed to access. However, it is possible to make certain resource and methods public by using the setResourceAccess() access method as</p>
+<div class="language-php highlighter-rouge"><pre class="highlight"><code>$this-&gt;setResourceAccess('login', 'public', 'post') 
+</code></pre>
+</div>
+
+<p>The first parameter is the resource name, second is status (should be public to make it public) and last is HTTP method to make public. Setting a resource public will mean that the API URL for that resource will not need any authentication.</p>
+
+<h3 id="access-control">Access Control</h3>
+<p>ACL needs to be handled by the respective plugins. com_api makes a <code class="highlighter-rouge">$this-&gt;user</code> object available in the resource class. This is same as the JFactory::getUser() object for the user to whom the token belongs. It is upto the resource to use the user object and apply the necessary access control and produce authorisation errors.</p>
+
+<div class="language-php highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="k">class</span> <span class="nc">ExamplesApiResourceExample</span> <span class="k">extends</span> <span class="nx">ApiResource</span>
+<span class="p">{</span>
+	<span class="k">public</span> <span class="k">function</span> <span class="nf">get</span><span class="p">()</span>
+	<span class="p">{</span>
+		<span class="c1">// Will dump the object for the user who is making the API call
+</span>		<span class="nb">var_dump</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">user</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h3 id="create-xml-file">Create .xml file</h3>
+<p>Finally create a manifest XML so that your plugin can be installed. Set group as ‘api’, add plugin name and other details.</p>
+
+<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;extension</span> <span class="na">version=</span><span class="s">"3.0.0"</span> <span class="na">type=</span><span class="s">"plugin"</span> <span class="na">group=</span><span class="s">"api"</span> <span class="na">method=</span><span class="s">"upgrade"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;name&gt;</span>YourPlugin<span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;version&gt;</span>1.0<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;creationDate&gt;</span>10/11/2016<span class="nt">&lt;/creationDate&gt;</span>
+    <span class="nt">&lt;author&gt;&lt;/author&gt;</span> 
+    <span class="nt">&lt;description&gt;&lt;/description&gt;</span>
+    <span class="nt">&lt;files&gt;</span>
+        <span class="nt">&lt;filename</span> <span class="na">plugin=</span><span class="s">"your_plugin_name"</span><span class="nt">&gt;</span>your_plugin_name.php<span class="nt">&lt;/filename&gt;</span>
+        <span class="nt">&lt;folder&gt;</span>your_plugin_name<span class="nt">&lt;/folder&gt;</span> 
+    <span class="nt">&lt;/files&gt;</span>
+    <span class="nt">&lt;languages</span> <span class="na">folder=</span><span class="s">"language"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;language</span> <span class="na">tag=</span><span class="s">"en-GB"</span><span class="nt">&gt;</span>en-GB/en-GB.plg_api_plugin_name.ini<span class="nt">&lt;/language&gt;</span>
+		<span class="nt">&lt;language</span> <span class="na">tag=</span><span class="s">"en-GB"</span><span class="nt">&gt;</span>en-GB/en-GB.plg_api_plugin_name.sys.ini<span class="nt">&lt;/language&gt;</span>
+	<span class="nt">&lt;/languages&gt;</span>
+	
+<span class="nt">&lt;/extension&gt;</span> 
+</code></pre>
+</div>
+
+<h3 id="tips-for-writing-plugins">Tips for writing plugins</h3>
+<ul>
+  <li>Think of API plugins as a replacement of controllers. Any business logic that you won’t put in a controller, leave it out of the plugin too. Load and use your models in the plugin code.</li>
+  <li>It is not recommended to have API specific language files unless absolutely necessary. You will ususally make plugins for an existing component, so load the language files from that component.</li>
+  <li>To create the list and details for an object type, you can either add a condition based on <code class="highlighter-rouge">id</code> query parameter in the <code class="highlighter-rouge">get()</code> method, or have a separate resource for the list.</li>
+</ul>
+
+
+		</div>
+		<div class="tutorial-share">
+			<a class="modalOpen no-smooth" href="#subscribe">
+			<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+		
+ Subscribe</a>
+			<a class="modalOpen no-smooth" href="#share">
+			<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0 0h24v24H0z" fill="none"/>
+				<path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
+			</svg>
+		
+ Share</a>
+		</div>
+	</section>
+</section>
+
+
+
+
+
+	<div class="related">
+		<h3>Related tutorials</h3>
+
+		<ul class="listing">
+	
+		<li >
+			<a href="/com_api/plugin-development/">
+				<div class="icon">
+		<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+			<path d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"/>
+			<path d="M0 0h24v24H0z" fill="none"/>
+		</svg>
+</div>
+				<article>
+					<div>
+						<h3>Writing your own API Plugin</h3>
+						<p class="description">API framework for Joomla</p>
+					</div>
+				</article>
+			</a>
+		</li>
+	
+		<li >
+			<a href="/jticketing%202.0/jticketingui/">
+				<div class="icon">
+		<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+			<path d="M0 0h24v24H0z" fill="none"/>
+			<path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+		</svg>
+	</div>
+				<article>
+					<div>
+						<h3>Quick look at the new UI !</h3>
+						<p class="description">JTicketing 2.0 - a Quick look at the new UI !</p>
+					</div>
+				</article>
+			</a>
+		</li>
+	
+		<li >
+			<a href="/tjreports/introduction/">
+				<div class="icon">
+		<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+			<path d="M6 2c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13z"/>
+			<path d="M0 0h24v24H0z" fill="none"/>
+		</svg>
+</div>
+				<article>
+					<div>
+						<h3>Introduction</h3>
+						<p class="description">Universal Reporting Engine for Joomla</p>
+					</div>
+				</article>
+			</a>
+		</li>
+	
+</ul>
+	</div>
+
+
+
+
+<div id="subscribe" class="modalDialog">
+	<div>
+		<a title="Close" class="close">&times;</a>
+		<form action="" method="post">
+			<h2>Subscribe</h2>
+			<p>The latest tutorials sent straight to your inbox.</p>
+			<input type="email" name="EMAIL" placeholder="Email">
+			<input type="submit" value="Sign up">
+		</form>
+	</div>
+</div>
+
+<div id="share" class="modalDialog sharing">
+	<div>
+		<a title="Close" class="close">&times;</a>
+		<h2>Share</h2>
+		<p>Share this tutorial with your community.</p>
+		<ul>
+			<li><a class="twitter" target="_blank" href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A4000%2Fcom_api%2Fintroduction%2F">
+		<svg class="twitter" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" /></svg>
+	
+ Twitter</a></li>
+			<li><a class="facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fcom_api%2Fintroduction%2F">
+		<svg class="facebook" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="15.8 15.8 25 25"><path d="M32.8 24.7h-3.2v-2.1c0-0.8 0.5-1 0.9-1s2.3 0 2.3 0v-3.5l-3.1 0c-3.5 0-4.3 2.6-4.3 4.3v2.3h-2v3.6h2c0 4.6 0 10.2 0 10.2h4.2c0 0 0-5.6 0-10.2h2.8L32.8 24.7z"/></svg>
+	
+ Facebook</a></li>
+			<li><a class="google-plus" target="_blank" href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2Fcom_api%2Fintroduction%2F">
+		<svg class="google-plus" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M23,11H21V9H19V11H17V13H19V15H21V13H23M8,11V13.4H12C11.8,14.4 10.8,16.4 8,16.4C5.6,16.4 3.7,14.4 3.7,12C3.7,9.6 5.6,7.6 8,7.6C9.4,7.6 10.3,8.2 10.8,8.7L12.7,6.9C11.5,5.7 9.9,5 8,5C4.1,5 1,8.1 1,12C1,15.9 4.1,19 8,19C12,19 14.7,16.2 14.7,12.2C14.7,11.7 14.7,11.4 14.6,11H8Z" /></svg>
+	
+ Google+</a></li>
+			<li><a class="hacker-news" target="_blank" href="http://news.ycombinator.com/submitlink?u=http%3A%2F%2Flocalhost%3A4000%2Fcom_api%2Fintroduction%2F&t=Introduction">
+		<svg class="hacker-news" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M18.8 3.3c-0.4 0.8-5.6 11.1-5.6 11.2 0 2 0 6.2 0 6.2 -0.1 0-2.2 0-2.3 0 0 0 0-5.9 0-6.2 0 0-5.5-10.9-5.6-11.1C5.3 3.3 5.3 3.3 5.3 3.3 5.3 3.3 5.3 3.3 5.3 3.3c0 0 0 0 0.1 0 0.9 0 1.7 0 2.6 0 0 0 0 0 0 0.1 0.1 0.1 4 8.3 4.1 8.3 0 0 4.2-8.3 4.3-8.4 0.8 0 1.6 0 2.4 0 0 0 0 0 0 0C18.8 3.3 18.8 3.3 18.8 3.3z"/></svg>
+	
+ Hacker News</a></li>
+		</ul>
+	</div>
+</div>
+
+<script src="/js/main.js"></script>
+
+<script>
+	var headings = document.querySelectorAll("h2[id]");
+
+	console.log(headings);
+	for (var i = 0; i < headings.length; i++) {
+		var anchorLink = document.createElement("a");
+		anchorLink.innerText = "#";
+		anchorLink.href = "#" + headings[i].id;
+		anchorLink.classList.add("header-link");
+
+		headings[i].appendChild(anchorLink);
+	}
+
+	$(".modalOpen").click(function() {
+		var id = $(this).attr("href");
+		$(id).addClass("show");
+
+		$(window).click(function() {
+			$(".show").removeClass("show");
+		});
+
+		$(id + " > div").click(function(event){
+			event.stopPropagation();
+		});
+		return false;
+	});
+
+	$(".close").click(function() {
+		$(".show").removeClass("show");
+		return false;
+	});
+
+	$(document).keyup(function(e) {
+		if (e.keyCode == 27) {
+			$(".show").removeClass("show");
+		}
+	});
+</script>
+
+			</div>
+		</section>
+
+		<footer>
+	<div class="wrapper">
+		<p class="edit-footer"><a class="editor-link btn" href="cloudcannon:collections/_data/footer.yml" class="btn" style="padding: 5px;"><strong>&#9998;</strong> Edit footer</a></p>
+		<ul class="footer-links">
+			
+				<li><a target="_blank" href="https://facebook.com/techjoomla" class="Facebook-icon">
+					
+						
+		<svg class="facebook" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M19,4V7H17A1,1 0 0,0 16,8V10H19V13H16V20H13V13H11V10H13V7.5C13,5.56 14.57,4 16.5,4M20,2H4A2,2 0 0,0 2,4V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V4C22,2.89 21.1,2 20,2Z" /></svg>
+	
+
+					
+					</a></li>
+			
+				<li><a target="_blank" href="https://twitter.com/techjoomla" class="Twitter-icon">
+					
+						
+		<svg class="twitter" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" /></svg>
+	
+
+					
+					</a></li>
+			
+				<li><a target="_blank" href="https://youtube.com/techjoomla" class="YouTube-icon">
+					
+						
+		<svg class="youtube" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M10,16.5V7.5L16,12M20,4.4C19.4,4.2 15.7,4 12,4C8.3,4 4.6,4.19 4,4.38C2.44,4.9 2,8.4 2,12C2,15.59 2.44,19.1 4,19.61C4.6,19.81 8.3,20 12,20C15.7,20 19.4,19.81 20,19.61C21.56,19.1 22,15.59 22,12C22,8.4 21.56,4.91 20,4.4Z" /></svg>
+	
+
+					
+					</a></li>
+			
+				<li><a  href="/feed.xml" class="RSS-icon">
+					
+						
+		<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><circle cx="6.18" cy="17.82" r="2.18"/><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/></svg>
+		
+
+					
+					</a></li>
+			
+		</ul>
+		<p class="copyright">&copy; Techjoomla 2017. All rights reserved.</p>
+	</div>
+</footer>
+		<script>
+			$(function() {
+				$('a[href*=\\#]').not(".no-smooth").on('click', function(event){
+					var el = $(this.hash);
+					if (el.length > 0) {
+						// event.preventDefault();
+						$('html,body').animate({scrollTop:$(this.hash).offset().top - 50}, 500);
+					}
+				});
+
+				$('svg').click(function() {
+					$(this).parent('form').submit();
+				});
+			});
+
+			document.getElementById("open-nav").addEventListener("click", function (event) {
+				event.preventDefault();
+				document.body.classList.toggle("nav-open");
+			});
+		</script>
+	</body>
+</html>
