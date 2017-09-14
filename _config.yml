@@ -2,7 +2,7 @@
 # Site
 
 title: Techjoomla
-url: "http://techjoomla.github.io/"
+url: "http://docs.techjoomla.com/"
 baseurl:
 google_analytics_key:
 disqus_shortname:
@@ -18,7 +18,7 @@ author:
 social:
   name: Techjoomla
   links:
-    - http://techjoomla.github.io/
+    - http://docs.techjoomla.com/
 
 # -----
 # Build
