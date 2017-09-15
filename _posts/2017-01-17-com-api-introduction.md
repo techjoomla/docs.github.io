@@ -3,7 +3,7 @@ date: 2017-01-15
 title: Introduction
 description: API framework for Joomla
 categories:
-  - APIs
+  - Joomla REST API
 type: Document
 ---
 
