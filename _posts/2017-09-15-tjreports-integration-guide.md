@@ -1,6 +1,6 @@
 ---
 date: 2017-01-15
-title: TJ Reports - Integration Guide
+title: Integration Guide
 categories:
   - TJ Reports
 type: Document

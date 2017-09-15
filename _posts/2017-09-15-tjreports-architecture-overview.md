@@ -1,6 +1,6 @@
 ---
 date: 2017-01-15
-title: TJ Reports - Architecture Overview
+title: Architecture Overview
 categories:
   - TJ Reports
 type: Document

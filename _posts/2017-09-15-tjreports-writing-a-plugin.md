@@ -1,6 +1,6 @@
 ---
 date: 2017-01-15
-title: TJ Reports - Writing a report plugin
+title: Writing a report plugin
 categories:
   - TJ Reports
 type: Document
