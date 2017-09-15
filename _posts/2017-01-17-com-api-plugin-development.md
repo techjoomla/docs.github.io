@@ -9,7 +9,7 @@ type: Document
 
 # Writing your own API Plugin
 
-Each resorce can support the GET, POST and DELETE operations. These are exposed by creating methods of the same name, i.e. `get()` `post()` and `delete()` in each of the resources. If a resouce URL is accessed via HTTP POST, the post() method is called, and similarly for the rest.
+Each resource supports the GET, POST and DELETE operations. These are exposed by creating methods of the same name, i.e. `get()` `post()` and `delete()` in each of the resources. If a resouce URL is accessed via HTTP POST, the post() method is called, and similarly for the rest.
 
 ## API plugin file structure
 * language/en-GB - Resource folder having resource file, keep name same as plugin name.

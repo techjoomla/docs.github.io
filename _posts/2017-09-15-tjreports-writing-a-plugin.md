@@ -6,16 +6,14 @@ categories:
 type: Document
 ---
 
-# Sample plugin for Example Report
+# Example Report Plugin
 The plugin type for TJ Reports plugins is `tjreports`. 
 
 ## Folder structure
 
-```
-plugins/tjreports/examplereport/examplereport.xml
-plugins/tjreports/examplereport/examplereport.php
-plugins/tjreports/examplereport/language/en-GB/en-GB.plg_tjreports_examplereport.ini
-```
+- plugins/tjreports/examplereport/examplereport.xml
+- plugins/tjreports/examplereport/examplereport.php
+- plugins/tjreports/examplereport/language/en-GB/en-GB.plg_tjreports_examplereport.ini
 
 ## Manifest File (examplereport.xml)
 
