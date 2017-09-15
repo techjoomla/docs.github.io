@@ -97,7 +97,7 @@ layout: default
 		<h2>Share</h2>
 		<p>Share this tutorial with your community.</p>
 		<ul>
-			<li><a class="twitter" target="_blank" href="https://twitter.com/intent/tweet?url={{ page.url | prepend: site.url | cgi_escape }}">{% include social-icon.html icon="Twitter" %} Twitter</a></li>
+			<li><a class="twitter" target="_blank" href="https://twitter.com/intent/tweet?text={{ page.title }}&via=techjoomla&url={{ page.url | prepend: site.url | cgi_escape }}">{% include social-icon.html icon="Twitter" %} Twitter</a></li>
 			<li><a class="facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | prepend: site.url | cgi_escape }}">{% include social-icon.html icon="Facebook2" %} Facebook</a></li>
 			<li><a class="google-plus" target="_blank" href="https://plus.google.com/share?url={{ page.url | prepend: site.url | cgi_escape }}">{% include social-icon.html icon="Google Plus" %} Google+</a></li>
 			<li><a class="linkedin" target="_blank" href="https://www.linkedin.com/shareArticle
