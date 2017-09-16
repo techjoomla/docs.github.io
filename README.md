@@ -32,10 +32,11 @@
         title: Post Title
         description: Post Description
         categories:
-          - Category Name
+          - CategoryName
         type: Document
         --- 
      ```
-
+5. This will add a section on homepage with Category name and a post under it. The post will be generated with url - ```domainname.com/categoryname/filename```
+ 
 
 
