@@ -73,10 +73,10 @@
 | **_includes**    | This folder contains common reusable html structures.     |
 | **js**           | Include Js here                                           |
 | **_layouts**     | This folder contains the layouts / templates              |
-
-
-**** - 
-**** - 
+| **_posts**       | Add posts inside this folder                              |
+| **_sass**        | Add CSS here                                              |
+| **_site**        | This is your output html                                  |
+| **config.yml**   |                                                           |
 
 ## Precations
 
