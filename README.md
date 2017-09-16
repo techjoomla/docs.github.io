@@ -24,7 +24,7 @@
 
 1. Start the development server with command ```bundle exec jekyll serve```
 2. It will give you the link where you can see the changes.
-3. Inside _post folder create a new md file format - ```YYYY-MM-DD-filename.md```
+3. Inside _post folder create a new md file format - ```YYYY-MM-DD-filename.md```.
 4. Open the same file you created and add front matter -
      ``` 
         ---
@@ -37,7 +37,14 @@
         --- 
      ```
 5. This will add a section on homepage with Category name and a post under it. The post will be generated with url - ```domainname.com/categoryname/filename```
-6. Add bellow the front matter your content to be added on that post. To know markdown follow [this link](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+6. Add below the front matter your content to be added on that post. To know markdown follow [this link](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
  
+### Adding a menu item
 
+1. Inside _data folder open ```navigation.yml``` file.
+2. Add Menu item - 
+    ```
+      - name: Link Name
+        link: /link-url/
+    ```
 
