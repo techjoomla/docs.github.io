@@ -20,7 +20,7 @@
 
 ## Basic Usage
 
-### Adding a new post
+### Adding a New Post
 
 1. Start the development server with command ```bundle exec jekyll serve```
 2. It will give you the link where you can see the changes.
@@ -47,4 +47,9 @@
       - name: Link Name
         link: /link-url/
     ```
+## Understanding Folder Structure
 
+```
+
+
+```
