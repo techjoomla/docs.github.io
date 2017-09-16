@@ -37,7 +37,7 @@
         --- 
      ```
 5. This will add a section on homepage with Category name and a post under it. The post will be generated with url - ```domainname.com/categoryname/filename```
-6. Add bellow the front matter your content to be added on that post. To know markdown follow this link  - (Link)[https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet]
+6. Add bellow the front matter your content to be added on that post. To know markdown follow this link  - [Link)](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
  
 
 
