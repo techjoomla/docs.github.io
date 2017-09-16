@@ -66,14 +66,21 @@
 ## Understanding Folder Structure
 
 **css** -
+
 **_data** - Contains Navigation and Footer data.
+
 **images** - Put your all images here
+
 **_includes** - This folder contains common reusable html structures
+
 **js** - Include Js here
+
 **_layouts** - This folder contains the layouts / templates 
-** - 
+
+
 **** - 
 **** - 
+
 ## Precations
 
 1. Never ever write in css file directly. Add it in scss/sass folder files. Otherwise you may loose the changes.
