@@ -29,10 +29,10 @@
      ``` 
         ---
         date: 2017-01-15
-        title: Introduction
-        description: REST API framework for Joomla
+        title: Post Title
+        description: Post Description
         categories:
-          - Joomla REST API
+          - Category Name
         type: Document
         --- 
      ```
