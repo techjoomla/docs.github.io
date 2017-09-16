@@ -18,3 +18,14 @@
 5. Go to the root folder of project. i.e. ```/techjoomla.github.io```
 6. Install Rubygems - ```sudo bundle install```.
 
+## Basic Usage
+
+### Adding a new post
+
+1. Start the development server with command ```bundle exec jekyll serve```
+2. It will give you the link where you can see the changes.
+3. Inside _post folder create a new md file format - ```YYYY-MM-DD-filename.md```
+4.
+
+
+
