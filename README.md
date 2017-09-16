@@ -81,4 +81,3 @@
 ## Precations
 
 1. Never ever write in css file directly. Add it in scss/sass folder files. Otherwise you may loose the changes.
-2. 
