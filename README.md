@@ -65,17 +65,13 @@
     ```
 ## Understanding Folder Structure
 
-| **css** | |
-
-| **_data** | Contains Navigation and Footer data. |
-
-| **images** | Put your all images here. |
-
-| **_includes** | This folder contains common reusable html structures. |
-
-| **js** | Include Js here |
-
-| **_layouts** | This folder contains the layouts / templates |
+| **Folder Name**  | Description                                           |
+| **css**          |                                                       |
+| **_data**        | Contains Navigation and Footer data.                  |
+| **images**       | Put your all images here.                             |
+| **_includes**    | This folder contains common reusable html structures. |
+| **js**           | Include Js here                                       |
+| **_layouts**     | This folder contains the layouts / templates          |
 
 
 **** - 
