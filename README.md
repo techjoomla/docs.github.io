@@ -12,9 +12,9 @@
 ## Installing requirements
 
 1. Install Ruby - ```sudo apt-get install ruby-full```.
-2. Check Ruby installed correctly by command - ```ruby -v```. It should be minimum 2.1.0
+2. Check Ruby installed correctly by command - ```ruby -v```. It should be ```minimum 2.1.0```
 3. Install Bundler - ```sudo apt-get install bundler```.
-4. Check Bundler installed correctly by command - ```bundle -v```. It should be minimum 1.15.3
+4. Check Bundler installed correctly by command - ```bundle -v```. It should be ```minimum 1.15.3```
 5. Go to the root folder of project. i.e. ```/techjoomla.github.io```
 6. Install Rubygems - ```sudo bundle install```.
 
