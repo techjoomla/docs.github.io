@@ -24,8 +24,8 @@
 
 1. Start the development server with command ```bundle exec jekyll serve```
 2. It will give you the link where you can see the changes.
-3. Inside _post folder create a new md file format - ```YYYY-MM-DD-filename.md```.
-4. Open the same file you created and add front matter -
+3. Inside _post folder create a new md file format ```YYYY-MM-DD-filename.md```
+4. Open the same file you created and add front matter 
      ``` 
         ---
         date: 2017-01-15
@@ -38,6 +38,22 @@
      ```
 5. This will add a section on homepage with Category name and a post under it. The post will be generated with url - ```domainname.com/categoryname/filename```
 6. Add below the front matter your content to be added on that post. To know markdown follow [this link](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+### Adding a Video Post
+
+1. Inside _post folder create a new md file format ```YYYY-MM-DD-filename.md```
+2. Open the same file you created and add front matter 
+     ``` 
+        ---
+        date: 2017-01-15
+        id: youtube-video-id
+        title: Post Title
+        description: Post Description
+        categories:
+          - CategoryName
+        type: Video
+        --- 
+     ```
  
 ### Adding a Menu Item
 
@@ -50,6 +66,18 @@
 ## Understanding Folder Structure
 
 ```
-
+**css** -
+**_data** - Contains Navigation and Footer data.
+**images** - Put your all images here
+**_includes** - This folder contains common reusable html structures
+**js** - Include Js here
+**_layouts** - This folder contains the layouts / templates 
+**** - 
+**** - 
+**** - 
 
 ```
+## Precations
+
+1. Never ever write in css file directly. Add it in scss/sass folder files. Otherwise you may loose the changes.
+2. 
