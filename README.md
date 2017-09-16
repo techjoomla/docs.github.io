@@ -1,6 +1,8 @@
 
 # Techjoomla Documentation Site
 
+Steps to contribute documentation to the Techjoomla Site.
+
 ## Git Fork Setup on local machine
 
 1. Fork the repo <a href="https://github.com/techjoomla/techjoomla.github.io" target="_blank">Techjoomla Documentation Repo</a>
