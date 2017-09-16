@@ -25,7 +25,15 @@
 1. Start the development server with command ```bundle exec jekyll serve```
 2. It will give you the link where you can see the changes.
 3. Inside _post folder create a new md file format - ```YYYY-MM-DD-filename.md```
-4.
+4. Open the same file you created and add front matter -
+    ```---
+date: 2017-01-15
+title: Introduction
+description: REST API framework for Joomla
+categories:
+  - Joomla REST API
+type: Document
+--- ```
 
 
 
