@@ -1,11 +1,4 @@
-   ---
-   date: 2017-09-21
-   title: Hierarchy Management for Joomla
-   description: This extension allows you to manage User Hierarchy Management in Joomla
-   categories:
-     - Hierarchy Management
-   type: Document
-   --- 
+
    
 # Hierarchy Management 
 
