@@ -40,9 +40,6 @@ collections:
   sets:
 
 
-jekyll-archives:
-  enabled: ['categories']
-
 defaults:
   -
     scope:
