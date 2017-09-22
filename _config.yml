@@ -29,7 +29,6 @@ gems:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-feed
-  - jekyll-archives
 
 exclude:
   - Gemfile
@@ -40,9 +39,6 @@ exclude:
 collections:
   sets:
 
-
-jekyll-archives:
-  enabled: ['categories']
 
 defaults:
   -

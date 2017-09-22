@@ -1,9 +1,8 @@
 ---
 layout: default
 ---
-
-<section class="tutorial">
-	{% if page.type == "Document" %}
+<section class=""> <!-- Removed tutorial class-->
+	<!--{% if page.type == "Document" %}
 	<section class="sidebar sticky">
 		<ul>
 			{% assign sub_navigation = content | extract_element: 'h2' %}
@@ -12,10 +11,10 @@ layout: default
 			{% endfor %}
 		</ul>
 	</section>
-	{% endif %}
+	{% endif %}->
+	
+	<!--<h1>{{ page.title }}</h1>-->
 	<section class="tutorial-content">
-		<!--<h1>{{ page.title }}</h1>-->
-
 		{% if page.type == "Video" %}
 			{% include youtube.html video_id=page.video_id %}
 
