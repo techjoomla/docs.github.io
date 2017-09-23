@@ -3,6 +3,9 @@ date: 2017-01-15
 title: Integration Guide
 categories:
   - TJ Reports
+tags:
+  - Joomla
+  - tjreports
 type: Document
 ---
 

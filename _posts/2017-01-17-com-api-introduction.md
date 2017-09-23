@@ -4,6 +4,9 @@ title: Introduction
 description: REST API framework for Joomla
 categories:
   - Joomla REST API
+tags:
+  - Joomla
+  - REST API
 type: Document
 ---
 

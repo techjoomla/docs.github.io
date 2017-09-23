@@ -4,6 +4,9 @@ title: Writing your own API Plugin
 description: API framework for Joomla
 categories:
   - Joomla REST API
+tags:
+  - Joomla
+  - REST API
 type: Document
 ---
 

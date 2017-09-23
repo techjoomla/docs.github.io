@@ -3,6 +3,9 @@ date: 2017-09-15
 title: Making calls to API resources
 categories:
   - Joomla REST API
+tags:
+  - Joomla
+  - REST API
 type: Document
 ---
 

@@ -3,6 +3,9 @@ date: 2017-01-15
 title: Writing a report plugin
 categories:
   - TJ Reports
+tags:
+  - Joomla
+  - tjreports
 type: Document
 ---
 
