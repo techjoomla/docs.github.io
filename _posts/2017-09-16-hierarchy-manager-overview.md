@@ -4,6 +4,9 @@ title: Hierarchy Management for Joomla
 description: Hierarchy Management for Joomla
 categories:
   - Hierarchy Management
+tags:
+  - Joomla
+  - Hierarchy
 type: Document
 ---
 # Hierarchy Management 
