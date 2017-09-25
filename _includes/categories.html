@@ -1,0 +1,7 @@
+<div class="post-category">
+	Category : &nbsp;
+	{% assign categories = page.categories %}
+	{% for category in categories %}
+		 <a class="underline" href="#">{{ category }}</a>
+	{% endfor %}
+</div>

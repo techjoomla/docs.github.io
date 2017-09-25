@@ -1,0 +1,7 @@
+<div class="tags">
+	Tags : 
+	{% assign tags = page.tags %}
+	{% for item in tags %}
+		<span class="tag">{{ item }}</span>
+	{% endfor %}
+</div>
