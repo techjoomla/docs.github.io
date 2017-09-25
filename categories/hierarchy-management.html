@@ -1,0 +1,23 @@
+---
+layout: default
+permalink: /category/hierarchy-management
+title: Hierarchy Management
+---
+
+<div id="archives">
+{% assign categories = site.categories | sort %}
+{% for category in categories %}
+	<div class="archive-group">
+		{% capture category_name %}{{ category | first }}{% endcapture %}
+		{% if category_name == "Hierarchy Management" %}
+		<a href="{{ site.baseurl }}/category/{{ category_name | slugify }}" class="nounderline"><h3 class="category-head">{{ category_name }}</h3></a>
+		<a name="{{ category_name | slugize }}"></a>
+		{% for post in site.categories[category_name] %}
+			<article class="archive-item">
+				<a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a>
+			</article>
+		{% endfor %}
+		{% endif %}
+	</div>
+{% endfor %}
+</div>
