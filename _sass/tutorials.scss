@@ -31,7 +31,7 @@
 	}
 
 	@media #{$desktop} {
-		flex: 0 0 33%;
+		flex: 0 0 50%;
 	}
 	margin: 0 0 30px 0;
 
@@ -437,4 +437,7 @@
 }
 .tags{
 	margin:0 0 0.7em 0;
+}
+.nounderline{
+	text-decoration:none;
 }

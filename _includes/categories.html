@@ -2,6 +2,6 @@
 	Category : &nbsp;
 	{% assign categories = page.categories %}
 	{% for category in categories %}
-		 <a class="underline" href="#">{{ category }}</a>
+		 <a class="underline" href="{{ site.baseurl }}/category/{{ category| slugify }}">{{ category }}</a>
 	{% endfor %}
 </div>
