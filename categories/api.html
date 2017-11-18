@@ -3,8 +3,8 @@ layout: default
 permalink: /category/joomla-rest-api
 title: Joomla REST API
 ---
-
-<div id="archives">
+{% include header.html %}
+<div id="archives" class="wrapper space">
 {% assign categories = site.categories | sort %}
 {% for category in categories %}
 	<div class="archive-group">
@@ -21,3 +21,4 @@ title: Joomla REST API
 	</div>
 {% endfor %}
 </div>
+{% include footer.html %}

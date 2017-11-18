@@ -3,9 +3,8 @@ layout: default
 permalink: /category/
 title: Categories
 ---
-
-
-<div id="archives">
+{% include header.html %}
+<div id="archives" class="wrapper space">
 {% assign categories = site.categories | sort %}
 {% for category in categories %}
 	<div class="archive-group">
@@ -21,3 +20,4 @@ title: Categories
 	<br />
 {% endfor %}
 </div>
+{% include footer.html %}
