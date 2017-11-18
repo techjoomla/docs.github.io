@@ -1,12 +1,13 @@
 ---
 date: 2017-01-16
-title: Terms & Conditions Manager Overview
+title:  Overview
 categories:
-  - TC Manager
+  - T & C Manager
 tags:
   - Joomla
   - Terms & Conditions Manager
 type: Document
+navigation_weight: 1
 ---
 
 # Terms & Conditions Manager

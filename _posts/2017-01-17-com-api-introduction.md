@@ -8,6 +8,7 @@ tags:
   - Joomla
   - REST API
 type: Document
+navigation_weight: 1
 ---
 
 # REST API framework for Joomla
