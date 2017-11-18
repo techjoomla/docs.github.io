@@ -8,6 +8,7 @@ tags:
   - Joomla
   - Hierarchy
 type: Document
+navigation_weight: 1
 ---
 # Hierarchy Management 
 

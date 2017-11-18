@@ -1,8 +1,9 @@
 ---
 layout: default
 ---
-<section class="">
-	<section class="tutorial-content">
+{% include sidebar.html %}
+<section class="post">
+	<section class="post-content">
 		{% if page.type == "Video" %}
 			{% include youtube.html video_id=page.video_id %}
 
@@ -18,7 +19,13 @@ layout: default
 		{% endif %}
 		
 		<div class="tutorial-main">
+			
 			{{ content }}
+			<hr />
+			<div class="pull-right">
+				<a target="_blank" href="https://github.com/techjoomla/techjoomla.github.io/edit/master/{{page.path}}"> <i class="material-icons">mode_edit</i> Edit</a> | 
+				<a target="_blank" href="https://github.com/techjoomla/techjoomla.github.io/issues"> <i class="material-icons">report</i> Report Issue</a>
+			</div>
 			{% include categories.html %}
 			{% include tags.html %}
 		</div>
@@ -27,46 +34,41 @@ layout: default
 			<a class="modalOpen no-smooth" href="#share">{% include social-icon.html icon="Share" %} Share</a>
 		</div>
 	</section>
+	<section class="post-related">
+		{% assign related_posts = site.related_posts %}
+		{% assign related_posts_size = related_posts | size %}
+		{% if related_posts_size > 0 %}
+			<div class="related">
+				<h3>Related articles</h3>
+				{% include listings.html listings=site.related_posts %}
+			</div>
+		{% endif %}
+	</section>
+	<section class="post-comment">
+		{% if site.disqus_shortname and page.comments %}
+		<div id="disqus_thread"></div>
+		<script>
+			var disqus_shortname = '{{ site.disqus_shortname }}';
+			var disqus_config = function () {
+				this.page.url = "{{ page.url | prepend: site.url }}";
+				this.page.identifier = "{{ page.id }}";
+			};
+			(function() {  // DON'T EDIT BELOW THIS LINE
+				var d = document, s = d.createElement('script');
+				s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+		{% endif %}
+	</section>
+	{% include footer.html %}
 </section>
 
-{% if page.set %}
-	{% assign set_file_name = "_sets/" | append: page.set | append: ".md" %}
-	{% assign set = site.sets | where: "title", "Getting Started" | first %}
-	{% assign series_posts = site.posts | where: "set", page.set %}
-	<div class="tutorial-series">
-		<h3>{{ set.title }} - Series</h3>
-		<p>{{ set.description }}</p>
 
-		{% include listings.html listings=series_posts numbered=true%}
-	</div>
-{% endif %}
-{% assign related_posts = site.related_posts %}
-{% assign related_posts_size = related_posts | size %}
-{% if related_posts_size > 0 %}
-	<div class="related">
-		<h3>Related articles</h3>
 
-		{% include listings.html listings=site.related_posts %}
-	</div>
-{% endif %}
 
-{% if site.disqus_shortname and page.comments %}
-	<div id="disqus_thread"></div>
-	<script>
-		var disqus_shortname = '{{ site.disqus_shortname }}';
-		var disqus_config = function () {
-			this.page.url = "{{ page.url | prepend: site.url }}";
-			this.page.identifier = "{{ page.id }}";
-		};
-		(function() {  // DON'T EDIT BELOW THIS LINE
-			var d = document, s = d.createElement('script');
-			s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-			s.setAttribute('data-timestamp', +new Date());
-			(d.head || d.body).appendChild(s);
-		})();
-	</script>
-	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-{% endif %}
 
 <div id="subscribe" class="modalDialog">
 	<div>

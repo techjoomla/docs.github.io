@@ -8,6 +8,7 @@ tags:
   - Joomla
   - REST API
 type: Document
+navigation_weight: 0
 ---
 
 # Writing your own API Plugin
