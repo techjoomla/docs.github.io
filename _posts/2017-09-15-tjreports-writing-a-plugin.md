@@ -47,26 +47,26 @@ Create a file for plugin same as plugin name - ```examplereport.php```
 
 At the top of the file include TJReport Model
 
-	JLoader::import('com_tjreports.models.reports', JPATH_SITE . '/components');
+```JLoader::import('com_tjreports.models.reports', JPATH_SITE . '/components');```
 
 
 
 
 Extend your plugin from TjreportsModelReports
 
-	class TjreportsModelExamplereport extends TjreportsModelReports
+```class TjreportsModelExamplereport extends TjreportsModelReports```
 
 
 
 Default ordering column will be assigned to default_order
 
-	protected $default_order = 'name';
+```protected $default_order = 'name';```
 
 
 
 Default ordering direction will be assigned to default_order_dir
 
-	protected $default_order_dir = 'ASC';
+```protected $default_order_dir = 'ASC';```
 
 
 
@@ -79,71 +79,74 @@ b) ```title``` - Title will be displayed on header and on hideshow checkbox
 c) ```disable_sorting``` - Set to true of this column is not sortable by default all columns are sortable
 
 
-	public function __construct($config = array())
-	{
-		$this->columns = array(
-			'attempt' => array('table_column' => 'lt.attempt', 'title' => 'COM_TJLMS_TITLE_ATTEMPTS'),
-			'usergroup' => array('title' => 'COM_TJLMS_REPORT_USERGROUP', 'disable_sorting' => true),
-		);
+```
+public function __construct($config = array())
+{
+	$this->columns = array(
+		'attempt' => array('table_column' => 'lt.attempt', 'title' => 'COM_TJLMS_TITLE_ATTEMPTS'),
+		'usergroup' => array('title' => 'COM_TJLMS_REPORT_USERGROUP', 'disable_sorting' => true),
+	);
 
-		parent::__construct($config);
-	}
-
-
+	parent::__construct($config);
+}
+```
 
 
 Most important method of your plugin is ```getListQuery```. You must have this method and this should return query for your report.
 
 To utilize framework where and order by functionality you must call parent getListQuery method and then add your extra clauses in that query object. When you call parent method framework add where clauses as per the filters you have defined in ```displayFilters``` method(see below for more detail)
 
-	$query = parent::getListQuery();
+```$query = parent::getListQuery();```
 
 
-	protected function getListQuery()
+```
+protected function getListQuery()
+{
+	$db        = $this->_db;
+
+	/* Create query instance by calling parents getListQuery */
+	$query     = parent::getListQuery();
+
+	$query->from($db->quoteName('#__tjlms_lesson_track', 'lt'));
+
+	if (in_array('usergroup', $colToshow))
 	{
-		$db        = $this->_db;
-
-		/* Create query instance by calling parents getListQuery */
-		$query     = parent::getListQuery();
-
-		$query->from($db->quoteName('#__tjlms_lesson_track', 'lt'));
-
-		if (in_array('usergroup', $colToshow))
+		if (isset($filters['usergroup']) && !empty($filters['usergroup']))
 		{
-			if (isset($filters['usergroup']) && !empty($filters['usergroup']))
-			{
-				$subQuery = $db->getQuery(true);
-				$subQuery->select('ugm.user_id');
-				$subQuery->from($db->quoteName('#__user_usergroup_map') . ' as ugm');
-				$subQuery->where($db->quoteName('ugm.group_id') . ' = ' . (int) $filters['usergroup']);
-				$query->where('lt.user_id IN(' . $subQuery . ')');
-			}
+			$subQuery = $db->getQuery(true);
+			$subQuery->select('ugm.user_id');
+			$subQuery->from($db->quoteName('#__user_usergroup_map') . ' as ugm');
+			$subQuery->where($db->quoteName('ugm.group_id') . ' = ' . (int) $filters['usergroup']);
+			$query->where('lt.user_id IN(' . $subQuery . ')');
 		}
-
-		return $query;
 	}
+
+	return $query;
+}
+```
 
 
 
 One can get columns to show using below line. $colToshow is an array of all columns key that use has checked to display for ex - attempt. This should not be called inside constructor.
 
-	$colToshow = (array) $this->getState('colToshow');
+```$colToshow = (array) $this->getState('colToshow');```
 
 
 One can get active filters using below line. $filters is an associative array with key as column name and value as selected value for the filter. This should not be called inside constructor.
 
-	$filters = $this->getState('filters');
+```$filters = $this->getState('filters');```
 
 
 If you want to add any styling you can add your styles in getStyles method
 
-	public function getStyles()
-	{
-		return array(
-			JUri::root(true) . '/css/style.css'
-		);
-	}
-
+```
+public function getStyles()
+{
+	return array(
+		JUri::root(true) . '/css/style.css'
+	);
+}
+```
 
 This framework also support build in filter functionality. You need to defined on which column you want to perform filteration. Framework currently supports text, dropdown and calendar type filter. There can have max two level of filters, one on Top level and other on Header level.
 
@@ -160,44 +163,48 @@ b) searchin -  if you want framework to add where clause for search criteria you
 
 c) type - This can be 'equal’,’custom’ otherwise by default it will match for like clause.
 
-	public function displayFilters()
-	{
-		$dispFilters = array(
-					array(
-						'attempt' => array(
-							'search_type' => 'text', 'type' => 'equal', 'searchin' => 'lt.attempt'),
-						'name' => array(
-							'search_type' => 'select', 'select_options' => $lessonFilter, 'type' => 'equal', 'searchin' => 'lt.lesson_id'
-						),
+```
+public function displayFilters()
+{
+	$dispFilters = array(
+				array(
+					'attempt' => array(
+						'search_type' => 'text', 'type' => 'equal', 'searchin' => 'lt.attempt'),
+					'name' => array(
+						'search_type' => 'select', 'select_options' => $lessonFilter, 'type' => 'equal', 'searchin' => 'lt.lesson_id'
 					),
-					array(
-						'last_accessed_on' => array(
-							'search_type' => 'date.range',
-							'searchin' => 'last_accessed_on',
-							'last_accessed_on_from' => array('attrib' => array('placeholder' => 'FROM (YYYY-MM-DD)')),
-							'last_accessed_on_to' => array('attrib' => array('placeholder' => 'TO (YYYY-MM-DD)')),
-						)
+				),
+				array(
+					'last_accessed_on' => array(
+						'search_type' => 'date.range',
+						'searchin' => 'last_accessed_on',
+						'last_accessed_on_from' => array('attrib' => array('placeholder' => 'FROM (YYYY-MM-DD)')),
+						'last_accessed_on_to' => array('attrib' => array('placeholder' => 'TO (YYYY-MM-DD)')),
 					)
-				);
+				)
+			);
 
-		return $dispFilters;
-	}
+	return $dispFilters;
+}
+```
 
 If you want to perform any data manipulation before sending it to framework for displaying, you can override below ```getItems``` method
 
-	public function getItems()
+```
+public function getItems()
+{
+	$items = parent::getItems();
+
+	foreach ($items as $item)
 	{
-		$items = parent::getItems();
-
-		foreach ($items as $item)
+		if (empty($item['last_accessed_on']) || $item['last_accessed_on'] == '0000-00-00 00:00:00')
 		{
-			if (empty($item['last_accessed_on']) || $item['last_accessed_on'] == '0000-00-00 00:00:00')
-			{
-				$item['last_accessed_on'] = ' - ';
-			}
+			$item['last_accessed_on'] = ' - ';
 		}
-
-		return $items;
 	}
+
+	return $items;
+}
+```
 
 
