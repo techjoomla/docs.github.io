@@ -7,6 +7,7 @@ tags:
   - Joomla
   - tjreports
 type: Document
+showSidebar: "true"
 ---
 
 # TJ Reports Integration Guide
@@ -43,19 +44,19 @@ b) ```title``` - This is the title of your plugin visible to users.
 ## Linking to TJ reports
 Just like other infrastructure extensions, you can pass the client context to show reports related to your extension. For instance Shika uses `index.php?option=com_tjreports&client=tjlms` for reports contextual to Shika LMS. The client is be specified when creating instances.
 
-When user passes client parameter in the url at backend, framework also fetches the menus added in the `addSubmenu` of the component you passed in the client parameter. 
+When user passes client parameter in the url at backend, framework also fetches the menus added in the `addSubmenu` of the component you passed in the client parameter.
 
-Below is the default URL for your extension 
+Below is the default URL for your extension
 
 `index.php?option=com_tjreports&client=com_example&task=reports.defaultReport`
 
-This  will bring you to the first plugin of that client type. 
+This  will bring you to the first plugin of that client type.
 
 
 ## Plugin configuration options -
-One can limit number of columns to show in the Report using plugin configuration. When you edit a plugin in tjreport you can load default params using ```Load Default Params``` . This data depends on the details you have mentioned in your plugin __constract. 
+One can limit number of columns to show in the Report using plugin configuration. When you edit a plugin in tjreport you can load default params using ```Load Default Params``` . This data depends on the details you have mentioned in your plugin __constract.
 
-Below is the example JSON Data - 
+Below is the example JSON Data -
 
 ```
 {
@@ -63,27 +64,27 @@ Below is the example JSON Data -
 	"filter_order_Dir":"ASC",
 	"limit":"20",
 	"showHideColumns":[
-		"attempt",  
-		"name",  
-		"username",  
-		"usergroup",  
-		"time_spent",  
-		"lesson_status",  
-		"score",  
-		"last_accessed_on"  
-	],  
+		"attempt",
+		"name",
+		"username",
+		"usergroup",
+		"time_spent",
+		"lesson_status",
+		"score",
+		"last_accessed_on"
+	],
 	"colToshow":{
 		"attempt": true,
-		"name":true,  
-		"username":true,  
-		"usergroup":false,  
-		"time_spent":true,  
-		"lesson_status":true,  
-		"score":true,  
-		"last_accessed_on":true  
-	}  
-} 
-``` 
+		"name":true,
+		"username":true,
+		"usergroup":false,
+		"time_spent":true,
+		"lesson_status":true,
+		"score":true,
+		"last_accessed_on":true
+	}
+}
+```
 
 filter_order - Default filter column, can be any key of your $this->columns array
 
@@ -91,9 +92,9 @@ filter_order_Dir - Default filter direction, can we ASC or DESC
 
 limit - Default limit of the results
 
-showHideColumns -  Which columns to show in show/hide dropdown. It must be a subset of colToshow(next option) 
+showHideColumns -  Which columns to show in show/hide dropdown. It must be a subset of colToshow(next option)
 
-colToshow - By default what columns to display. Key of this data are column names(keys of $this->columns array) and value can be true or false which decides whether it will be displayed by default or not. 
+colToshow - By default what columns to display. Key of this data are column names(keys of $this->columns array) and value can be true or false which decides whether it will be displayed by default or not.
 
 
 

@@ -7,6 +7,7 @@ tags:
   - Joomla
   - tjreports
 type: Document
+showSidebar: "true"
 ---
 
 # Example Report Plugin
