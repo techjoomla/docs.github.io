@@ -37,7 +37,7 @@ UCM types are nothing but actual form which will display to user. There can be a
 
 ### Categories :
 
-For now, I don’t know about how categories plays the role in TJ UCM & how it works on user panel as well as admin panel.
+-
 
 ### Views & Layouts :
 
