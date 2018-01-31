@@ -13,10 +13,10 @@ showSidebar: "true"
 
 ### Developer Help
 * [UCM Type Parameteres](../com-tjucm-paramters/)
-* Steps for adding new field type (comming soon)
+* Steps for adding new field type (coming soon)
 * [Package installation steps](../com-tjucm-installation/)
 
 
 ### Database Structure
 
-* Database Structure For TJ UCM & TJ Fields (comming soon)
+* Database Structure For TJ UCM & TJ Fields (coming soon)
