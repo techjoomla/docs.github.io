@@ -7,12 +7,13 @@ tags:
   - Joomla
   - REST API
 type: Document
+showSidebar: "true"
 ---
 
 # Calling API resources
 
 ## API URLs
-The URL to access any route is of the format - 
+The URL to access any route is of the format -
 
 `/api/{plugin}/{resource}`
 

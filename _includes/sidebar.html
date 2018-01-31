@@ -11,7 +11,9 @@
 			<ul>
 				{% assign tutorials = posts | sort: "title" %}
 				{% for tutorial in tutorials | sort: "navigation_weight" %}
+					{% if tutorial.showSidebar %}
 					<li {% if tutorial.url == page.url %}class="active"{% endif %}><a href="{{ site.baseurl }}{{ tutorial.url }}">{{ tutorial.title }}</a></li>
+					{% endif %}
 				{% endfor %}
 			</ul>
 		</div>
