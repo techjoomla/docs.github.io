@@ -7,9 +7,12 @@ tags:
   - Joomla
   - REST API
 type: Document
+showSidebar: true
+published: true
+nav_ordering: 3
+pageTitle: "Calling API resources"
 ---
 
-# Calling API resources
 
 ## API URLs
 The URL to access any route is of the format - 

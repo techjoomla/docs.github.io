@@ -1,7 +1,7 @@
 ---
 layout: default
-permalink: /category/tc-manager
-title: TC Manager
+permalink: t%20&%20c%20manager/
+title: T & C Manager
 ---
 {% include header.html %}
 <div id="archives" class="wrapper space">
@@ -9,12 +9,12 @@ title: TC Manager
 {% for category in categories %}
 	<div class="archive-group">
 		{% capture category_name %}{{ category | first }}{% endcapture %}
-		{% if category_name == "TC Manager" %}
-		<a href="{{ site.baseurl }}/category/{{ category_name | slugify }}" class="nounderline"><h3 class="category-head">{{ category_name }}</h3></a>
-		<a name="{{ category_name | slugize }}"></a>
-		{% for post in site.categories[category_name] %}
+		{% if category_name == "T & C Manager" %}
+		<h3 class="category-head">{{ category_name }}</h3>
+		{% assign posts = site.categories[category_name] | sort: "nav_ordering" %}
+		{% for post in posts %}
 			<article class="archive-item">
-				<a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a>
+				<a href="{{ site.baseurl }}{{ post.url }}"><i class="material-icons">insert_drive_file</i> {{post.title}}</a>
 			</article>
 		{% endfor %}
 		{% endif %}

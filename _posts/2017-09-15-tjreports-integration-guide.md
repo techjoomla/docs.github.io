@@ -7,9 +7,12 @@ tags:
   - Joomla
   - tjreports
 type: Document
+showSidebar: true
+published: true
+nav_ordering: 2
+pageTitle: "TJ Reports Integration Guide"
 ---
 
-# TJ Reports Integration Guide
 
 ## Installing the default instances
 The reporting plugin only offers the code needed for the report. For the report to be usable, it needs to be configured. An extension developer who wishes to create default 'instances' for the plugins can do that by adding the below method in the installation script.

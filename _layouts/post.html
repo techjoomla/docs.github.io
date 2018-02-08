@@ -20,18 +20,24 @@ layout: default
 		
 		<div class="tutorial-main">
 			
+			<h1>{{page.pageTitle}}</h1>
+			
+			{% include meta.html %}
+			
+			<hr />
+			
 			{{ content }}
 			<hr />
-			<div class="pull-right">
-				<a target="_blank" href="https://github.com/techjoomla/techjoomla.github.io/edit/master/{{page.path}}"> <i class="material-icons">mode_edit</i> Edit</a> | 
-				<a target="_blank" href="https://github.com/techjoomla/techjoomla.github.io/issues"> <i class="material-icons">report</i> Report Issue</a>
-			</div>
-			{% include categories.html %}
-			{% include tags.html %}
+			
 		</div>
 		<div class="tutorial-share">
-			<a class="modalOpen no-smooth" href="#subscribe">{% include social-icon.html icon="Email" %} Subscribe</a>
-			<a class="modalOpen no-smooth" href="#share">{% include social-icon.html icon="Share" %} Share</a>
+			<!--<a class="modalOpen no-smooth" href="#subscribe">{% include social-icon.html icon="Email" %} Subscribe</a>
+			<a class="modalOpen no-smooth" href="#share">{% include social-icon.html icon="Share" %} Share</a>-->
+			<small>Tags: </small>
+			{% assign tags = page.tags %}
+			{% for item in tags %}
+				<span class="tag">{{ item }}</span>
+			{% endfor %}
 		</div>
 	</section>
 	<section class="post-related">

@@ -8,8 +8,11 @@ tags:
   - Joomla
   - Hierarchy
 type: Document
-navigation_weight: 1
+nav_ordering: 1
+showSidebar: true
+published: true
+pageTitle: "Hierarchy Management"
 ---
-# Hierarchy Management 
+
 
 Hierarchy Management is an horizontal (Infrastructure) extension by Techjoomla that allows setting up general or context specific hierarchical relations between users. This can be used by other extensions to allow special access control, generate reports and so on.

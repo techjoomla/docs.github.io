@@ -8,10 +8,11 @@ tags:
   - Joomla
   - REST API
 type: Document
-navigation_weight: 0
+nav_ordering: 2
+showSidebar: true
+published: true
+pageTitle: "Writing your own API Plugin"
 ---
-
-# Writing your own API Plugin
 
 Each resource supports the GET, POST and DELETE operations. These are exposed by creating methods of the same name, i.e. `get()` `post()` and `delete()` in each of the resources. If a resouce URL is accessed via HTTP POST, the post() method is called, and similarly for the rest.
 

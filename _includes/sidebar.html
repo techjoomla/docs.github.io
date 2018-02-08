@@ -7,13 +7,38 @@
 		{% assign posts = category[1] %}
 		{% assign size = posts | size %}
 		<div class = 'category-module {% if name == page.categories[0] %}active{% endif %}'>
-			<span class="heading">{{ name | replace: "-", " " }}</span>
-			<ul>
-				{% assign tutorials = posts | sort: "title" %}
-				{% for tutorial in tutorials | sort: "navigation_weight" %}
-					<li {% if tutorial.url == page.url %}class="active"{% endif %}><a href="{{ site.baseurl }}{{ tutorial.url }}">{{ tutorial.title }}</a></li>
+			<span class="heading accordion {% if name == page.categories[0] %}active{% endif %}" >{{ name | replace: "-", " " }}</span>
+			<ul class="panel">
+				{% assign tutorials = posts | sort: "nav_ordering" %}
+				{% for tutorial in tutorials  %}
+					{% if tutorial.showSidebar %}
+					{% if tutorial.published %}
+					<li {% if tutorial.url == page.url %}class="active"{% endif %}>
+						<a href="{{ site.baseurl }}{{ tutorial.url }}">{{ tutorial.title }}</a>
+					</li>
+					{% endif %}
+					{% endif %}
 				{% endfor %}
 			</ul>
 		</div>
 	{% endfor %}
 </section>
+<script>
+var acc = $(".accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        $(this).siblings("span.active").removeClass("active");
+
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+
+</script>
