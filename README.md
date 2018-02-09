@@ -80,6 +80,6 @@ Steps to contribute documentation to the Techjoomla Site.
 | **_site**        | This is your output html                                  |
 | **config.yml**   |                                                           |
 
-## Precations
+## Precautions
 
 1. Never ever write in css file directly. Add it in scss/sass folder files. Otherwise you may loose the changes.
