@@ -57,7 +57,7 @@ public function getItems()
 }
 ```
 
-We also need to ensure that the Hide/Show columns gets reset when the Form Filter is changed in this case. To do this, you may add the below code in an onCHange event where the HTML gets generated inside the `displayFilters()` method
+We also need to ensure that the Hide/Show columns gets reset when the Form Filter is changed in this case. To do this, you may add the below code in an onChange event where the HTML gets generated inside the `displayFilters()` method
 
 ```javascript
 onchange="document.getElementById('ul-columns-name').remove(); tjrContentUI.report.submitTJRData();"
