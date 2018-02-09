@@ -1,6 +1,6 @@
 ---
 date: 2018-02-09
-title: Integration Guide
+title: Reports with dynamic columns
 categories:
   - TJ Reports
 tags:
