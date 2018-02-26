@@ -294,7 +294,7 @@
 }
 
 .related, .tutorial-series {
-	margin: 50px 0;
+	margin: 0;
 	padding: 20px 0;
 
 	ul {
@@ -390,14 +390,14 @@
   border-radius: 3px 0 0 3px;
   color: #fff;
   display: inline-block;
-  height: 26px;
-  line-height: 26px;
+  height: 22px;
+  line-height: 22px;
   padding: 0 20px 0 23px;
   position: relative;
   margin: 0 10px 10px 0;
   text-decoration: none;
   -webkit-transition: color 0.2s;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
 }
 
@@ -410,14 +410,14 @@
   left: 10px;
   position: absolute;
   width: 6px;
-  top: 10px;
+  top: 8px;
 }
 
 .tag::after {
   background: #fff;
-  border-bottom: 13px solid transparent;
+  border-bottom: 11px solid transparent;
   border-left: 10px solid #43C6AC;
-  border-top: 13px solid transparent;
+  border-top: 11px solid transparent;
   content: '';
   position: absolute;
   right: 0;

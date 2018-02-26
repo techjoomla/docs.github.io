@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /category/tj-reports
+permalink: tj%20reports/
 title: TJ Reports
 ---
 {% include header.html %}
@@ -10,11 +10,11 @@ title: TJ Reports
 	<div class="archive-group">
 		{% capture category_name %}{{ category | first }}{% endcapture %}
 		{% if category_name == "TJ Reports" %}
-		<a href="{{ site.baseurl }}/category/{{ category_name | slugify }}" class="nounderline"><h3 class="category-head">{{ category_name }}</h3></a>
-		<a name="{{ category_name | slugize }}"></a>
-		{% for post in site.categories[category_name] %}
+		<h3 class="category-head">{{ category_name }}</h3>
+		{% assign posts = site.categories[category_name] | sort: "nav_ordering" %}
+		{% for post in posts %}
 			<article class="archive-item">
-				<a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a>
+				<a href="{{ site.baseurl }}{{ post.url }}"><i class="material-icons">insert_drive_file</i> {{post.title}}</a>
 			</article>
 		{% endfor %}
 		{% endif %}

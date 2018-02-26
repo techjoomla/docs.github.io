@@ -7,9 +7,12 @@ tags:
   - Joomla
   - tjreports
 type: Document
+showSidebar: true
+published: true
+nav_ordering: 3
+pageTitle: "Example Report Plugin"
 ---
 
-# Example Report Plugin
 The plugin type for TJ Reports plugins is `tjreports`.
 
 ## Folder structure

@@ -1,0 +1,26 @@
+<div class="post-meta">
+	
+	<div class="pull-right">
+		<a target="_blank" class="nounderline" href="https://github.com/techjoomla/techjoomla.github.io/edit/master/{{page.path}}"> 
+			<i class="material-icons">mode_edit</i> Edit 
+		</a>
+		&nbsp;|&nbsp;
+		<a target="_blank" class="nounderline" href="https://github.com/techjoomla/techjoomla.github.io/issues"> 
+			<i class="material-icons">report</i> Report Issue 
+		</a>
+		&nbsp;|&nbsp;
+		<a class="modalOpen no-smooth nounderline" href="#share">
+			<i class="material-icons">share</i> Share
+		</a>
+	</div>
+
+	<div>
+		
+		{% assign categories = page.categories %}
+		{% for category in categories %}
+			 <a class="nounderline" href="{{ site.baseurl }}/{{ category | downcase }}"><i class="material-icons">folder</i> {{ category }}</a>
+		{% endfor %} 
+		
+	</div>
+	
+</div>
