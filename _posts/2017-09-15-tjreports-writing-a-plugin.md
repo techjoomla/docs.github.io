@@ -11,6 +11,7 @@ showSidebar: true
 published: true
 nav_ordering: 3
 pageTitle: "Example Report Plugin"
+permalink: tj-reports/tjreports-writing-a-plugin.html
 ---
 
 The plugin type for TJ Reports plugins is `tjreports`.

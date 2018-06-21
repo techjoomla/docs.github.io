@@ -12,6 +12,7 @@ nav_ordering: 1
 showSidebar: true
 published: true
 pageTitle: "Hierarchy Management"
+permalink: hierarchy-management/hierarchy-manager-overview.html
 ---
 
 

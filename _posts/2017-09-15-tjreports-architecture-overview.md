@@ -11,6 +11,7 @@ showSidebar: true
 published: true
 nav_ordering: 1
 pageTitle: "TJ Reports : Architecture Overview"
+permalink: tj-reports/tjreports-architecture-overview.html
 ---
 
 In terms of data structure, the TJ Reports framework is a Joomla MVC List view, with added features for saving queries, modifying columns and dynamic filters. Since reports are typically tabular data, reusing existing list view infrastructure was an obvious choice. So under the hood, it simply extends JModelList. The key difference is that instead of a single model, the framework allows plugins to extend the base reports model and provide a query or list for the report.

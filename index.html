@@ -10,7 +10,7 @@
 			{% assign size = posts | size %}
 			<section class="category">
 					<h3>
-						<a href="{{ site.baseurl }}/{{ name | downcase }}">{{ name | replace: "-", " " }}</a>
+						<a href="{{ site.baseurl }}/{{ name | downcase | slugify }}">{{ name | replace: "-", " "}}</a>
 					</h3>
 
 				<ul>

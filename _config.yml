@@ -23,7 +23,7 @@ social:
 # -----
 # Build
 
-permalink: /:categories/:title/
+permalink: /:categories/:slug:output_ext
 
 gems:
   - jekyll-sitemap
