@@ -11,6 +11,7 @@ showSidebar: true
 published: true
 nav_ordering: 2
 pageTitle: "TJ Reports Integration Guide"
+permalink: tj-reports/tjreports-integration-guide.html
 ---
 
 

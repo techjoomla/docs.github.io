@@ -12,6 +12,7 @@ nav_ordering: 1
 showSidebar: true
 published: true
 pageTitle: "REST API framework for Joomla"
+permalink: joomla-rest-api/com-api-introduction.html
 ---
 
 

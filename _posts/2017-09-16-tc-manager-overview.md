@@ -11,6 +11,7 @@ nav_ordering: 1
 showSidebar: true
 published: true
 pageTitle: "Terms & Conditions Manager"
+permalink: t-c-manager/tc-manager-overview.html
 ---
 
 Terms & Conditions Manager is used to force users to accept the T&C before they can start using the site, or a part of the site. 

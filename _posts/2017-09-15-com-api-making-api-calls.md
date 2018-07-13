@@ -11,6 +11,7 @@ showSidebar: true
 published: true
 nav_ordering: 3
 pageTitle: "Calling API resources"
+permalink: joomla-rest-api/com-api-making-api-calls.html
 ---
 
 

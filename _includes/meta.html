@@ -18,7 +18,7 @@
 		
 		{% assign categories = page.categories %}
 		{% for category in categories %}
-			 <a class="nounderline" href="{{ site.baseurl }}/{{ category | downcase }}"><i class="material-icons">folder</i> {{ category }}</a>
+			 <a class="nounderline" href="{{ site.baseurl }}/{{ category | downcase | slugify }}"><i class="material-icons">folder</i> {{ category }}</a>
 		{% endfor %} 
 		
 	</div>
