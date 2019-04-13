@@ -10,7 +10,7 @@ type: Document
 showSidebar: true
 published: true
 nav_ordering: 3
-pageTitle: "Calling API resources"
+pageTitle: "Impersonating another user"
 permalink: joomla-rest-api/com-api-impersonation.html
 ---
 
