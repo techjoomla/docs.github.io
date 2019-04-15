@@ -22,3 +22,8 @@ Using the impersonation feature it is possible for a Super Admin user to imperso
 To impersonate another user, pass the header `X-Impersonate`. The value of the header is the user id of the user to impersonate eg: `X-Impersonate` : `42`.
 
 It is also possible to use the username or email of the user eg: `X-Impersonate` : `email:user@email.com` or `X-Impersonate` : `username:ashwin`.
+
+**Security Note** : When using this feature, we recommend the below steps to improve the security of your setup
+
+- Create a new token to be used only for impersonation instead of using an existing token.
+- Absolutely avoid using this token for client side requests. Use it only in server side communication.
