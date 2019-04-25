@@ -13,7 +13,7 @@ nav_ordering: 1
 showSidebar: true
 published: true
 pageTitle: "Introduction to TJ Queue"
-permalink: tjqueue/introduction.html
+permalink: tj-queue/introduction.html
 ---
 
 ## Background
