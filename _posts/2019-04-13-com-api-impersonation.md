@@ -27,3 +27,46 @@ It is also possible to use the username or email of the user eg: `X-Impersonate`
 
 - Create a new token to be used only for impersonation instead of using an existing token.
 - Absolutely avoid using this token for client side requests. Use it only in server side communication.
+
+**More details of how this works:**
+
+Normally, the com_api framework sets the `JUser` object for any API call based on the token passed in the Authorization header. Plugins can then access the user object making the API call via `$this->plugin->get('user')`.
+
+This feature adds support for a new `X-Impersonate` header which allows the API caller to set a different user than the one making the API call. The Impersonate header can accept either the id, username or email of the user to impersonate. 
+
+The Impersonate header cannot be used by all users, only by Super Users.
+
+Consider the example below
+
+| ID | Name | Email | API Token | Level |
+| ---- | ---- | ---- | ---- | ---- |
+| 20 | Rahul | rahul@mail.com | rrrrrr | Super User |
+| 21 | Jaya | jaya@mail.com | jjjjjj | Registered |
+| 22 | Kevin | kevin@mail.com | kkkkkkk | Registered |
+
+**Case 1**
+`GET /jgive/campaign`
+`Authorization` : `Bearer rrrrrr`
+`X-Impersonate` : `21`
+
+In this case the user object available to the campaign resource will be that of userid 21. 
+
+**Case 2**
+`GET /jgive/campaign`
+`Authorization` : `Bearer jjjjjj`
+`X-Impersonate` : `22`
+
+This API call will return a 403 error since the user with token jjjjjj is not allowed to use impersonation. 
+
+**Case 3**
+`GET /jgive/campaign`
+`Authorization` : `Bearer rrrrrr`
+`X-Impersonate` : `email:kevin@mail.com`
+
+In this case the user object available to the campaign resource will be that of userid 22 i.e. the user with the email kevin@mail.com
+
+**Case 4**
+`GET /jgive/campaign`
+`Authorization` : `Bearer jjjjjj`
+
+This is how com_api works as of today, the campaign resource will receive the user object for userid 21
