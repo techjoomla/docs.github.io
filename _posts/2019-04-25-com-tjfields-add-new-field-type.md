@@ -7,7 +7,7 @@ categories:
 tags:
   - Joomla
   - Fields
-	- TJ - Fields
+  - TJ - Fields
 type: Document
 nav_ordering: 1
 showSidebar: true
@@ -16,13 +16,13 @@ pageTitle: "Add new field Type "
 permalink: tj-ucm/com-tjfields-add-new-field-type.html
 ---
 
-###How to add new field type?
+## How to add new field type?
 
 TJ-Fields supports many of the core field types provided by Joomla and it provides a way to easily add new field type or any new custom field type as per the requirement. 
 
 Follow the steps given below to add new field type support in TJ-Fields.
 
-####1) Add entry of new field type in “tjfieldfields” field
+#### 1) Add entry of new field type in “tjfieldfields” field
 
 This is to add the new field type in the list of available field types. The field “tjfieldfields” is a custom field in TJ-Fields which is used to generate the HTML of dropdown to show the list of available field types.
 
@@ -34,9 +34,9 @@ $options[] = JHtml::_('select.option', 'FIELD_TYPE', JText::_('LANGUAGE_CONSTANT
 
 File Path
 
-YOUR_JOOMLA/administrator/components/com_tjfields/models/fields/tjfieldfields.php
+`YOUR_JOOMLA/administrator/components/com_tjfields/models/fields/tjfieldfields.php`
 
-####2) Add XML to define attributes of the new field type (Only if your field type has any attribute)
+#### 2) Add XML to define attributes of the new field type (Only if your field type has any attribute)
 
 Attributes of the field are the properties of field type which defines it e.g (For input type text name, size, value, maxlength etc are the attributes)
 
@@ -44,7 +44,7 @@ To add attributes for the new field type create a new XML file with the name sam
 
 Folder Path
 
-YOUR_JOOMLA/administrator/components/com_tjfields/models/forms/types/forms
+`YOUR_JOOMLA/administrator/components/com_tjfields/models/forms/types/forms`
 
 Sample XML File
 ```xml
@@ -63,13 +63,13 @@ Sample XML File
 
 Add all the required attributes of new field under **fieldset** named **params**, there is **no need** to add basic attributes like “name”, “type”, “label” and “description” in the XML file.
 
-####) Create form field file (Only if you are creating custom field which is not supported by Joomla)
+#### 3) Create form field file (Only if you are creating custom field which is not supported by Joomla)
 
 Create the form field file in the folder on path given below to define the rendering of the field on the form.
 
 Folder Path
 
-YOUR_JOOMLA/administrator/components/com_tjfields/models/fields
+`YOUR_JOOMLA/administrator/components/com_tjfields/models/fields`
 
 Sample field file (Textarea Counter)
 
