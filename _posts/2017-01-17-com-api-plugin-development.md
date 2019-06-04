@@ -65,7 +65,7 @@ class UsersApiResourceLogin extends ApiResource
 	{
         $result = new \stdClass;
         $result->id = 45;
-        $result->name = "John Doe"
+        $result->name = "John Doe";
 		 
 		$this->plugin->setResponse( $result );
 	}
@@ -112,7 +112,7 @@ Note : The exception classes extend PHP's `Exception` class. So you will need to
  
 Unless specified, all resources are private, which means an API token is needed to access. However, it is possible to make certain resource and methods public by using the setResourceAccess() access method as
 ```php
-$this->setResourceAccess('login', 'public', 'post') 
+$this->setResourceAccess('login', 'public', 'post') ;
 ```
 
 The first parameter is the resource name, second is status (should be public to make it public) and last is HTTP method to make public. Setting a resource public will mean that the API URL for that resource will not need any authentication.
