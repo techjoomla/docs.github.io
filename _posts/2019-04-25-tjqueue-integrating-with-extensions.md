@@ -31,7 +31,7 @@ permalink: tj-queue/integrating-with-extensions.html
    
   | Config Name | Description  |
   | -- | -- |
-  |  Topic Name | Name of the default topic to which messages will be sent. Developers may choose to create additional queues for other workloads and use them with the producer and CLI scripts. You can read more about this in the extension documentation. The suggested format for this is environment-purpose eg: prod-default-queue |
+  |  Topic Name | Name of the default topic to which messages will be sent. Developers may choose to create additional queues for other workloads and use them with the producer and CLI scripts. The suggested format for this is environment-purpose eg: prod-default-queue |
   | Queue Handler |Choose which adapter should handle the queue. Some adapters need additional configuration. eg: the SQS adapter will need the AWS credentials and the region name. |
   | AWS Key | Key to access AWS SQS  |
   | AWS Secret | Secret to access AWS SQS  |
