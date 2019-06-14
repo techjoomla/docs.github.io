@@ -14,7 +14,7 @@ nav_ordering: 1
 showSidebar: true
 published: true
 pageTitle: "Integrating with extensions"
-permalink: tj-ucm/com-tjfields-integration.html
+permalink: tj-fields/com-tjfields-integration.html
 ---
 
 ## How to integrate client with TJ-Fields?
