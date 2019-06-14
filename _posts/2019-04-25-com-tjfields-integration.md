@@ -7,8 +7,8 @@ categories:
 tags:
   - Joomla
   - Fields
-	- TJ - Fields
-	- Integration
+  - TJ - Fields
+  - Integration
 type: Document
 nav_ordering: 1
 showSidebar: true
@@ -17,13 +17,13 @@ pageTitle: "Integrating with extensions"
 permalink: tj-ucm/com-tjfields-integration.html
 ---
 
-###How to integrate client with TJ-Fields?
+## How to integrate client with TJ-Fields?
 
 Here the **Client** represents the view (Product Creation Form) of the vertical extension (Shopping Cart Extension) where you want to use TJ - Fields to get support of custom/extra fields (Product Attributes). e.g com_quick2cart.product, com_tjlms.lesson etc
 
 To integrate TJ-Fields with your client you need to add the code given below in respective files
 
-####1) Model file of client (Product Model)
+#### 1) Model file of client (Product Model)
 
 All the functions to retrieve form of custom/extra fields, form data and function to save data of fields are written in trait “TjfieldsFilterField”.
 
@@ -38,7 +38,7 @@ class [COMPONENT]Model[VIEW] extends JModelForm
 }
 ```
 
-####2) view.html.php file of view (view.html.php of product form view)
+#### 2) view.html.php file of view (view.html.php of product form view)
 
 In view.html.php file you need to get the object of form of custom(Extra) fields created in TJ-Fields so that they can be displayed in the client view.
 
@@ -56,13 +56,15 @@ The function **getFormExtra()** will return the JForm object of extra fields.
 
 Parameter to be passed to the function **getFormExtra()**
 
-1) $data (Array)
+1. $data (Array)
 
+```php
 $data["category"] => // category of content
 $data["clientComponent"] => // component name
 $data["client"] => //[COMPONENT_NAME].[VIEW_NAME]
 $data["view"] => [VIEW_NAME]
 $data["layout"] => // Layout name
+```
 
 **Example**
 
@@ -81,7 +83,7 @@ $this->form_extra = $Quick2cartModelProduct->getFormExtra(
 
 $this->form_extra = array_filter($this->form_extra);
 ```
-####3) Layout file of view
+#### 3) Layout file of view
 
 You need to add the layout file named **default_extrafields.php** in the **tmpl** folder of the view
 
@@ -221,7 +223,7 @@ else
 }
 ```
 
-####4) Model file of client (Form/View)
+#### 4) Model file of client (Form/View)
 
 Till now we have rendered the custom(Extra) fields in the client form and now we will add the code to save the data of custom(Extra) fields in TJ-Fields tables. (Store prodcut's attribute values)
 
@@ -233,7 +235,7 @@ Add the line given below in the save() function of model file of client to save 
 
 Parameter to be passed to the function **saveExtraFields()**
 
-1) $data (Array)
+1. $data (Array)
 
 ```php
 	Array
@@ -253,7 +255,7 @@ Parameter to be passed to the function **saveExtraFields()**
   )
 ```
 
-####5) Model file of client (Form/View)
+#### 5) Model file of client (Form/View)
 
 We are done with storing the data of custom fields, now we need to add the code to delete the data of custom fields when the parent record for the extra data is deleted. (When we delete the product we need to delete the extra fields data associalted with the product from the TJ-Fields tables)
 
@@ -265,10 +267,10 @@ $this->deleteExtraFieldsData($content_id, $client);
 
 Parameters to be passed to the function **deleteExtraFieldsData()**
 
-1) $content_id (Int) e.g Product Id
-2) $client (String) e.g com_quick2cart.product
+1. $content_id (Int) e.g Product Id
+2. $client (String) e.g com_quick2cart.product
 
-####6) Model file of client (Form/View)
+#### 6) Model file of client (Form/View)
 
 If you want to use the **TJ-Fields Filter Module** to filter out the content of the client then you need to add the code given below
 
