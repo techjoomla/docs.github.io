@@ -13,7 +13,7 @@ nav_ordering: 1
 showSidebar: true
 published: true
 pageTitle: "Field manager for Joomla (TJ-Fields)"
-permalink: tj-ucm/com-tjfields-introduction.html
+permalink: tj-fields/com-tjfields-introduction.html
 ---
 
 TJ-Fields is a horizontal extension used to extend the existing forms (Adding custom fields) of any client component.

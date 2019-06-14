@@ -13,7 +13,7 @@ nav_ordering: 1
 showSidebar: true
 published: true
 pageTitle: "Add new field Type "
-permalink: tj-ucm/com-tjfields-add-new-field-type.html
+permalink: tj-fields/com-tjfields-add-new-field-type.html
 ---
 
 ## How to add new field type?
