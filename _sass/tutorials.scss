@@ -80,7 +80,7 @@
 		display: none;
 		padding: 0 20px 0 0;
 		position: absolute;
-    top: 85px;
+    	top: 85px;
 		width: 200px;
 
 		@media #{$mid-point} {
@@ -399,6 +399,7 @@
   -webkit-transition: color 0.2s;
   font-size: 12px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .tag::before {
