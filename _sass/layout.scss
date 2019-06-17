@@ -51,32 +51,34 @@ dt, h2 {
 }
 .sidebar{
 	position:fixed;
-	width:300px;
-	background: #808080;
-    background: -webkit-linear-gradient(to bottom, #3fada8, #808080);
-    background: linear-gradient(to bottom, #3fada8, #808080);
-    padding: 15px;
-    box-sizing:border-box;
-    overflow-y: auto;
-    overflow-x: hidden;
-    height:100vh;
-    
-    .logo{
-		text-align:center;
-    }
-    a{
+	width:330px;
+	background: #3fada8;
+	background: -webkit-linear-gradient(to bottom, #3fada8, #0b7772);
+	background: linear-gradient(to bottom, #3fada8, #0b7772);
+	padding: 20px 10px 20px 20px;
+	box-sizing: border-box;
+	overflow-y: auto;
+	overflow-x: hidden;
+	height:100vh;
+	box-shadow: 2px 0px 2px #eee;
+	border-right: 1px solid #ccc;
+	.logo {
+			text-align: center;
+			margin: 0 0 30px 0;
+	}
+	a {
 		color:#fff;
 		text-decoration:none;
 		font-weight:600;
-    }
-    .panel{
+  	}
+	.panel{
 		display:none;
 		overflow: hidden;
 		padding: 0 10px;
 		border-left: 1px solid #ddd;
-		margin-left: 5px;
-    }
-    ul {
+		margin: 0 !important;
+	}
+  	ul {
 		list-style:none;
 		margin:0;
 		padding:0;
@@ -86,30 +88,34 @@ dt, h2 {
 			a{
 				font-weight:600;
 				font-size: 0.9em;
-				white-space:nowrap;	
-				max-width: 80%;
 				overflow: hidden;
 				text-overflow: ellipsis;
 				display: block;
 			}
 		}
-		li.active a{
+		li.active a {
 			color:#ddd;
 		}
-    }
-    span , i{
-		font-size: 1.1em;
+  	}
+  	span , i {
+		font-size: 1em;
 		color:#fff;
 		font-weight:600;
 		display:inline-block;
 		padding:5px 0;
 		cursor:pointer;
 		margin: 0 10px 0 0;
-		
-    }
-    span{
-		display:block;
-    }
+	  }
+	.heading-title {
+		width: calc(100% - 50px);
+		max-width: calc(100% - 50px);
+		display: inline-block;
+		text-overflow: ellipsis;
+	}
+	.heading {
+		display: flex;
+		align-items: center;
+	}
 }
 .category-module {
 	margin: 0;
@@ -127,7 +133,7 @@ dt, h2 {
     overflow-y: scroll;
     overflow-x: hidden;
     height: 100%;
-    left: 300px;
+    left: 330px;
     padding:15px 0;
     section {
 		padding:10px 30px;
@@ -139,18 +145,28 @@ dt, h2 {
 .home-link{
 	margin-bottom:10px;
 }
-a i.material-icons{vertical-align: sub;}
-.pull-right{float:right;}
-.accordion:after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-    color: #fff;
-    float: right;
-    margin-left: 5px;
+a i.material-icons{
+	vertical-align: sub;
 }
-
-.accordion.active:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
+.pull-right {
+	float:right;
+}
+.accordion {
+	.material-icons {
+		font-size: 30px;
+		margin: 0;
+	}
+	.up {
+		display: none;
+	}
+	&.active {
+		.up {
+			display: inline-block;
+		}
+		.down {
+			display: none;
+		}
+	}
 }
 .post-meta
 {

@@ -1,5 +1,5 @@
 ---
-date: 2018--09-06
+date: 2018-09-06
 title: Integrating TJ Vendors with a CPG Plugin
 description: REST API framework for Joomla
 categories:
@@ -12,8 +12,9 @@ nav_ordering: 1
 showSidebar: true
 published: true
 pageTitle: "Integrating TJ Vendors with a CPG Plugin"
-permalink: tjvendor/payment-plugin-integration.html
+permalink: tj-vendor/payment-plugin-integration.html
 ---
+
 Integrating payment plugins with TJ Vendor will allow each vendor to configure their payment information which will be used for receiving payments. The vendor can add/edit his payment information from the vendor edit page. 
 
 ## Supporting vendor specific payment configuration

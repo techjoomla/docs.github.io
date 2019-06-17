@@ -11,9 +11,10 @@
 header {
 	padding: 16px 0 10px 0;
 	color: #fff;
-    background: #808080;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #3fada8, #808080);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #3fada8, #808080); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #3fada8;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #3fada8, #0b7772);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #3fada8, #0b7772); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	box-shadow: 6px 3px 3px #ccc;
 
 	form {
 		position: relative;
@@ -51,7 +52,7 @@ header {
 	nav {
 		@media #{$mid-point} {
 			flex: 1;
-			margin: 0 0 0 10px;
+			margin: 0 0 0 50px;
 			display: block;
 
 			form {
@@ -90,7 +91,8 @@ header {
 				display: inline-block;
 				padding: 7px 0;
 				margin: 0 15px;
-				border-bottom: 2px solid rgba(255, 255, 255, 0)
+				border-bottom: 2px solid rgba(255, 255, 255, 0);
+				font-weight: 600;
 			}
 
 			&.active, &.active:hover {
@@ -130,7 +132,7 @@ header {
 	display: none;
 	text-align: center;
 	flex: 0 0 100%;
-	padding: 60px 0 30px 0;
+	padding: 100px 0 60px 0;
 
 	form {
 		position: relative;
@@ -139,7 +141,7 @@ header {
 		padding: 20px 0;
 
 		svg {
-			fill: #eee;
+			fill: #aaa;
 			position: absolute;
 			top: 31px;
 			right: 12px;
