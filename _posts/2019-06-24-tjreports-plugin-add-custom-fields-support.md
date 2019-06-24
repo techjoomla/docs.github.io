@@ -19,9 +19,9 @@ permalink: tj-reports/tjreports-plugin-add-custom-fields-support.html
 
 - [A. Background](#a-background)
   - [Core TJReports plugins to index data created using com_fields](#core-tjreports-plugins-to-index-data-created-using-com_fields)
-- [B. Which all com_fields's field types are support in TJReports?](#b-which-all-com_fieldss-field-types-are-support-in-tjreports)
+- [B. Which all com_fields's field types are supported in TJReports?](#b-which-all-com_fieldss-field-types-are-support-in-tjreports)
   - [Database table used for this (indexed data)](#database-table-used-for-this-indexed-data)
-- [C. How to add user fields to any report?](#c-how-to-add-user-fields-to-any-report)
+- [C. How to add user fields to any tjreports plugin?](#c-how-to-add-user-fields-to-any-tjreports-plugin)
   - [Steps](#steps)
     - [Step 1: Setup custom fields columns](#step-1-setup-custom-fields-columns)
     - [Step 2: Setup custom fields filters](#step-2-setup-custom-fields-filters)
@@ -41,7 +41,7 @@ TJReport has plugins that let you index the custom fields data created using Joo
 *In case of if you are using com_fields for com_users context table name will be as
 `#__tjreports_context` = `#__tjreports_com_users_user`
 
-### B. Which all com_fields's field types are support in TJReports?
+### B. Which all com_fields's field types are supported in TJReports?
 
 | com_field field type  | tjreport indexer table column type | how / what indexer stores values for this | what type of filter in tjreports used for this |
 | ------------- | ------------- | ------------- | ------------- |
@@ -69,7 +69,7 @@ TJReport has plugins that let you index the custom fields data created using Joo
 * Column which is needed here in this example is
   * `record_id` *int (11)*
 
-### C. How to add user fields to any report?
+### C. How to add user fields to any tjreports plugin?
 
 Below are steps for adding those user fields data columns into an existing report.
 Eg: For a plugin named `mytjreportplugin`, open plugin entry file `mytjreportplugin.php`
@@ -156,7 +156,7 @@ public function displayFilters()
 
 	// Joomla fields integration
 	// Call parent function to set filters for custom fields
-	$this->setCustomFieldsDisplayFilters($dispFilters);
+	parent::setCustomFieldsDisplayFilters($dispFilters);
 
 	return $dispFilters;
 }
