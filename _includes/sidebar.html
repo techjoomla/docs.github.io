@@ -1,22 +1,27 @@
 <section class="sidebar">
-	<div class="logo"><a href="https://techjoomla.com" target="_blank">{% include logo.html %}</a> </div>
+	<div class="logo"><a href="https://techjoomla.com" target="_blank">{% include logo.html %}</a></div>
 	<div class="home-link"><a href="/"><i class="material-icons">home</i> Docs Homepage</a></div>
 	{% assign categories = site.categories | sort %}
 	{% for category in categories %}
 		{% assign name = category[0] %}
 		{% assign posts = category[1] %}
 		{% assign size = posts | size %}
-		<div class = 'category-module {% if name == page.categories[0] %}active{% endif %}'>
-			<span class="heading accordion {% if name == page.categories[0] %}active{% endif %}" >{{ name | replace: "-", " " }}</span>
+		<div class ="category-module {% if name == page.categories[0] %}active{% endif %}">
+			<h5 class="heading accordion {% if name == page.categories[0] %}active{% endif %}">
+				<span class="heading-title">{{name | replace: "-", " "}}</span>
+				<i class="material-icons up">keyboard_arrow_up</i>
+				<i class="material-icons down">keyboard_arrow_down</i>
+				
+			</h5>
 			<ul class="panel">
 				{% assign tutorials = posts | sort: "nav_ordering" %}
 				{% for tutorial in tutorials  %}
 					{% if tutorial.showSidebar %}
-					{% if tutorial.published %}
-					<li {% if tutorial.url == page.url %}class="active"{% endif %}>
-						<a href="{{ site.baseurl }}{{ tutorial.url }}">{{ tutorial.title }}</a>
-					</li>
-					{% endif %}
+						{% if tutorial.published %}
+						<li {% if tutorial.url == page.url %}class="active"{% endif %}>
+							<a href="{{site.baseurl}}{{ tutorial.url }}">{{ tutorial.title }}</a>
+						</li>
+						{% endif %}
 					{% endif %}
 				{% endfor %}
 			</ul>
