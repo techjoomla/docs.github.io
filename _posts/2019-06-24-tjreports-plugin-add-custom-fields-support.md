@@ -156,7 +156,10 @@ public function displayFilters()
 
 	// Joomla fields integration
 	// Call parent function to set filters for custom fields
-	parent::setCustomFieldsDisplayFilters($dispFilters);
+	if (method_exists(get_parent_class($this), 'setCustomFieldsDisplayFilters'))
+	{
+		parent::setCustomFieldsDisplayFilters($dispFilters);
+	}
 
 	return $dispFilters;
 }
