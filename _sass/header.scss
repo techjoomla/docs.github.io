@@ -10,11 +10,11 @@
 
 header {
 	padding: 16px 0 10px 0;
-	color: #fff;
-    background: #3fada8;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #3fada8, #0b7772);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #3fada8, #0b7772); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	box-shadow: 6px 3px 3px #ccc;
+	color: #444;
+  background: #ccc;
+  background: -webkit-linear-gradient(to right, #fbf8f8, #ECE9E6);
+  background: linear-gradient(to right, #fbf8f8, #ccc);
+	box-shadow: 3px 2px 2px #bbb;
 
 	form {
 		position: relative;
@@ -26,21 +26,39 @@ header {
 	}
 
 	.top-bar {
-		@media #{$mid-point} {
-			display: flex;
-		}
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
 
 		.logo {
+			display: inline-block;
 			a {
 				display: block;
 				line-height: 0;
+				img {
+					height: 50px;
+					@media #{$mid-point} {
+						height: 80px;
+					}
+				}
 			}
 
-			svg {
+		svg {
 				fill: #fff;
 				width: 100%;
 				height: 46px;
 				min-width: 100px;
+			}
+		}
+
+	.nav-toggle {
+			font-size: 1.6em;
+			line-height: 1em;
+			text-decoration: none;
+			color: #444;
+			margin-left: auto;
+			@media #{$mid-point} {
+				display: none;
 			}
 		}
 
@@ -51,8 +69,7 @@ header {
 
 	nav {
 		@media #{$mid-point} {
-			flex: 1;
-			margin: 0 0 0 50px;
+			margin: 0 0 0 auto;
 			display: block;
 
 			form {
@@ -82,7 +99,7 @@ header {
 		}
 
 		a {
-			color: #fff;
+			color: #333;
 			text-decoration: none;
 			display: block;
 			padding: 20px 0;
@@ -91,20 +108,17 @@ header {
 				display: inline-block;
 				padding: 7px 0;
 				margin: 0 15px;
-				border-bottom: 2px solid rgba(255, 255, 255, 0);
+				border-bottom: 2px solid transparent;
 				font-weight: 600;
 			}
 
 			&.active, &.active:hover {
-				border-bottom-color: rgba(255, 255, 255, .3);
+				border-bottom-color: #888;
 			}
 
 			&:hover {
 				text-decoration: none;
-				color: #fff;
-				@media #{$mid-point} {
-					border-bottom-color: rgba(255, 255, 255, .1);
-				}
+				color: #444;
 			}
 		}
 	}
@@ -112,20 +126,8 @@ header {
 
 .nav-open header nav {
 	display: block;
-}
-
-.nav-toggle {
-	position: absolute;
-	right: 25px;
-	font-size: 1.6em;
-	line-height: 1em;
-	text-decoration: none;
-	color: #fff;
-	top: 4px;
-
-	@media #{$mid-point} {
-		display: none;
-	}
+	width: 100%;
+	text-align: right;
 }
 
 .hero_search {
@@ -153,8 +155,7 @@ header {
 	}
 
 	h1 {
-		// font-size: 2.4em;
-		color: #fff;
+		color: #333;
 	}
 
 	input[type=search] {
