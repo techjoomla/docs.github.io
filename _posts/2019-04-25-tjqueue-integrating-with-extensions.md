@@ -60,7 +60,7 @@ jimport('tjqueue.tjqueueproduce', JPATH_SITE . '/media');
 $TJQueueProduce = new TJQueueProduce;
 
 // Set message body - This can be any data
-$messageBody = "This is message"
+$messageBody = "This is message";
 $TJQueueProduce->message->setBody($messageBody);
 
 // Push the message to queue
