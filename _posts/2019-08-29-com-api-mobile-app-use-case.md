@@ -78,7 +78,7 @@ If credentials are correct, you will get a response, which looks like
 "auth": "c8b16517a0a21c446f1ee9980944cd7e"
 ```
 
- - 3.0 Now for subsequent API calls you can pass this auth key in the header and still access APIs without passing username and password.
+ - 3.0 Now, for subsequent API calls you can pass this auth key in the header and still access APIs without passing username and password.
 
 
 *Example:*
@@ -131,3 +131,5 @@ If you set up SEF, and have created menu for com_api (with `api` as alias), you 
 ```
 {{host}}/api/users/user/619
 ```
+
+As described in step 3.0, you can call the APIs you have built from the app and use those.
