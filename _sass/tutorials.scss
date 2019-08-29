@@ -12,6 +12,7 @@
 	justify-content:flex-start;
 	align-items:stretch;
 	font-size: .9em;
+	padding: 20px;
 
 	h3 {
 		font-size: 2.75rem;
@@ -61,8 +62,8 @@
 				text-decoration: none;
 				svg {
 					fill: $link-hover-color;
-					width: 30px;
-					height: 30px;
+					width: 26px;
+					height: 26px;
 				}
 			}
 		}
@@ -142,7 +143,7 @@
 
 	h3 {
 		margin: 0;
-		font-size: 1.3em;
+		font-size: 16px;
 	}
 
 	a {
@@ -164,8 +165,8 @@
 			align-items: center;
 			padding: 0 5px 0 0;
 			svg {
-				width: 35px;
-				height: 35px;
+				width: 30px;
+				height: 30px;
 				fill: $link-color;
 				-webkit-transition: all .2s ease;
 				margin: 0 auto;
@@ -386,7 +387,7 @@
 
 }
 .tag {
-  background: #43C6AC;
+  background: #666;
   border-radius: 3px 0 0 3px;
   color: #fff;
   display: inline-block;
@@ -415,10 +416,10 @@
 }
 
 .tag::after {
-  background: #fff;
-  border-bottom: 11px solid transparent;
-  border-left: 10px solid #43C6AC;
-  border-top: 11px solid transparent;
+  background: #666;
+  border-bottom: 11px solid #fff;
+  border-left: 10px solid #666;
+  border-top: 11px solid #fff;
   content: '';
   position: absolute;
   right: 0;
@@ -426,12 +427,12 @@
 }
 
 .tag:hover {
-  background-color: #191654;
+  background-color: #999;
   color: white;
 }
 
 .tag:hover::after {
-   border-left-color: #191654; 
+   border-left-color: #999; 
 }
 .underline{
 	text-decoration:underline;
