@@ -53,8 +53,8 @@ e.g ['foo', 'bar'] or {foo:"Something"} or Hello world etc.
 
 ```php
 <?php
-use Media\TJQueue\TJQueueProduce;
-jimport('tjqueue.tjqueueproduce', JPATH_SITE . '/media');
+use TJQueue\Admin\TJQueueProduce;
+jimport('tjqueueproduce', JPATH_SITE . '/administrator/components/com_tjqueue/libraries');
 
 // Create object of message produce class
 $TJQueueProduce = new TJQueueProduce;
@@ -69,8 +69,8 @@ $TJQueueProduce->produce();
 ### Property
 ```php
 <?php
-use Media\TJQueue\TJQueueProduce;
-jimport('tjqueue.tjqueueproduce', JPATH_SITE . '/media');
+use TJQueue\Admin\TJQueueProduce;
+jimport('tjqueueproduce', JPATH_SITE . '/administrator/components/com_tjqueue/libraries');
 
 // Create object of message produce class
 $TJQueueProduce = new TJQueueProduce;
@@ -87,8 +87,8 @@ Some brokers may not support it from scratch.
 
 ```php
 <?php
-use Media\TJQueue\TJQueueProduce;
-jimport('tjqueue.tjqueueproduce', JPATH_SITE . '/media');
+use TJQueue\Admin\TJQueueProduce;
+jimport('tjqueueproduce', JPATH_SITE . '/administrator/components/com_tjqueue/libraries');
 
 // Create object of message produce class
 $TJQueueProduce = new TJQueueProduce;
@@ -106,8 +106,8 @@ For example, it makes sense to send a forgot password email within the first few
 
 ```php
 <?php
-use Media\TJQueue\TJQueueProduce;
-jimport('tjqueue.tjqueueproduce', JPATH_SITE . '/media');
+use TJQueue\Admin\TJQueueProduce;
+jimport('tjqueueproduce', JPATH_SITE . '/administrator/components/com_tjqueue/libraries');
 
 // Create object of message produce class
 $TJQueueProduce = new TJQueueProduce;
@@ -130,8 +130,8 @@ Client defines five priority constants:
 
 ```php
 <?php
-use Media\TJQueue\TJQueueProduce;
-jimport('tjqueue.tjqueueproduce', JPATH_SITE . '/media');
+use TJQueue\Admin\TJQueueProduce;
+jimport('tjqueueproduce', JPATH_SITE . '/administrator/components/com_tjqueue/libraries');
 
 // Create object of message produce class
 $TJQueueProduce = new TJQueueProduce;
@@ -149,8 +149,8 @@ If you do not like what Client set you can always set custom values:
  
 ```php
 <?php
-use Media\TJQueue\TJQueueProduce;
-jimport('tjqueue.tjqueueproduce', JPATH_SITE . '/media');
+use TJQueue\Admin\TJQueueProduce;
+jimport('tjqueueproduce', JPATH_SITE . '/administrator/components/com_tjqueue/libraries');
 
 // Create object of message produce class
 $TJQueueProduce = new TJQueueProduce;
