@@ -30,8 +30,6 @@ permalink: tj-ucm/com-tjucm-introduction.html
 
 ---
 
-
-
 Universal Content Manager (UCM) is an application built on top of TJ-Fields.   
 Using UCM, users you can easily create fully customizable forms (content/UCM Type) in Joomla.
 
@@ -40,8 +38,7 @@ Using UCM, users you can easily create fully customizable forms (content/UCM Typ
 
 
 #### 1) UCM Type 
-
-Backend Users can create a UCM type.   
+Bakend Users can create a UCM type.   
 To create new type select the component "TJ-UCM" and click on "New" button of UCM-Types List view.   
 The form has fields as follows:   
 - **Title:** Give a title for UCM type.   
@@ -56,32 +53,24 @@ The form has fields as follows:
 
 
 #### 2) Is Subform
-
 If “Is subform” is set to Yes while creating type then the UCM type can be used as a subform in another UCM type.  
 
 #### 3)Allow draft save
-
 Especially useful for lengthy forms, this feature allows saving form data in “draft” status. The record can be moved in the published state only after the form gets saved.  
 Backend Users can configure their created form (content/UCM Type) to allow users to save the filled form in draft mode i.e the user can partially fill the form and complete as per their convenience.  
 When UCM type is not a subform you can configure this feature. The behaviour of the subform type is the same as its main type. So no need to configure this feature for subform.  
 To configure this feature, Backend Users must set “Allow AutoSave=>No” while creating type from Backend Users. Then set “Allow Draft Save=>Yes” and Save the Type.
 
-
 #### 4) Allow Autosave
-
 This configuration of UCM Type allows using Ajax-based autosave of form which will autosave the form data in draft mode when a user changes the value of any of the fields on the form.  
 This ensures that the user does not lose the changes done if the form is accidentally closed or any other issue occurs while filling the form.  
 To configure this feature, you have to set “Allow AutoSave=>Yes” while creating type from Backend.  
 
-
 #### 5) Enable timely autosave?
-
 It is functionality to auto save the form after a field value gets changed after a time interval which can be set by the Backend Users as per need.   
 Backend Users have to enable this option while creating type. When it is enabled, add time interval in seconds.   
 
-
 #### 6) Custom field UCM Subform
-
 UCM subform is similar to subform.   
 To create UCM subform:   
  a) Create a new type and set “Is subform” to Yes eg. Type2  
@@ -97,11 +86,9 @@ To create UCM subform:
  b)If the fields in subform repeatable table layout are mandatory fields and not filled then the user gets blank error.   
 
 #### 7) Flexibility to use different layouts
-
 Backend users can create different form layouts for different UCM Types and configure the UCM Type to use those layouts
 
 #### 8) UCM Type and Field permissions
-
 Backend users can control the access of UCM Types and Fields in them to show/hide UCM Types and Fields from users of different user groups.  
 Following are the permission which users can use.
 
@@ -121,7 +108,6 @@ Following are the permission which users can use.
 
 
 #### 9) Category for UCM Items
-
 Backend Users can create different categories for a UCM Type and store the items of the UCM Type against them.  
 Eg. Consider a company has created a form to collect data of aspirants to join the company in different departments (Accounts, Testing, Development etc), The form for collecting the data will be same which will collect the same type of data but for different departments. In this case you can create UCM Type categories as "Accounts", "Testing", "Development" and add "UCM-Category" field in the form which will help in storing the data of people applying for different departments.
 
@@ -142,7 +128,6 @@ On the Backend, there is import and export buttons in the toolbar.
 ### Features for Frontend Users 
 
 #### 1) Frontend Views
-
 UCM provides three views on site.   
   **1) Form View**   
      A form is displayed with custom fields created for a particular type.   
@@ -158,28 +143,21 @@ UCM provides three views on site.
      Edit and delete actions are provided on detail view.  
 
 #### 2) Save As Draft
-
 Especially useful for lengthy forms, this feature allows saving form data in “draft” status. The record can be moved in the published state only after the form gets saved.   
 On Form view users can see the button “Save as Draft”.
 The form will be saved as draft when users click on the button.
 
-
 #### 3) Autosave
-
 This config of UCM Type allows using Ajax-based autosave of form which will autosave the form data in draft mode when a user changes the value of any of the fields on the form.
 This ensures that the user does not lose the changes done if the form is accidentally closed or any other issue occurs while filling the form.   
 On Form view, the form data will be saved in draft mode when an end-user changes the value of any of the fields on the form.
 
-
 #### 4) Enable timely autosave?
-
 It is functionality to auto save the form after a field value gets changed after a time interval which can be set by the Backend Users as per need.  
 Backend Users has to enable this option while creating type. When it is enabled, add time in seconds.   
 On form view, check the form gets auto saved after given time interval.  
 
-
 #### 5) UCM Subform and Subforms
-
 A type can have a subform field which will load another UCM type in a subform.   
 The subform field can also be repeatable, so multiple sub-records can be added.   
 On Form view, users can see a plus button or table with button set as below.   
@@ -188,10 +166,8 @@ On Form view, users can see a plus button or table with button set as below.
 
 
 #### 6) Copy To Other
-
-To make a copy of records from a UCM types to same/different UCM type, end-user can use this feature. In Joomla, on the Backend Users, there is a “Save as Copy” button to copy only one record at a time on edit view. Similar to this, “Copy to other” feature can copy multiple records at a time.
-
-On List view, there is a button at the bottom of the list: Copy to Other
+To make a copy of records from a UCM types to same/different UCM type, end-user can use this feature. In Joomla, on the Backend Users, there is a “Save as Copy” button to copy only one record at a time on edit view. Similar to this, “Copy to other” feature can copy multiple records at a time.   
+On List view, there is a button at the bottom of the list: Copy to Other.   
 First users need to select records from the list and click on the “Copy to Other” button.  
 Select type in the pop-up displayed and click on “Process” and refresh the list.  
 Observe the created copy of selected record on the top of list.  
