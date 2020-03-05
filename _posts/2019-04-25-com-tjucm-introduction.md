@@ -23,29 +23,29 @@ Using UCM, users you can easily create fully customizable forms (content/UCM Typ
 
 #### 1)UCM Type 
 
-Backend Users can create  an ucm type.
+Backend Users can create an UCM type.
 To create new type click on “New”.
 
 The form contains fields as follows: 
-- **Title:** Give unique title for ucm type   
-- **Alias:** It is short piece of text that represent the title of certain items in a machine-friendly format   
-- **Description:** Give short description about ucm type   
+- **Title:** Give a title for UCM type   
+- **Alias:** It is an unique short piece of text that represent the title of certain items in a machine-friendly format   
+- **Description:** Give short description about UCM type   
 - **Is subform:** If the type is subform click on Yes   
-- **Allowed count:** It is count allowed to users to  add records   
+- **Allowed count:** It is the count of records a user is allowed to add in a given UCM type.   
 - **Allow draft save:** Allows user to save form as draft   
 - **Allow auto save:** Saves form automatically after a field value gets changed   
 - **Publish items by default:** If Yes, the records created gets published by default   
 - **Enable timely autosave?:** Saves form automatically after a field value gets changed after given time interval 
 
 #### 2)  Is Subform
-If “Is subform” is set ON while creating type then the ucm type can be used as subform in another type.   
+If “Is subform” is set ON while creating type then the UCM type can be used as subform in another type.   
 The auto save and draft save functionality is by default ON for subform UCM type.
 
 #### 3)Allow draft save
 Especially useful for lengthy forms, this feature allows saving form data in “draft” status. Form level field validations are bypassed in this case and users can come back later and complete the form.  The record can be moved in the published state only after all fields are valid.
 
 Backend Users can configure their created form (content/UCM Type) to allow users to save the filled form in draft mode i.e the user can partially fill the form and complete as per their convenience.  
-When ucm type is not a subform you can configure this feature. The behaviour of the subform type is the same as its main type. So no need to configure this feature for subform.
+When UCM type is not a subform you can configure this feature. The behaviour of the subform type is the same as its main type. So no need to configure this feature for subform.
 
 To configure this feature, Backend Users must set “Allow AutoSave=>No” while creating type from Backend Users.   
 Then set  “Allow Draft Save=>Yes” and Save the Type.
@@ -61,7 +61,7 @@ Backend Users have to enable this option while creating type. When it is enabled
 
 #### 6) Custom field UCM Subform
 UCM subform is similar to subform.
-To create ucm subform:   
+To create UCM subform:   
  a) Create  a new type and set “Is subform” to Yes eg. Type2    
  b) Now create a field subform in type1.   
  c) Select subform from the list   
@@ -125,7 +125,7 @@ UCM provides three views on site.
      Along with add button, two new buttons are added at the bottom of list view    
      There is an action button set of view, edit, delete actions on the list view for each record.   
   **3) Detail View**   
-     Detail  view shows  the details  of the submitted item against the UCM Type.  
+     Detail  view shows  the details of the submitted item against the UCM Type.  
      Edit and delete actions are provided on detail view.   
 
 #### 2)  Save As Draft
@@ -155,7 +155,7 @@ On Form view, users can see a plus button or table with button set as below.
 
 
 #### 6) Copy To Other
-To make a copy of records between two different ucm types/same ucm type, end user can use this feature.   
+To make a copy of records from an UCM types to same/different UCM type, end user can use this feature.   
 In Joomla, on the  Backend Users, there is a “Save as Copy” button to copy only one record at a time on edit view.   
 Similar to this, “Copy to other” feature can copy multiple records at a time.   
 On List view, there is a button at the bottom of the list: Copy to Other
