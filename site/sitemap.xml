@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
+     <loc>https://docs.techjoomla.com/</loc>
+     <lastmod>2020-04-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.techjoomla.com/hierarchy-management/hierarchy-manager-overview/</loc>
+     <lastmod>2020-04-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.techjoomla.com/joomla-rest-api/com-api-introduction/</loc>
+     <lastmod>2020-04-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.techjoomla.com/joomla-rest-api/com-api-plugin-development/</loc>
+     <lastmod>2020-04-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.techjoomla.com/joomla-rest-api/com-api-making-api-calls/</loc>
+     <lastmod>2020-04-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.techjoomla.com/joomla-rest-api/com-api-impersonation/</loc>
+     <lastmod>2020-04-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.techjoomla.com/joomla-rest-api/com-api-mobile-app-use-case/</loc>
+     <lastmod>2020-04-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.techjoomla.com/tnc-manager/tnc-manager-overview/</loc>
+     <lastmod>2020-04-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+</urlset>

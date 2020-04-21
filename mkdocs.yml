@@ -1,0 +1,113 @@
+# Project information
+site_name: Techjoomla Docs
+site_description: A documentation site for techjoomla extensions
+site_author: Techjoomla
+site_url: https://docs.techjoomla.com/
+
+# Repository
+repo_name: techjoomla.github.io
+repo_url: https://github.com/techjoomla/techjoomla.github.io
+edit_uri: ""
+
+# Copyright
+copyright: Copyright &copy; 2008 - 2020 Techjoomla
+
+# Configuration
+theme:
+  name: material
+
+  # 404 page
+  static_templates:
+    - 404.html
+
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: en
+  features:
+    - tabs
+    #- instant
+  palette:
+    primary: indigo
+    accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/images/techjoomla-favicon.ico
+  logo: assets/images/techjoomla-logo.png
+
+# Extras
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/techjoomla
+    - icon: fontawesome/brands/facebook
+      link: https://facebook.com/techjoomla
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/techjoomla
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/techjoomla
+
+# Google Analytics
+google_analytics:
+  - UA-XXXXXXXX-X
+  - auto
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.attr_list
+  - markdown.extensions.codehilite:
+      guess_lang: false
+      linenums: true
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  # - pymdownx.highlight:
+  #     linenums_style: pymdownx-inline
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+  # Page tree
+nav:
+  - Home: index.md
+  - Hierarchy Management:
+    - Overview: hierarchy-management/hierarchy-manager-overview.md
+  - Joomla Rest API:
+    - Introduction: joomla-rest-api/com-api-introduction.md
+    - Writing your own API Plugin: joomla-rest-api/com-api-plugin-development.md
+    - Making calls to API resources: joomla-rest-api/com-api-making-api-calls.md
+    - Impersonating another user: joomla-rest-api/com-api-impersonation.md
+    - Mobile App Use Case: joomla-rest-api/com-api-mobile-app-use-case.md
+  - Terms & Conditions Manager:
+    - T & C Manager Overview: tnc-manager/tnc-manager-overview.md
