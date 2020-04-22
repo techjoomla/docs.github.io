@@ -111,3 +111,20 @@ nav:
     - Mobile App Use Case: joomla-rest-api/com-api-mobile-app-use-case.md
   - Terms & Conditions Manager:
     - T & C Manager Overview: tnc-manager/tnc-manager-overview.md
+  - TJ Fields:
+    - Introduction: tj-fields/com-tjfields-introduction.md
+    - Integrating with extensions: tj-fields/com-tjfields-integrating-with-extensions.md
+    - Add new field Type: tj-fields/com-tjfields-add-new-field-type.md
+  - TJ Queue :
+    - Introduction: tj-queue/tjqueue-introduction.md
+    - Integrating with extensions: tj-queue/tjqueue-integrating-with-extensions.md
+  - TJ Reports :
+    - Introduction: tj-reports/tjreports-architecture-overview.md
+    - Integration guide: tj-reports/tjreports-integration-guide.md    
+    - Writing a report plugin: tj-reports/tjreports-write-report-plugin.md
+    - Reports with dyanamic columns: tj-reports/tjreports-reports-with-dynamic-columns.md    
+    - Custom fields (com_fields) support in TJReports plugins: tj-reports/tjreports-plugin-add-custom-fields-support.md
+  - TJ Vendors :
+    - Integrating TJ Vendors with CPG Plugin: tj-vendors/tjvendors-integrating-with-cpg-plugin.md  
+  - TJ UCM :
+    - Introduction: tj-ucm/com-tjucm-introduction.md
