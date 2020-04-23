@@ -11,23 +11,23 @@
         <meta name="description" content="A documentation site for techjoomla extensions">
       
       
-        <link rel="canonical" href="https://docs.techjoomla.com/">
+        <link rel="canonical" href="https://docs.techjoomla.com/tj-reports/tjreports-integration-guide/">
       
       
         <meta name="author" content="Techjoomla">
       
-      <link rel="shortcut icon" href="assets/images/techjoomla-favicon.ico">
+      <link rel="shortcut icon" href="../../assets/images/techjoomla-favicon.ico">
       <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.1">
     
     
       
-        <title>Techjoomla Docs</title>
+        <title>Integration Guide</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.a676eddb.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a676eddb.min.css">
       
-        <link rel="stylesheet" href="assets/stylesheets/palette.b302131d.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.b302131d.min.css">
       
       
         
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-mkdocs" class="md-skip">
+        <a href="#installing-the-default-instances" class="md-skip">
           Skip to content
         </a>
       
@@ -80,7 +80,7 @@
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="https://docs.techjoomla.com/" title="Techjoomla Docs" class="md-header-nav__button md-logo" aria-label="Techjoomla Docs">
       
-  <img src="assets/images/techjoomla-logo.png" alt="logo">
+  <img src="../../assets/images/techjoomla-logo.png" alt="logo">
 
     </a>
     <label class="md-header-nav__button md-icon" for="__drawer">
@@ -94,7 +94,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Home
+              Integration Guide
             
           </span>
         </div>
@@ -156,14 +156,16 @@
         
           
 
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href="." class="md-tabs__link md-tabs__link--active">
+      <a href="../.." class="md-tabs__link">
         Home
       </a>
     
@@ -175,7 +177,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="hierarchy-management/hierarchy-manager-overview/" class="md-tabs__link">
+        <a href="../../hierarchy-management/hierarchy-manager-overview/" class="md-tabs__link">
           Hierarchy Management
         </a>
       
@@ -188,7 +190,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="joomla-rest-api/com-api-introduction/" class="md-tabs__link">
+        <a href="../../joomla-rest-api/com-api-introduction/" class="md-tabs__link">
           Joomla Rest API
         </a>
       
@@ -201,7 +203,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="tnc-manager/tnc-manager-overview/" class="md-tabs__link">
+        <a href="../../tnc-manager/tnc-manager-overview/" class="md-tabs__link">
           Terms & Conditions Manager
         </a>
       
@@ -214,7 +216,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="tj-fields/com-tjfields-introduction/" class="md-tabs__link">
+        <a href="../../tj-fields/com-tjfields-introduction/" class="md-tabs__link">
           TJ Fields
         </a>
       
@@ -227,7 +229,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="tj-queue/tjqueue-introduction/" class="md-tabs__link">
+        <a href="../../tj-queue/tjqueue-introduction/" class="md-tabs__link">
           TJ Queue
         </a>
       
@@ -240,7 +242,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="tj-reports/tjreports-architecture-overview/" class="md-tabs__link">
+        <a href="../tjreports-architecture-overview/" class="md-tabs__link md-tabs__link--active">
           TJ Reports
         </a>
       
@@ -253,7 +255,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="tj-vendors/tjvendors-integrating-with-cpg-plugin/" class="md-tabs__link">
+        <a href="../../tj-vendors/tjvendors-integrating-with-cpg-plugin/" class="md-tabs__link">
           TJ Vendors
         </a>
       
@@ -266,7 +268,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="tj-ucm/com-tjucm-introduction/" class="md-tabs__link">
+        <a href="../../tj-ucm/com-tjucm-introduction/" class="md-tabs__link">
           TJ UCM
         </a>
       
@@ -290,7 +292,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="https://docs.techjoomla.com/" title="Techjoomla Docs" class="md-nav__button md-logo" aria-label="Techjoomla Docs">
       
-  <img src="assets/images/techjoomla-logo.png" alt="logo">
+  <img src="../../assets/images/techjoomla-logo.png" alt="logo">
 
     </a>
     Techjoomla Docs
@@ -315,60 +317,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Home
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
-        </span>
-      </label>
-    
-    <a href="." title="Home" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
       Home
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    Commands
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    Project layout
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -403,7 +356,7 @@
 
 
   <li class="md-nav__item">
-    <a href="hierarchy-management/hierarchy-manager-overview/" title="Overview" class="md-nav__link">
+    <a href="../../hierarchy-management/hierarchy-manager-overview/" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -445,7 +398,7 @@
 
 
   <li class="md-nav__item">
-    <a href="joomla-rest-api/com-api-introduction/" title="Introduction" class="md-nav__link">
+    <a href="../../joomla-rest-api/com-api-introduction/" title="Introduction" class="md-nav__link">
       Introduction
     </a>
   </li>
@@ -457,7 +410,7 @@
 
 
   <li class="md-nav__item">
-    <a href="joomla-rest-api/com-api-plugin-development/" title="Writing your own API Plugin" class="md-nav__link">
+    <a href="../../joomla-rest-api/com-api-plugin-development/" title="Writing your own API Plugin" class="md-nav__link">
       Writing your own API Plugin
     </a>
   </li>
@@ -469,7 +422,7 @@
 
 
   <li class="md-nav__item">
-    <a href="joomla-rest-api/com-api-making-api-calls/" title="Making calls to API resources" class="md-nav__link">
+    <a href="../../joomla-rest-api/com-api-making-api-calls/" title="Making calls to API resources" class="md-nav__link">
       Making calls to API resources
     </a>
   </li>
@@ -481,7 +434,7 @@
 
 
   <li class="md-nav__item">
-    <a href="joomla-rest-api/com-api-impersonation/" title="Impersonating another user" class="md-nav__link">
+    <a href="../../joomla-rest-api/com-api-impersonation/" title="Impersonating another user" class="md-nav__link">
       Impersonating another user
     </a>
   </li>
@@ -493,7 +446,7 @@
 
 
   <li class="md-nav__item">
-    <a href="joomla-rest-api/com-api-mobile-app-use-case/" title="Mobile App Use Case" class="md-nav__link">
+    <a href="../../joomla-rest-api/com-api-mobile-app-use-case/" title="Mobile App Use Case" class="md-nav__link">
       Mobile App Use Case
     </a>
   </li>
@@ -535,7 +488,7 @@
 
 
   <li class="md-nav__item">
-    <a href="tnc-manager/tnc-manager-overview/" title="T & C Manager Overview" class="md-nav__link">
+    <a href="../../tnc-manager/tnc-manager-overview/" title="T & C Manager Overview" class="md-nav__link">
       T & C Manager Overview
     </a>
   </li>
@@ -577,7 +530,7 @@
 
 
   <li class="md-nav__item">
-    <a href="tj-fields/com-tjfields-introduction/" title="Introduction" class="md-nav__link">
+    <a href="../../tj-fields/com-tjfields-introduction/" title="Introduction" class="md-nav__link">
       Introduction
     </a>
   </li>
@@ -589,7 +542,7 @@
 
 
   <li class="md-nav__item">
-    <a href="tj-fields/com-tjfields-integrating-with-extensions/" title="Integrating with extensions" class="md-nav__link">
+    <a href="../../tj-fields/com-tjfields-integrating-with-extensions/" title="Integrating with extensions" class="md-nav__link">
       Integrating with extensions
     </a>
   </li>
@@ -601,7 +554,7 @@
 
 
   <li class="md-nav__item">
-    <a href="tj-fields/com-tjfields-add-new-field-type/" title="Add new field Type" class="md-nav__link">
+    <a href="../../tj-fields/com-tjfields-add-new-field-type/" title="Add new field Type" class="md-nav__link">
       Add new field Type
     </a>
   </li>
@@ -643,7 +596,7 @@
 
 
   <li class="md-nav__item">
-    <a href="tj-queue/tjqueue-introduction/" title="Introduction" class="md-nav__link">
+    <a href="../../tj-queue/tjqueue-introduction/" title="Introduction" class="md-nav__link">
       Introduction
     </a>
   </li>
@@ -655,7 +608,7 @@
 
 
   <li class="md-nav__item">
-    <a href="tj-queue/tjqueue-integrating-with-extensions/" title="Integrating with extensions" class="md-nav__link">
+    <a href="../../tj-queue/tjqueue-integrating-with-extensions/" title="Integrating with extensions" class="md-nav__link">
       Integrating with extensions
     </a>
   </li>
@@ -670,10 +623,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
     
     <label class="md-nav__link" for="nav-7">
       TJ Reports
@@ -697,7 +652,7 @@
 
 
   <li class="md-nav__item">
-    <a href="tj-reports/tjreports-architecture-overview/" title="Introduction" class="md-nav__link">
+    <a href="../tjreports-architecture-overview/" title="Introduction" class="md-nav__link">
       Introduction
     </a>
   </li>
@@ -707,11 +662,63 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="tj-reports/tjreports-integration-guide/" title="Integration guide" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Integration guide
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Integration guide" class="md-nav__link md-nav__link--active">
       Integration guide
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-the-default-instances" class="md-nav__link">
+    Installing the default instances
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linking-to-tj-reports" class="md-nav__link">
+    Linking to TJ reports
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plugin-configuration-options-" class="md-nav__link">
+    Plugin configuration options -
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -721,7 +728,7 @@
 
 
   <li class="md-nav__item">
-    <a href="tj-reports/tjreports-write-report-plugin/" title="Writing a report plugin" class="md-nav__link">
+    <a href="../tjreports-write-report-plugin/" title="Writing a report plugin" class="md-nav__link">
       Writing a report plugin
     </a>
   </li>
@@ -733,7 +740,7 @@
 
 
   <li class="md-nav__item">
-    <a href="tj-reports/tjreports-reports-with-dynamic-columns/" title="Reports with dyanamic columns" class="md-nav__link">
+    <a href="../tjreports-reports-with-dynamic-columns/" title="Reports with dyanamic columns" class="md-nav__link">
       Reports with dyanamic columns
     </a>
   </li>
@@ -745,7 +752,7 @@
 
 
   <li class="md-nav__item">
-    <a href="tj-reports/tjreports-plugin-add-custom-fields-support/" title="Custom fields (com_fields) support in TJReports plugins" class="md-nav__link">
+    <a href="../tjreports-plugin-add-custom-fields-support/" title="Custom fields (com_fields) support in TJReports plugins" class="md-nav__link">
       Custom fields (com_fields) support in TJReports plugins
     </a>
   </li>
@@ -787,7 +794,7 @@
 
 
   <li class="md-nav__item">
-    <a href="tj-vendors/tjvendors-integrating-with-cpg-plugin/" title="Integrating TJ Vendors with CPG Plugin" class="md-nav__link">
+    <a href="../../tj-vendors/tjvendors-integrating-with-cpg-plugin/" title="Integrating TJ Vendors with CPG Plugin" class="md-nav__link">
       Integrating TJ Vendors with CPG Plugin
     </a>
   </li>
@@ -829,7 +836,7 @@
 
 
   <li class="md-nav__item">
-    <a href="tj-ucm/com-tjucm-introduction/" title="Introduction" class="md-nav__link">
+    <a href="../../tj-ucm/com-tjucm-introduction/" title="Introduction" class="md-nav__link">
       Introduction
     </a>
   </li>
@@ -854,8 +861,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon">
@@ -866,15 +871,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    Commands
+  <a href="#installing-the-default-instances" class="md-nav__link">
+    Installing the default instances
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    Project layout
+  <a href="#linking-to-tj-reports" class="md-nav__link">
+    Linking to TJ reports
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plugin-configuration-options-" class="md-nav__link">
+    Plugin configuration options -
   </a>
   
 </li>
@@ -895,25 +907,71 @@
                   
                 
                 
-                <h1 id="welcome-to-mkdocs">Welcome to MkDocs<a class="headerlink" href="#welcome-to-mkdocs" title="Permanent link">&para;</a></h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
-</ul>
-<h2 id="project-layout">Project layout<a class="headerlink" href="#project-layout" title="Permanent link">&para;</a></h2>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
+                  <h1>Integration guide</h1>
+                
+                <h2 id="installing-the-default-instances">Installing the default instances<a class="headerlink" href="#installing-the-default-instances" title="Permanent link">&para;</a></h2>
+<p>The reporting plugin only offers the code needed for the report. For the report to be usable, it needs to be configured. An extension developer who wishes to create default 'instances' for the plugins can do that by adding the below method in the installation script.</p>
+<p>In order to use plugin, after installation you need to enable that plugin and to add your plugin detail to table. Below is the code that will add new entry in the table for missing plugins.</p>
+<div class="highlight"><pre><span></span><code>JModelLegacy::addIncludePath(JPATH_ADMINISTRATOR . &#39;/components/com_tjreports/models&#39;);
+$model = JModelLegacy::getInstance(&#39;Reports&#39;, &#39;TjreportsModel&#39;);
+$installed = $model-&gt;addTjReportsPlugins();
 </code></pre></div>
-</td></tr></table>
+
+<p>If you are intalling plugin as a part of a package. You can call above method in postflight of package script. Above method requires some detail from your plugin so you must have below method that will return plugin detail.</p>
+<div class="highlight"><pre><span></span><code>public function getPluginDetail()
+{
+  $detail = array(&#39;client&#39; =&gt; &#39;com_example&#39;, &#39;title&#39; =&gt; JText::_(&#39;PLG_TJREPORTS_EXAMPLEREPORT_TITLE&#39;));
+
+  return $detail;
+}
+</code></pre></div>
+
+<p><code>$detail</code> array of above method should have following details -</p>
+<p>a) <code>client</code> - This is used for grouping of your plugins.</p>
+<p>b) <code>title</code> - This is the title of your plugin visible to users.</p>
+<h2 id="linking-to-tj-reports">Linking to TJ reports<a class="headerlink" href="#linking-to-tj-reports" title="Permanent link">&para;</a></h2>
+<p>Just like other infrastructure extensions, you can pass the client context to show reports related to your extension. For instance Shika uses <code>index.php?option=com_tjreports&amp;client=tjlms</code> for reports contextual to Shika LMS. The client is be specified when creating instances.</p>
+<p>When user passes client parameter in the url at backend, framework also fetches the menus added in the <code>addSubmenu</code> of the component you passed in the client parameter. </p>
+<p>Below is the default URL for your extension </p>
+<p><code>index.php?option=com_tjreports&amp;client=com_example&amp;task=reports.defaultReport</code></p>
+<p>This  will bring you to the first plugin of that client type. </p>
+<h2 id="plugin-configuration-options-">Plugin configuration options -<a class="headerlink" href="#plugin-configuration-options-" title="Permanent link">&para;</a></h2>
+<p>One can limit number of columns to show in the Report using plugin configuration. When you edit a plugin in tjreport you can load default params using <code>Load Default Params</code> . This data depends on the details you have mentioned in your plugin __constract. </p>
+<p>Below is the example JSON Data - </p>
+<div class="highlight"><pre><span></span><code>{
+    &quot;filter_order&quot;:&quot;name&quot;,
+    &quot;filter_order_Dir&quot;:&quot;ASC&quot;,
+    &quot;limit&quot;:&quot;20&quot;,
+    &quot;showHideColumns&quot;:[
+        &quot;attempt&quot;,  
+        &quot;name&quot;,  
+        &quot;username&quot;,  
+        &quot;usergroup&quot;,  
+        &quot;time_spent&quot;,  
+        &quot;lesson_status&quot;,  
+        &quot;score&quot;,  
+        &quot;last_accessed_on&quot;  
+    ],  
+    &quot;colToshow&quot;:{
+        &quot;attempt&quot;: true,
+        &quot;name&quot;:true,  
+        &quot;username&quot;:true,  
+        &quot;usergroup&quot;:false,  
+        &quot;time_spent&quot;:true,  
+        &quot;lesson_status&quot;:true,  
+        &quot;score&quot;:true,  
+        &quot;last_accessed_on&quot;:true  
+    }  
+} 
+</code></pre></div>
+
+<p>filter_order - Default filter column, can be any key of your $this-&gt;columns array</p>
+<p>filter_order_Dir - Default filter direction, can we ASC or DESC</p>
+<p>limit - Default limit of the results</p>
+<p>showHideColumns -  Which columns to show in show/hide dropdown. It must be a subset of colToshow(next option) </p>
+<p>colToshow - By default what columns to display. Key of this data are column names(keys of $this-&gt;columns array) and value can be true or false which decides whether it will be displayed by default or not. </p>
+                
+                  
                 
               
               
@@ -932,14 +990,28 @@ docs/
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
+          <a href="../tjreports-architecture-overview/" title="Introduction" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Introduction
+              </div>
+            </div>
+          </a>
         
-          <a href="hierarchy-management/hierarchy-manager-overview/" title="Overview" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+        
+          <a href="../tjreports-write-report-plugin/" title="Writing a report plugin" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Overview
+                Writing a report plugin
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -998,15 +1070,15 @@ docs/
       
     </div>
     
-      <script src="assets/javascripts/vendor.c51dfa35.min.js"></script>
-      <script src="assets/javascripts/bundle.eaaa3931.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../../assets/javascripts/vendor.c51dfa35.min.js"></script>
+      <script src="../../assets/javascripts/bundle.eaaa3931.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
-          base: ".",
+          base: "../..",
           features: ["tabs"],
           search: Object.assign({
-            worker: "assets/javascripts/worker/search.58d22e8e.min.js"
+            worker: "../../assets/javascripts/worker/search.58d22e8e.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

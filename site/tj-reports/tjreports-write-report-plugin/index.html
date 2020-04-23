@@ -11,23 +11,23 @@
         <meta name="description" content="A documentation site for techjoomla extensions">
       
       
-        <link rel="canonical" href="https://docs.techjoomla.com/">
+        <link rel="canonical" href="https://docs.techjoomla.com/tj-reports/tjreports-write-report-plugin/">
       
       
         <meta name="author" content="Techjoomla">
       
-      <link rel="shortcut icon" href="assets/images/techjoomla-favicon.ico">
+      <link rel="shortcut icon" href="../../assets/images/techjoomla-favicon.ico">
       <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.1">
     
     
       
-        <title>Techjoomla Docs</title>
+        <title>Writing a report plugin</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.a676eddb.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a676eddb.min.css">
       
-        <link rel="stylesheet" href="assets/stylesheets/palette.b302131d.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.b302131d.min.css">
       
       
         
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-mkdocs" class="md-skip">
+        <a href="#folder-structure" class="md-skip">
           Skip to content
         </a>
       
@@ -80,7 +80,7 @@
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="https://docs.techjoomla.com/" title="Techjoomla Docs" class="md-header-nav__button md-logo" aria-label="Techjoomla Docs">
       
-  <img src="assets/images/techjoomla-logo.png" alt="logo">
+  <img src="../../assets/images/techjoomla-logo.png" alt="logo">
 
     </a>
     <label class="md-header-nav__button md-icon" for="__drawer">
@@ -94,7 +94,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Home
+              Writing a report plugin
             
           </span>
         </div>
@@ -156,14 +156,16 @@
         
           
 
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href="." class="md-tabs__link md-tabs__link--active">
+      <a href="../.." class="md-tabs__link">
         Home
       </a>
     
@@ -175,7 +177,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="hierarchy-management/hierarchy-manager-overview/" class="md-tabs__link">
+        <a href="../../hierarchy-management/hierarchy-manager-overview/" class="md-tabs__link">
           Hierarchy Management
         </a>
       
@@ -188,7 +190,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="joomla-rest-api/com-api-introduction/" class="md-tabs__link">
+        <a href="../../joomla-rest-api/com-api-introduction/" class="md-tabs__link">
           Joomla Rest API
         </a>
       
@@ -201,7 +203,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="tnc-manager/tnc-manager-overview/" class="md-tabs__link">
+        <a href="../../tnc-manager/tnc-manager-overview/" class="md-tabs__link">
           Terms & Conditions Manager
         </a>
       
@@ -214,7 +216,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="tj-fields/com-tjfields-introduction/" class="md-tabs__link">
+        <a href="../../tj-fields/com-tjfields-introduction/" class="md-tabs__link">
           TJ Fields
         </a>
       
@@ -227,7 +229,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="tj-queue/tjqueue-introduction/" class="md-tabs__link">
+        <a href="../../tj-queue/tjqueue-introduction/" class="md-tabs__link">
           TJ Queue
         </a>
       
@@ -240,7 +242,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="tj-reports/tjreports-architecture-overview/" class="md-tabs__link">
+        <a href="../tjreports-architecture-overview/" class="md-tabs__link md-tabs__link--active">
           TJ Reports
         </a>
       
@@ -253,7 +255,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="tj-vendors/tjvendors-integrating-with-cpg-plugin/" class="md-tabs__link">
+        <a href="../../tj-vendors/tjvendors-integrating-with-cpg-plugin/" class="md-tabs__link">
           TJ Vendors
         </a>
       
@@ -266,7 +268,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="tj-ucm/com-tjucm-introduction/" class="md-tabs__link">
+        <a href="../../tj-ucm/com-tjucm-introduction/" class="md-tabs__link">
           TJ UCM
         </a>
       
@@ -290,7 +292,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="https://docs.techjoomla.com/" title="Techjoomla Docs" class="md-nav__button md-logo" aria-label="Techjoomla Docs">
       
-  <img src="assets/images/techjoomla-logo.png" alt="logo">
+  <img src="../../assets/images/techjoomla-logo.png" alt="logo">
 
     </a>
     Techjoomla Docs
@@ -315,60 +317,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Home
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
-        </span>
-      </label>
-    
-    <a href="." title="Home" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
       Home
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    Commands
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    Project layout
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -403,7 +356,7 @@
 
 
   <li class="md-nav__item">
-    <a href="hierarchy-management/hierarchy-manager-overview/" title="Overview" class="md-nav__link">
+    <a href="../../hierarchy-management/hierarchy-manager-overview/" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -445,7 +398,7 @@
 
 
   <li class="md-nav__item">
-    <a href="joomla-rest-api/com-api-introduction/" title="Introduction" class="md-nav__link">
+    <a href="../../joomla-rest-api/com-api-introduction/" title="Introduction" class="md-nav__link">
       Introduction
     </a>
   </li>
@@ -457,7 +410,7 @@
 
 
   <li class="md-nav__item">
-    <a href="joomla-rest-api/com-api-plugin-development/" title="Writing your own API Plugin" class="md-nav__link">
+    <a href="../../joomla-rest-api/com-api-plugin-development/" title="Writing your own API Plugin" class="md-nav__link">
       Writing your own API Plugin
     </a>
   </li>
@@ -469,7 +422,7 @@
 
 
   <li class="md-nav__item">
-    <a href="joomla-rest-api/com-api-making-api-calls/" title="Making calls to API resources" class="md-nav__link">
+    <a href="../../joomla-rest-api/com-api-making-api-calls/" title="Making calls to API resources" class="md-nav__link">
       Making calls to API resources
     </a>
   </li>
@@ -481,7 +434,7 @@
 
 
   <li class="md-nav__item">
-    <a href="joomla-rest-api/com-api-impersonation/" title="Impersonating another user" class="md-nav__link">
+    <a href="../../joomla-rest-api/com-api-impersonation/" title="Impersonating another user" class="md-nav__link">
       Impersonating another user
     </a>
   </li>
@@ -493,7 +446,7 @@
 
 
   <li class="md-nav__item">
-    <a href="joomla-rest-api/com-api-mobile-app-use-case/" title="Mobile App Use Case" class="md-nav__link">
+    <a href="../../joomla-rest-api/com-api-mobile-app-use-case/" title="Mobile App Use Case" class="md-nav__link">
       Mobile App Use Case
     </a>
   </li>
@@ -535,7 +488,7 @@
 
 
   <li class="md-nav__item">
-    <a href="tnc-manager/tnc-manager-overview/" title="T & C Manager Overview" class="md-nav__link">
+    <a href="../../tnc-manager/tnc-manager-overview/" title="T & C Manager Overview" class="md-nav__link">
       T & C Manager Overview
     </a>
   </li>
@@ -577,7 +530,7 @@
 
 
   <li class="md-nav__item">
-    <a href="tj-fields/com-tjfields-introduction/" title="Introduction" class="md-nav__link">
+    <a href="../../tj-fields/com-tjfields-introduction/" title="Introduction" class="md-nav__link">
       Introduction
     </a>
   </li>
@@ -589,7 +542,7 @@
 
 
   <li class="md-nav__item">
-    <a href="tj-fields/com-tjfields-integrating-with-extensions/" title="Integrating with extensions" class="md-nav__link">
+    <a href="../../tj-fields/com-tjfields-integrating-with-extensions/" title="Integrating with extensions" class="md-nav__link">
       Integrating with extensions
     </a>
   </li>
@@ -601,7 +554,7 @@
 
 
   <li class="md-nav__item">
-    <a href="tj-fields/com-tjfields-add-new-field-type/" title="Add new field Type" class="md-nav__link">
+    <a href="../../tj-fields/com-tjfields-add-new-field-type/" title="Add new field Type" class="md-nav__link">
       Add new field Type
     </a>
   </li>
@@ -643,7 +596,7 @@
 
 
   <li class="md-nav__item">
-    <a href="tj-queue/tjqueue-introduction/" title="Introduction" class="md-nav__link">
+    <a href="../../tj-queue/tjqueue-introduction/" title="Introduction" class="md-nav__link">
       Introduction
     </a>
   </li>
@@ -655,7 +608,7 @@
 
 
   <li class="md-nav__item">
-    <a href="tj-queue/tjqueue-integrating-with-extensions/" title="Integrating with extensions" class="md-nav__link">
+    <a href="../../tj-queue/tjqueue-integrating-with-extensions/" title="Integrating with extensions" class="md-nav__link">
       Integrating with extensions
     </a>
   </li>
@@ -670,10 +623,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
     
     <label class="md-nav__link" for="nav-7">
       TJ Reports
@@ -697,7 +652,7 @@
 
 
   <li class="md-nav__item">
-    <a href="tj-reports/tjreports-architecture-overview/" title="Introduction" class="md-nav__link">
+    <a href="../tjreports-architecture-overview/" title="Introduction" class="md-nav__link">
       Introduction
     </a>
   </li>
@@ -709,7 +664,7 @@
 
 
   <li class="md-nav__item">
-    <a href="tj-reports/tjreports-integration-guide/" title="Integration guide" class="md-nav__link">
+    <a href="../tjreports-integration-guide/" title="Integration guide" class="md-nav__link">
       Integration guide
     </a>
   </li>
@@ -719,11 +674,63 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="tj-reports/tjreports-write-report-plugin/" title="Writing a report plugin" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Writing a report plugin
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Writing a report plugin" class="md-nav__link md-nav__link--active">
       Writing a report plugin
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#folder-structure" class="md-nav__link">
+    Folder structure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manifest-file-examplereportxml" class="md-nav__link">
+    Manifest File (examplereport.xml)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-main-report-file-examplereportphp" class="md-nav__link">
+    The main report file (examplereport.php)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -733,7 +740,7 @@
 
 
   <li class="md-nav__item">
-    <a href="tj-reports/tjreports-reports-with-dynamic-columns/" title="Reports with dyanamic columns" class="md-nav__link">
+    <a href="../tjreports-reports-with-dynamic-columns/" title="Reports with dyanamic columns" class="md-nav__link">
       Reports with dyanamic columns
     </a>
   </li>
@@ -745,7 +752,7 @@
 
 
   <li class="md-nav__item">
-    <a href="tj-reports/tjreports-plugin-add-custom-fields-support/" title="Custom fields (com_fields) support in TJReports plugins" class="md-nav__link">
+    <a href="../tjreports-plugin-add-custom-fields-support/" title="Custom fields (com_fields) support in TJReports plugins" class="md-nav__link">
       Custom fields (com_fields) support in TJReports plugins
     </a>
   </li>
@@ -787,7 +794,7 @@
 
 
   <li class="md-nav__item">
-    <a href="tj-vendors/tjvendors-integrating-with-cpg-plugin/" title="Integrating TJ Vendors with CPG Plugin" class="md-nav__link">
+    <a href="../../tj-vendors/tjvendors-integrating-with-cpg-plugin/" title="Integrating TJ Vendors with CPG Plugin" class="md-nav__link">
       Integrating TJ Vendors with CPG Plugin
     </a>
   </li>
@@ -829,7 +836,7 @@
 
 
   <li class="md-nav__item">
-    <a href="tj-ucm/com-tjucm-introduction/" title="Introduction" class="md-nav__link">
+    <a href="../../tj-ucm/com-tjucm-introduction/" title="Introduction" class="md-nav__link">
       Introduction
     </a>
   </li>
@@ -854,8 +861,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon">
@@ -866,15 +871,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    Commands
+  <a href="#folder-structure" class="md-nav__link">
+    Folder structure
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    Project layout
+  <a href="#manifest-file-examplereportxml" class="md-nav__link">
+    Manifest File (examplereport.xml)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-main-report-file-examplereportphp" class="md-nav__link">
+    The main report file (examplereport.php)
   </a>
   
 </li>
@@ -895,25 +907,154 @@
                   
                 
                 
-                <h1 id="welcome-to-mkdocs">Welcome to MkDocs<a class="headerlink" href="#welcome-to-mkdocs" title="Permanent link">&para;</a></h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
+                  <h1>Writing a report plugin</h1>
+                
+                <p>The plugin type for TJ Reports plugins is <code>tjreports</code>.</p>
+<h2 id="folder-structure">Folder structure<a class="headerlink" href="#folder-structure" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
+<li>plugins/tjreports/examplereport/examplereport.xml</li>
+<li>plugins/tjreports/examplereport/examplereport.php</li>
+<li>plugins/tjreports/examplereport/language/en-GB/en-GB.plg_tjreports_examplereport.ini</li>
 </ul>
-<h2 id="project-layout">Project layout<a class="headerlink" href="#project-layout" title="Permanent link">&para;</a></h2>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
+<h2 id="manifest-file-examplereportxml">Manifest File (examplereport.xml)<a class="headerlink" href="#manifest-file-examplereportxml" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="nt">&lt;extension</span> <span class="na">version=</span><span class="s">&quot;3.1&quot;</span> <span class="na">type=</span><span class="s">&quot;plugin&quot;</span> <span class="na">group=</span><span class="s">&quot;tjreports&quot;</span> <span class="na">method=</span><span class="s">&quot;upgrade&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;name&gt;</span>PLG_TJREPORTS_EXAMPLEREPORT<span class="nt">&lt;/name&gt;</span>
+<span class="nt">&lt;author&gt;</span>Techjoomla<span class="nt">&lt;/author&gt;</span>
+<span class="nt">&lt;creationDate&gt;</span>17th June 2016<span class="nt">&lt;/creationDate&gt;</span>
+<span class="nt">&lt;copyright&gt;</span>(C)techjoomla.com<span class="nt">&lt;/copyright&gt;</span>
+<span class="nt">&lt;license&gt;</span>http://www.gnu.org/copyleft/gpl.html GNU/GPL<span class="nt">&lt;/license&gt;</span>
+<span class="nt">&lt;authorEmail&gt;</span>contact@techjoomla.com<span class="nt">&lt;/authorEmail&gt;</span>
+<span class="nt">&lt;authorUrl&gt;</span>www.techjoomla.com<span class="nt">&lt;/authorUrl&gt;</span>
+<span class="nt">&lt;version&gt;</span>1.0.0<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;description&gt;</span>PLG_TJREPORTS_EXAMPLEREPORT_DESC<span class="nt">&lt;/description&gt;</span>
+    <span class="nt">&lt;files&gt;</span>
+        <span class="nt">&lt;filename</span> <span class="na">plugin=</span><span class="s">&quot;examplereport&quot;</span><span class="nt">&gt;</span>examplereport.php<span class="nt">&lt;/filename&gt;</span>
+        <span class="nt">&lt;filename&gt;</span>index.html<span class="nt">&lt;/filename&gt;</span>
+        <span class="nt">&lt;folder&gt;</span>language<span class="nt">&lt;/folder&gt;</span>
+    <span class="nt">&lt;/files&gt;</span>
+<span class="nt">&lt;/extension&gt;</span>
 </code></pre></div>
-</td></tr></table>
+
+<h2 id="the-main-report-file-examplereportphp">The main report file (examplereport.php)<a class="headerlink" href="#the-main-report-file-examplereportphp" title="Permanent link">&para;</a></h2>
+<p>Create a file for plugin same as plugin name - <code>examplereport.php</code></p>
+<p>At the top of the file include TJReport Model</p>
+<p><code>JLoader::import('com_tjreports.models.reports', JPATH_SITE . '/components');</code></p>
+<p>Extend your plugin from TjreportsModelReports</p>
+<p><code>class TjreportsModelExamplereport extends TjreportsModelReports</code></p>
+<p>Default ordering column will be assigned to default_order</p>
+<p><code>protected $default_order = 'name';</code></p>
+<p>Default ordering direction will be assigned to default_order_dir</p>
+<p><code>protected $default_order_dir = 'ASC';</code></p>
+<p>All columns details must be added to $columns variable. <code>$columns</code> is an associative array and one of the main entity of report plugin. Key of this Array denotes the report header and  Value is an associative array which can have following detail as key value -</p>
+<p>a)<code>table_column</code> - is directly linked to table column. This is also used in framework for ordering. If you have complex column like having COUNT than you should leave its value blank</p>
+<p>b) <code>title</code> - Title will be displayed on header and on hideshow checkbox</p>
+<p>c) <code>disable_sorting</code> - Set to true of this column is not sortable by default all columns are sortable</p>
+<div class="highlight"><pre><span></span><code>public function __construct($config = array())
+{
+    $this-&gt;columns = array(
+        &#39;attempt&#39; =&gt; array(&#39;table_column&#39; =&gt; &#39;lt.attempt&#39;, &#39;title&#39; =&gt; &#39;COM_TJLMS_TITLE_ATTEMPTS&#39;),
+        &#39;usergroup&#39; =&gt; array(&#39;title&#39; =&gt; &#39;COM_TJLMS_REPORT_USERGROUP&#39;, &#39;disable_sorting&#39; =&gt; true),
+    );
+
+    parent::__construct($config);
+}
+</code></pre></div>
+
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Most important method of your plugin is <code>getListQuery</code>. You must have this method and this should return query for your report.</p>
+</div>
+<p>To utilize framework where and order by functionality you must call parent getListQuery method and then add your extra clauses in that query object. When you call parent method framework add where clauses as per the filters you have defined in <code>displayFilters</code> method(see below for more detail)</p>
+<p><code>$query = parent::getListQuery();</code></p>
+<div class="highlight"><pre><span></span><code>protected function getListQuery()
+{
+    $db        = $this-&gt;_db;
+
+    /* Create query instance by calling parents getListQuery */
+    $query     = parent::getListQuery();
+
+    $query-&gt;from($db-&gt;quoteName(&#39;#__tjlms_lesson_track&#39;, &#39;lt&#39;));
+
+    if (in_array(&#39;usergroup&#39;, $colToshow))
+    {
+        if (isset($filters[&#39;usergroup&#39;]) &amp;&amp; !empty($filters[&#39;usergroup&#39;]))
+        {
+            $subQuery = $db-&gt;getQuery(true);
+            $subQuery-&gt;select(&#39;ugm.user_id&#39;);
+            $subQuery-&gt;from($db-&gt;quoteName(&#39;#__user_usergroup_map&#39;) . &#39; as ugm&#39;);
+            $subQuery-&gt;where($db-&gt;quoteName(&#39;ugm.group_id&#39;) . &#39; = &#39; . (int) $filters[&#39;usergroup&#39;]);
+            $query-&gt;where(&#39;lt.user_id IN(&#39; . $subQuery . &#39;)&#39;);
+        }
+    }
+
+    return $query;
+}
+</code></pre></div>
+
+<p>One can get columns to show using below line. $colToshow is an array of all columns key that use has checked to display for ex - attempt. This should not be called inside constructor.</p>
+<p><code>$colToshow = (array) $this-&gt;getState('colToshow');</code></p>
+<p>One can get active filters using below line. $filters is an associative array with key as column name and value as selected value for the filter. This should not be called inside constructor.</p>
+<p><code>$filters = $this-&gt;getState('filters');</code></p>
+<p>If you want to add any styling you can add your styles in getStyles method</p>
+<div class="highlight"><pre><span></span><code>public function getStyles()
+{
+    return array(
+        JUri::root(true) . &#39;/css/style.css&#39;
+    );
+}
+</code></pre></div>
+
+<p>This framework also support build in filter functionality. You need to defined on which column you want to perform filteration. Framework currently supports text, dropdown and calendar type filter. There can have max two level of filters, one on Top level and other on Header level.</p>
+<p>Filters will be defined inside <code>displayFilters</code> method and this method must return associative array and this can have max size of 2.</p>
+<p>Header level filters will be defined in 0 index. eg. - attempt, name</p>
+<p>Top level filters will be defined in 1 index. For instance in a single course report if you want to select course and then its report will be populated
+Each filter will be an associative aray which can have follwoing keys-</p>
+<p>a)search_type - it can be text, select, date.range, calendar, html for select type field you need to mention select_options which is an array of  <code>JHTML::_('select.option')</code></p>
+<p>b) searchin -  if you want framework to add where clause for search criteria you can define type. This is the column name where you want to search. Or you can leave it blank to add your own where clause. For that you need to add where clause in <code>getListQuery</code> method.</p>
+<p>c) type - This can be 'equal’,’custom’ otherwise by default it will match for like clause.</p>
+<div class="highlight"><pre><span></span><code>public function displayFilters()
+{
+    $dispFilters = array(
+                array(
+                    &#39;attempt&#39; =&gt; array(
+                        &#39;search_type&#39; =&gt; &#39;text&#39;, &#39;type&#39; =&gt; &#39;equal&#39;, &#39;searchin&#39; =&gt; &#39;lt.attempt&#39;),
+                    &#39;name&#39; =&gt; array(
+                        &#39;search_type&#39; =&gt; &#39;select&#39;, &#39;select_options&#39; =&gt; $lessonFilter, &#39;type&#39; =&gt; &#39;equal&#39;, &#39;searchin&#39; =&gt; &#39;lt.lesson_id&#39;
+                    ),
+                ),
+                array(
+                    &#39;last_accessed_on&#39; =&gt; array(
+                        &#39;search_type&#39; =&gt; &#39;date.range&#39;,
+                        &#39;searchin&#39; =&gt; &#39;last_accessed_on&#39;,
+                        &#39;last_accessed_on_from&#39; =&gt; array(&#39;attrib&#39; =&gt; array(&#39;placeholder&#39; =&gt; &#39;FROM (YYYY-MM-DD)&#39;)),
+                        &#39;last_accessed_on_to&#39; =&gt; array(&#39;attrib&#39; =&gt; array(&#39;placeholder&#39; =&gt; &#39;TO (YYYY-MM-DD)&#39;)),
+                    )
+                )
+            );
+
+    return $dispFilters;
+}
+</code></pre></div>
+
+<p>If you want to perform any data manipulation before sending it to framework for displaying, you can override below <code>getItems</code> method</p>
+<div class="highlight"><pre><span></span><code>public function getItems()
+{
+    $items = parent::getItems();
+
+    foreach ($items as $item)
+    {
+        if (empty($item[&#39;last_accessed_on&#39;]) || $item[&#39;last_accessed_on&#39;] == &#39;0000-00-00 00:00:00&#39;)
+        {
+            $item[&#39;last_accessed_on&#39;] = &#39; - &#39;;
+        }
+    }
+
+    return $items;
+}
+</code></pre></div>
+                
+                  
                 
               
               
@@ -932,14 +1073,28 @@ docs/
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
+          <a href="../tjreports-integration-guide/" title="Integration guide" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Integration guide
+              </div>
+            </div>
+          </a>
         
-          <a href="hierarchy-management/hierarchy-manager-overview/" title="Overview" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+        
+          <a href="../tjreports-reports-with-dynamic-columns/" title="Reports with dyanamic columns" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Overview
+                Reports with dyanamic columns
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -998,15 +1153,15 @@ docs/
       
     </div>
     
-      <script src="assets/javascripts/vendor.c51dfa35.min.js"></script>
-      <script src="assets/javascripts/bundle.eaaa3931.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../../assets/javascripts/vendor.c51dfa35.min.js"></script>
+      <script src="../../assets/javascripts/bundle.eaaa3931.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
-          base: ".",
+          base: "../..",
           features: ["tabs"],
           search: Object.assign({
-            worker: "assets/javascripts/worker/search.58d22e8e.min.js"
+            worker: "../../assets/javascripts/worker/search.58d22e8e.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
