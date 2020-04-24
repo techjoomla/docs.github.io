@@ -912,18 +912,18 @@
                 <h2 id="installing-the-default-instances">Installing the default instances<a class="headerlink" href="#installing-the-default-instances" title="Permanent link">&para;</a></h2>
 <p>The reporting plugin only offers the code needed for the report. For the report to be usable, it needs to be configured. An extension developer who wishes to create default 'instances' for the plugins can do that by adding the below method in the installation script.</p>
 <p>In order to use plugin, after installation you need to enable that plugin and to add your plugin detail to table. Below is the code that will add new entry in the table for missing plugins.</p>
-<div class="highlight"><pre><span></span><code>JModelLegacy::addIncludePath(JPATH_ADMINISTRATOR . &#39;/components/com_tjreports/models&#39;);
-$model = JModelLegacy::getInstance(&#39;Reports&#39;, &#39;TjreportsModel&#39;);
-$installed = $model-&gt;addTjReportsPlugins();
+<div class="highlight"><pre><span></span><code><span class="x">JModelLegacy::addIncludePath(JPATH_ADMINISTRATOR . &#39;/components/com_tjreports/models&#39;);</span>
+<span class="x">$model = JModelLegacy::getInstance(&#39;Reports&#39;, &#39;TjreportsModel&#39;);</span>
+<span class="x">$installed = $model-&gt;addTjReportsPlugins();</span>
 </code></pre></div>
 
 <p>If you are intalling plugin as a part of a package. You can call above method in postflight of package script. Above method requires some detail from your plugin so you must have below method that will return plugin detail.</p>
-<div class="highlight"><pre><span></span><code>public function getPluginDetail()
-{
-  $detail = array(&#39;client&#39; =&gt; &#39;com_example&#39;, &#39;title&#39; =&gt; JText::_(&#39;PLG_TJREPORTS_EXAMPLEREPORT_TITLE&#39;));
+<div class="highlight"><pre><span></span><code><span class="x">public function getPluginDetail()</span>
+<span class="x">{</span>
+<span class="x">  $detail = array(&#39;client&#39; =&gt; &#39;com_example&#39;, &#39;title&#39; =&gt; JText::_(&#39;PLG_TJREPORTS_EXAMPLEREPORT_TITLE&#39;));</span>
 
-  return $detail;
-}
+<span class="x">  return $detail;</span>
+<span class="x">}</span>
 </code></pre></div>
 
 <p><code>$detail</code> array of above method should have following details -</p>
@@ -933,36 +933,38 @@ $installed = $model-&gt;addTjReportsPlugins();
 <p>Just like other infrastructure extensions, you can pass the client context to show reports related to your extension. For instance Shika uses <code>index.php?option=com_tjreports&amp;client=tjlms</code> for reports contextual to Shika LMS. The client is be specified when creating instances.</p>
 <p>When user passes client parameter in the url at backend, framework also fetches the menus added in the <code>addSubmenu</code> of the component you passed in the client parameter. </p>
 <p>Below is the default URL for your extension </p>
-<p><code>index.php?option=com_tjreports&amp;client=com_example&amp;task=reports.defaultReport</code></p>
+<div class="highlight"><pre><span></span><code><span class="x">index.php?option=com_tjreports&amp;client=com_example&amp;task=reports.defaultReport</span>
+</code></pre></div>
+
 <p>This  will bring you to the first plugin of that client type. </p>
 <h2 id="plugin-configuration-options-">Plugin configuration options -<a class="headerlink" href="#plugin-configuration-options-" title="Permanent link">&para;</a></h2>
 <p>One can limit number of columns to show in the Report using plugin configuration. When you edit a plugin in tjreport you can load default params using <code>Load Default Params</code> . This data depends on the details you have mentioned in your plugin __constract. </p>
 <p>Below is the example JSON Data - </p>
-<div class="highlight"><pre><span></span><code>{
-    &quot;filter_order&quot;:&quot;name&quot;,
-    &quot;filter_order_Dir&quot;:&quot;ASC&quot;,
-    &quot;limit&quot;:&quot;20&quot;,
-    &quot;showHideColumns&quot;:[
-        &quot;attempt&quot;,  
-        &quot;name&quot;,  
-        &quot;username&quot;,  
-        &quot;usergroup&quot;,  
-        &quot;time_spent&quot;,  
-        &quot;lesson_status&quot;,  
-        &quot;score&quot;,  
-        &quot;last_accessed_on&quot;  
-    ],  
-    &quot;colToshow&quot;:{
-        &quot;attempt&quot;: true,
-        &quot;name&quot;:true,  
-        &quot;username&quot;:true,  
-        &quot;usergroup&quot;:false,  
-        &quot;time_spent&quot;:true,  
-        &quot;lesson_status&quot;:true,  
-        &quot;score&quot;:true,  
-        &quot;last_accessed_on&quot;:true  
-    }  
-} 
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;filter_order&quot;</span><span class="p">:</span><span class="s2">&quot;name&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;filter_order_Dir&quot;</span><span class="p">:</span><span class="s2">&quot;ASC&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;limit&quot;</span><span class="p">:</span><span class="s2">&quot;20&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;showHideColumns&quot;</span><span class="p">:[</span>
+        <span class="s2">&quot;attempt&quot;</span><span class="p">,</span>  
+        <span class="s2">&quot;name&quot;</span><span class="p">,</span>  
+        <span class="s2">&quot;username&quot;</span><span class="p">,</span>  
+        <span class="s2">&quot;usergroup&quot;</span><span class="p">,</span>  
+        <span class="s2">&quot;time_spent&quot;</span><span class="p">,</span>  
+        <span class="s2">&quot;lesson_status&quot;</span><span class="p">,</span>  
+        <span class="s2">&quot;score&quot;</span><span class="p">,</span>  
+        <span class="s2">&quot;last_accessed_on&quot;</span>  
+    <span class="p">],</span>  
+    <span class="nt">&quot;colToshow&quot;</span><span class="p">:{</span>
+        <span class="nt">&quot;attempt&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>  
+        <span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>  
+        <span class="nt">&quot;usergroup&quot;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span>  
+        <span class="nt">&quot;time_spent&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>  
+        <span class="nt">&quot;lesson_status&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>  
+        <span class="nt">&quot;score&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>  
+        <span class="nt">&quot;last_accessed_on&quot;</span><span class="p">:</span><span class="kc">true</span>  
+    <span class="p">}</span>  
+<span class="p">}</span> 
 </code></pre></div>
 
 <p>filter_order - Default filter column, can be any key of your $this-&gt;columns array</p>

@@ -20,7 +20,7 @@ The reporting plugin only offers the code needed for the report. For the report 
 
 In order to use plugin, after installation you need to enable that plugin and to add your plugin detail to table. Below is the code that will add new entry in the table for missing plugins.
 
-```
+```php
 JModelLegacy::addIncludePath(JPATH_ADMINISTRATOR . '/components/com_tjreports/models');
 $model = JModelLegacy::getInstance('Reports', 'TjreportsModel');
 $installed = $model->addTjReportsPlugins();
@@ -28,7 +28,7 @@ $installed = $model->addTjReportsPlugins();
 
 If you are intalling plugin as a part of a package. You can call above method in postflight of package script. Above method requires some detail from your plugin so you must have below method that will return plugin detail.
 
-```
+```php
 public function getPluginDetail()
 {
   $detail = array('client' => 'com_example', 'title' => JText::_('PLG_TJREPORTS_EXAMPLEREPORT_TITLE'));
@@ -51,7 +51,9 @@ When user passes client parameter in the url at backend, framework also fetches 
 
 Below is the default URL for your extension 
 
-`index.php?option=com_tjreports&client=com_example&task=reports.defaultReport`
+```php
+index.php?option=com_tjreports&client=com_example&task=reports.defaultReport`
+```
 
 This  will bring you to the first plugin of that client type. 
 
@@ -61,7 +63,7 @@ One can limit number of columns to show in the Report using plugin configuration
 
 Below is the example JSON Data - 
 
-```
+```json
 {
 	"filter_order":"name",
 	"filter_order_Dir":"ASC",

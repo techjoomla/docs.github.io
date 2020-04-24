@@ -950,15 +950,15 @@
 <p>a)<code>table_column</code> - is directly linked to table column. This is also used in framework for ordering. If you have complex column like having COUNT than you should leave its value blank</p>
 <p>b) <code>title</code> - Title will be displayed on header and on hideshow checkbox</p>
 <p>c) <code>disable_sorting</code> - Set to true of this column is not sortable by default all columns are sortable</p>
-<div class="highlight"><pre><span></span><code>public function __construct($config = array())
-{
-    $this-&gt;columns = array(
-        &#39;attempt&#39; =&gt; array(&#39;table_column&#39; =&gt; &#39;lt.attempt&#39;, &#39;title&#39; =&gt; &#39;COM_TJLMS_TITLE_ATTEMPTS&#39;),
-        &#39;usergroup&#39; =&gt; array(&#39;title&#39; =&gt; &#39;COM_TJLMS_REPORT_USERGROUP&#39;, &#39;disable_sorting&#39; =&gt; true),
-    );
+<div class="highlight"><pre><span></span><code><span class="x">public function __construct($config = array())</span>
+<span class="x">{</span>
+<span class="x">    $this-&gt;columns = array(</span>
+<span class="x">        &#39;attempt&#39; =&gt; array(&#39;table_column&#39; =&gt; &#39;lt.attempt&#39;, &#39;title&#39; =&gt; &#39;COM_TJLMS_TITLE_ATTEMPTS&#39;),</span>
+<span class="x">        &#39;usergroup&#39; =&gt; array(&#39;title&#39; =&gt; &#39;COM_TJLMS_REPORT_USERGROUP&#39;, &#39;disable_sorting&#39; =&gt; true),</span>
+<span class="x">    );</span>
 
-    parent::__construct($config);
-}
+<span class="x">    parent::__construct($config);</span>
+<span class="x">}</span>
 </code></pre></div>
 
 <div class="admonition info">
@@ -967,29 +967,29 @@
 </div>
 <p>To utilize framework where and order by functionality you must call parent getListQuery method and then add your extra clauses in that query object. When you call parent method framework add where clauses as per the filters you have defined in <code>displayFilters</code> method(see below for more detail)</p>
 <p><code>$query = parent::getListQuery();</code></p>
-<div class="highlight"><pre><span></span><code>protected function getListQuery()
-{
-    $db        = $this-&gt;_db;
+<div class="highlight"><pre><span></span><code><span class="x">protected function getListQuery()</span>
+<span class="x">{</span>
+<span class="x">    $db        = $this-&gt;_db;</span>
 
-    /* Create query instance by calling parents getListQuery */
-    $query     = parent::getListQuery();
+<span class="x">    /* Create query instance by calling parents getListQuery */</span>
+<span class="x">    $query     = parent::getListQuery();</span>
 
-    $query-&gt;from($db-&gt;quoteName(&#39;#__tjlms_lesson_track&#39;, &#39;lt&#39;));
+<span class="x">    $query-&gt;from($db-&gt;quoteName(&#39;#__tjlms_lesson_track&#39;, &#39;lt&#39;));</span>
 
-    if (in_array(&#39;usergroup&#39;, $colToshow))
-    {
-        if (isset($filters[&#39;usergroup&#39;]) &amp;&amp; !empty($filters[&#39;usergroup&#39;]))
-        {
-            $subQuery = $db-&gt;getQuery(true);
-            $subQuery-&gt;select(&#39;ugm.user_id&#39;);
-            $subQuery-&gt;from($db-&gt;quoteName(&#39;#__user_usergroup_map&#39;) . &#39; as ugm&#39;);
-            $subQuery-&gt;where($db-&gt;quoteName(&#39;ugm.group_id&#39;) . &#39; = &#39; . (int) $filters[&#39;usergroup&#39;]);
-            $query-&gt;where(&#39;lt.user_id IN(&#39; . $subQuery . &#39;)&#39;);
-        }
-    }
+<span class="x">    if (in_array(&#39;usergroup&#39;, $colToshow))</span>
+<span class="x">    {</span>
+<span class="x">        if (isset($filters[&#39;usergroup&#39;]) &amp;&amp; !empty($filters[&#39;usergroup&#39;]))</span>
+<span class="x">        {</span>
+<span class="x">            $subQuery = $db-&gt;getQuery(true);</span>
+<span class="x">            $subQuery-&gt;select(&#39;ugm.user_id&#39;);</span>
+<span class="x">            $subQuery-&gt;from($db-&gt;quoteName(&#39;#__user_usergroup_map&#39;) . &#39; as ugm&#39;);</span>
+<span class="x">            $subQuery-&gt;where($db-&gt;quoteName(&#39;ugm.group_id&#39;) . &#39; = &#39; . (int) $filters[&#39;usergroup&#39;]);</span>
+<span class="x">            $query-&gt;where(&#39;lt.user_id IN(&#39; . $subQuery . &#39;)&#39;);</span>
+<span class="x">        }</span>
+<span class="x">    }</span>
 
-    return $query;
-}
+<span class="x">    return $query;</span>
+<span class="x">}</span>
 </code></pre></div>
 
 <p>One can get columns to show using below line. $colToshow is an array of all columns key that use has checked to display for ex - attempt. This should not be called inside constructor.</p>
@@ -997,12 +997,12 @@
 <p>One can get active filters using below line. $filters is an associative array with key as column name and value as selected value for the filter. This should not be called inside constructor.</p>
 <p><code>$filters = $this-&gt;getState('filters');</code></p>
 <p>If you want to add any styling you can add your styles in getStyles method</p>
-<div class="highlight"><pre><span></span><code>public function getStyles()
-{
-    return array(
-        JUri::root(true) . &#39;/css/style.css&#39;
-    );
-}
+<div class="highlight"><pre><span></span><code><span class="x">public function getStyles()</span>
+<span class="x">{</span>
+<span class="x">    return array(</span>
+<span class="x">        JUri::root(true) . &#39;/css/style.css&#39;</span>
+<span class="x">    );</span>
+<span class="x">}</span>
 </code></pre></div>
 
 <p>This framework also support build in filter functionality. You need to defined on which column you want to perform filteration. Framework currently supports text, dropdown and calendar type filter. There can have max two level of filters, one on Top level and other on Header level.</p>
@@ -1013,45 +1013,45 @@ Each filter will be an associative aray which can have follwoing keys-</p>
 <p>a)search_type - it can be text, select, date.range, calendar, html for select type field you need to mention select_options which is an array of  <code>JHTML::_('select.option')</code></p>
 <p>b) searchin -  if you want framework to add where clause for search criteria you can define type. This is the column name where you want to search. Or you can leave it blank to add your own where clause. For that you need to add where clause in <code>getListQuery</code> method.</p>
 <p>c) type - This can be 'equal’,’custom’ otherwise by default it will match for like clause.</p>
-<div class="highlight"><pre><span></span><code>public function displayFilters()
-{
-    $dispFilters = array(
-                array(
-                    &#39;attempt&#39; =&gt; array(
-                        &#39;search_type&#39; =&gt; &#39;text&#39;, &#39;type&#39; =&gt; &#39;equal&#39;, &#39;searchin&#39; =&gt; &#39;lt.attempt&#39;),
-                    &#39;name&#39; =&gt; array(
-                        &#39;search_type&#39; =&gt; &#39;select&#39;, &#39;select_options&#39; =&gt; $lessonFilter, &#39;type&#39; =&gt; &#39;equal&#39;, &#39;searchin&#39; =&gt; &#39;lt.lesson_id&#39;
-                    ),
-                ),
-                array(
-                    &#39;last_accessed_on&#39; =&gt; array(
-                        &#39;search_type&#39; =&gt; &#39;date.range&#39;,
-                        &#39;searchin&#39; =&gt; &#39;last_accessed_on&#39;,
-                        &#39;last_accessed_on_from&#39; =&gt; array(&#39;attrib&#39; =&gt; array(&#39;placeholder&#39; =&gt; &#39;FROM (YYYY-MM-DD)&#39;)),
-                        &#39;last_accessed_on_to&#39; =&gt; array(&#39;attrib&#39; =&gt; array(&#39;placeholder&#39; =&gt; &#39;TO (YYYY-MM-DD)&#39;)),
-                    )
-                )
-            );
+<div class="highlight"><pre><span></span><code><span class="x">public function displayFilters()</span>
+<span class="x">{</span>
+<span class="x">    $dispFilters = array(</span>
+<span class="x">                array(</span>
+<span class="x">                    &#39;attempt&#39; =&gt; array(</span>
+<span class="x">                        &#39;search_type&#39; =&gt; &#39;text&#39;, &#39;type&#39; =&gt; &#39;equal&#39;, &#39;searchin&#39; =&gt; &#39;lt.attempt&#39;),</span>
+<span class="x">                    &#39;name&#39; =&gt; array(</span>
+<span class="x">                        &#39;search_type&#39; =&gt; &#39;select&#39;, &#39;select_options&#39; =&gt; $lessonFilter, &#39;type&#39; =&gt; &#39;equal&#39;, &#39;searchin&#39; =&gt; &#39;lt.lesson_id&#39;</span>
+<span class="x">                    ),</span>
+<span class="x">                ),</span>
+<span class="x">                array(</span>
+<span class="x">                    &#39;last_accessed_on&#39; =&gt; array(</span>
+<span class="x">                        &#39;search_type&#39; =&gt; &#39;date.range&#39;,</span>
+<span class="x">                        &#39;searchin&#39; =&gt; &#39;last_accessed_on&#39;,</span>
+<span class="x">                        &#39;last_accessed_on_from&#39; =&gt; array(&#39;attrib&#39; =&gt; array(&#39;placeholder&#39; =&gt; &#39;FROM (YYYY-MM-DD)&#39;)),</span>
+<span class="x">                        &#39;last_accessed_on_to&#39; =&gt; array(&#39;attrib&#39; =&gt; array(&#39;placeholder&#39; =&gt; &#39;TO (YYYY-MM-DD)&#39;)),</span>
+<span class="x">                    )</span>
+<span class="x">                )</span>
+<span class="x">            );</span>
 
-    return $dispFilters;
-}
+<span class="x">    return $dispFilters;</span>
+<span class="x">}</span>
 </code></pre></div>
 
 <p>If you want to perform any data manipulation before sending it to framework for displaying, you can override below <code>getItems</code> method</p>
-<div class="highlight"><pre><span></span><code>public function getItems()
-{
-    $items = parent::getItems();
+<div class="highlight"><pre><span></span><code><span class="x">public function getItems()</span>
+<span class="x">{</span>
+<span class="x">    $items = parent::getItems();</span>
 
-    foreach ($items as $item)
-    {
-        if (empty($item[&#39;last_accessed_on&#39;]) || $item[&#39;last_accessed_on&#39;] == &#39;0000-00-00 00:00:00&#39;)
-        {
-            $item[&#39;last_accessed_on&#39;] = &#39; - &#39;;
-        }
-    }
+<span class="x">    foreach ($items as $item)</span>
+<span class="x">    {</span>
+<span class="x">        if (empty($item[&#39;last_accessed_on&#39;]) || $item[&#39;last_accessed_on&#39;] == &#39;0000-00-00 00:00:00&#39;)</span>
+<span class="x">        {</span>
+<span class="x">            $item[&#39;last_accessed_on&#39;] = &#39; - &#39;;</span>
+<span class="x">        }</span>
+<span class="x">    }</span>
 
-    return $items;
-}
+<span class="x">    return $items;</span>
+<span class="x">}</span>
 </code></pre></div>
                 
                   

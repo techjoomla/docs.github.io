@@ -83,7 +83,7 @@ b) ```title``` - Title will be displayed on header and on hideshow checkbox
 c) ```disable_sorting``` - Set to true of this column is not sortable by default all columns are sortable
 
 
-```
+```php
 public function __construct($config = array())
 {
 	$this->columns = array(
@@ -103,7 +103,7 @@ To utilize framework where and order by functionality you must call parent getLi
 ```$query = parent::getListQuery();```
 
 
-```
+```php
 protected function getListQuery()
 {
 	$db        = $this->_db;
@@ -143,7 +143,7 @@ One can get active filters using below line. $filters is an associative array wi
 
 If you want to add any styling you can add your styles in getStyles method
 
-```
+```php
 public function getStyles()
 {
 	return array(
@@ -167,7 +167,7 @@ b) searchin -  if you want framework to add where clause for search criteria you
 
 c) type - This can be 'equal’,’custom’ otherwise by default it will match for like clause.
 
-```
+```php
 public function displayFilters()
 {
 	$dispFilters = array(
@@ -194,7 +194,7 @@ public function displayFilters()
 
 If you want to perform any data manipulation before sending it to framework for displaying, you can override below ```getItems``` method
 
-```
+```php
 public function getItems()
 {
 	$items = parent::getItems();
