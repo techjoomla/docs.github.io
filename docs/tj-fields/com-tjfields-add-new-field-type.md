@@ -61,7 +61,10 @@ Sample XML File
 </form>
 ```
 
-Add all the required attributes of new field under **fieldset** named **params**, there is **no need** to add basic attributes like “name”, “type”, “label” and “description” in the XML file.
+Add all the required attributes of new field under **fieldset** named **params**.
+
+!!! note
+	There is **no need** to add basic attributes like “name”, “type”, “label” and “description” in the XML file.
 
 #### 3) Create form field file (Only if you are creating custom field which is not supported by Joomla)
 

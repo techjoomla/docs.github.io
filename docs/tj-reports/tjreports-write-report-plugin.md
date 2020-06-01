@@ -95,8 +95,8 @@ public function __construct($config = array())
 }
 ```
 
-
-Most important method of your plugin is ```getListQuery```. You must have this method and this should return query for your report.
+!!! info
+	Most important method of your plugin is ```getListQuery```. You must have this method and this should return query for your report.
 
 To utilize framework where and order by functionality you must call parent getListQuery method and then add your extra clauses in that query object. When you call parent method framework add where clauses as per the filters you have defined in ```displayFilters``` method(see below for more detail)
 

@@ -34,7 +34,8 @@ In this case you can integrate TJ-Fields with your product creation form which w
 
 You can create different fields for different categories of the client form (E.g Attributes like Screensize, RAM, ROM, Processor, Operating System etc for products of category Laptops and Mobiles and Attributes like Size, Colour, Matterial, Waist size etc for products of clothes category)
 
-Also, you can use the added custom fields as the filters (Using TJ-Fields Filter Module) to filter the content of the client (E.g The product attributes Screensize, RAM, ROM etc can be used as filters to filter the products of laptop category)
+!!! note
+	Also, you can use the added custom fields as the filters (Using TJ-Fields Filter Module) to filter the content of the client (E.g The product attributes Screensize, RAM, ROM etc can be used as filters to filter the products of laptop category)
 
 ### Available Field Types
 

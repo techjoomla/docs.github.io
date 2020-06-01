@@ -52,7 +52,7 @@ When user passes client parameter in the url at backend, framework also fetches 
 Below is the default URL for your extension 
 
 ```php
-index.php?option=com_tjreports&client=com_example&task=reports.defaultReport`
+index.php?option=com_tjreports&client=com_example&task=reports.defaultReport
 ```
 
 This  will bring you to the first plugin of that client type. 
