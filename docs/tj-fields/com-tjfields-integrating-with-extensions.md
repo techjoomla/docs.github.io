@@ -1,7 +1,7 @@
 ---
 title:       Integrating with extensions
 description: Integrating with extensions
-path:        docs/tj-fields
+path:        blob/master/docs/tj-fields
 source:      com-tjfields-integrating-with-extensions.md
 hero:        TJFields - Integrating with extensions
 date:        2020-04-22

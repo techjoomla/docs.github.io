@@ -1,7 +1,7 @@
 ---
 title:       TJQueue Introduction
 description: Introduction to TJQueue, a Message queue for Joomla
-path:        docs/tj-queue
+path:        blob/master/docs/tj-queue
 source:      tjqueue-introduction.md
 hero:        TJQueue - Introduction
 date:        2020-04-22

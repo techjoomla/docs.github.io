@@ -1,7 +1,7 @@
 ---
 title:       Making calls to API resources
 description: Making calls to API resources using REST API framework for Joomla (com_api)
-path:        docs/joomla-rest-api
+path:        blob/master/docs/joomla-rest-api
 source:      com-api-making-api-calls.md
 hero:        Joomla REST API - Making calls to API resources
 date:        2017-09-15

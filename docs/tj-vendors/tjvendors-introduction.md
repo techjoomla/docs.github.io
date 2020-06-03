@@ -1,7 +1,7 @@
 ---
 title:       TJVendors Introduction
 description: Introduction to TJReports (com_tjvendors)
-path:        docs/tj-reports
+path:        blob/master/docs/tj-reports
 source:      tjvendors-introduction.md
 hero:        TJVendors - Introduction
 date:        2020-04-22

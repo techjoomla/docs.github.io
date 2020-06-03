@@ -1,7 +1,7 @@
 ---
 title:       Hierarchy Manager Introduction
 description: Quick introduction to Hierarchy Manager component
-path:        docs/hierarchy-management
+path:        blob/master/docs/hierarchy-management
 source:      hierarchy-manager-introduction.md
 hero:        Hierarchy Manager - Introduction
 date:        2017-01-16

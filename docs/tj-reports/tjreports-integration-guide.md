@@ -1,7 +1,7 @@
 ---
 title:       Integration Guide
 description: Integration Guide for TJReports (com_tjreports), a reports manager for Joomla
-path:        docs/tj-reports
+path:        blob/master/docs/tj-reports
 source:      tjreports-integration-guide.md
 hero:        TJReports - Integration Guide
 date:        2020-04-22

@@ -1,7 +1,7 @@
 ---
 title:       Architecture Overview
 description: Architecture Overview of TJReports (com_tjreports), a reports manager for Joomla
-path:        docs/tj-reports
+path:        blob/master/docs/tj-reports
 source:      tjreports-architecture-overview.md
 hero:        TJReports - Architecture Overview
 date:        2020-04-22

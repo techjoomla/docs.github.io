@@ -1,7 +1,7 @@
 ---
 title:       Integrating with extensions
 description: Integrating with extensions
-path:        docs/tj-queue
+path:        blob/master/docs/tj-queue
 source:      tjqueue-integrating-with-extensions.md
 hero:        TJQueue - Integrating with extensions
 date:        2020-04-22

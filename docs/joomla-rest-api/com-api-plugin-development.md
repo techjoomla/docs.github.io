@@ -1,7 +1,7 @@
 ---
 title:       Writing your own API Plugin
 description: Writing your own API Plugin for REST API framework for Joomla (com_api)
-path:        docs/joomla-rest-api
+path:        blob/master/docs/joomla-rest-api
 source:      com-api-plugin-development.md
 hero:        Joomla REST API - Writing your own API Plugin
 date:        2017-01-15

@@ -1,7 +1,7 @@
 ---
 title:       Terms & Conditions Manager Introduction
 description: Introduction to Terms & Conditions Manager
-path:        docs/tnc-manager
+path:        blob/master/docs/tnc-manager
 source:      tncmanager-introduction.md
 hero:        Terms & Conditions Manager - Introduction
 date:        2017-01-16

@@ -1,7 +1,7 @@
 ---
 title:       TJFields Introduction
 description: Introduction to TJFields (com_tjfields), a Field manager for Joomla
-path:        docs/tj-fields
+path:        blob/master/docs/tj-fields
 source:      tjfields-introduction.md
 hero:        TJFields - Introduction
 date:        2020-04-22

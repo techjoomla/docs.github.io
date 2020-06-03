@@ -1,7 +1,7 @@
 ---
 title:       Custom fields (com_fields) support in TJReports plugins
 description: Custom fields (com_fields) support in TJReports plugins
-path:        docs/tj-reports
+path:        blob/master/docs/tj-reports
 source:      tjreports-plugin-add-custom-fields-support.md
 hero:        TJReports - Custom fields (com_fields) support in TJReports plugins
 date:        2020-04-22

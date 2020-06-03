@@ -1,7 +1,7 @@
 ---
 title:       Mobile App Use Case
 description: Using REST API framework for Joomla (com_api) for Mobile App Use Case
-path:        docs/joomla-rest-api
+path:        blob/master/docs/joomla-rest-api
 source:      com-api-mobile-app-use-case.md
 hero:        Joomla REST API - Mobile App Use Case
 date:        2019-08-29

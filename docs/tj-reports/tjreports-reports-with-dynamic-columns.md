@@ -1,7 +1,7 @@
 ---
 title:       Reports with dynamic columns
 description: Reports with dynamic columns for TJReports (com_tjreports), a reports manager for Joomla
-path:        docs/tj-reports
+path:        blob/master/docs/tj-reports
 source:      reports-with-dynamic-columns.md
 hero:        TJReports - Reports with dynamic columns
 date:        2020-04-22

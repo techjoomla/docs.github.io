@@ -1,7 +1,7 @@
 ---
 title:       Impersonating another user
 description: Impersonating another user using REST API framework for Joomla (com_api)
-path:        docs/joomla-rest-api
+path:        blob/master/docs/joomla-rest-api
 source:      com-api-impersonation.md
 hero:        Joomla REST API - Impersonating another user
 date:        2019-04-13

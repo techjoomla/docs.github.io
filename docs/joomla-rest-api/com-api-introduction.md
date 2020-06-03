@@ -1,7 +1,7 @@
 ---
 title:       Joomla REST API Introduction
 description: Quick introduction to REST API framework for Joomla (com_api)
-path:        docs/joomla-rest-api
+path:        blob/master/docs/joomla-rest-api
 source:      com-api-introduction.md
 hero:        Joomla REST API - Introduction
 date:        2017-01-15

@@ -1,7 +1,7 @@
 ---
 title:       TJUCM Features of UCM
 description: Universal Content Manager (UCM) extension for Joomla. Uses TJ-Fields for fields management.
-path:        docs/tj-ucm
+path:        blob/master/docs/tj-ucm
 source:      ucm-features.md
 hero:        TJUCM - Features of UCM
 date:        2020-04-22

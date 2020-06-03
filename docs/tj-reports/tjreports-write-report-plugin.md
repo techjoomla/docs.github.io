@@ -1,7 +1,7 @@
 ---
 title:       Writing a report plugin
 description: Writing a report plugin for TJReports (com_tjreports), a reports manager for Joomla
-path:        docs/tj-reports
+path:        blob/master/docs/tj-reports
 source:      tjreports-write-report-plugin.md
 hero:        TJReports - Writing a report plugin
 date:        2020-04-22

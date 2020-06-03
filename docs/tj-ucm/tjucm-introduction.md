@@ -1,7 +1,7 @@
 ---
 title:       TJUCM Introduction
 description: Universal Content Manager (UCM) extension for Joomla. Uses TJ-Fields for fields management.
-path:        docs/tj-ucm
+path:        blob/master/docs/tj-ucm
 source:      tjucm-introduction.md
 hero:        TJUCM - Introduction
 date:        2020-04-22

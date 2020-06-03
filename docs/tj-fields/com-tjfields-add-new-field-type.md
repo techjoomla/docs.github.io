@@ -1,7 +1,7 @@
 ---
 title:       Add new field Type
 description: TJFields - Steps to add support of new field type
-path:        docs/tj-fields
+path:        blob/master/docs/tj-fields
 source:      com-tjfields-add-new-field-type.md
 hero:        TJFields - Steps to add support of new field type
 date:        2020-04-22
