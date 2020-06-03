@@ -1,4 +1,4 @@
-# How to contribute to https://docs.techjoomla.com site
+# Guide for `How to contribute to https://docs.techjoomla.com site?`
 
 ## Pre-requisites
 
@@ -28,6 +28,7 @@ and
 `user@pc:~$ source ~/Python_environments/docs.github.io-mkdoks/bin/activate`
 
 6. Install wheel, mkdocs on this virtual env.
+
 `(docs.github.io-mkdoks) user@pc:~$ python3 -m pip install wheel`
 
 `(docs.github.io-mkdoks) user@pc:~$ python3 -m pip install mkdocs`.
@@ -50,12 +51,12 @@ Steps to contribute documentation to the Techjoomla Site.
 
 ## Understanding repos
 
-1. This repo containts the source code of the docs https://github.com/techjoomla/docs.github.io
-2. This repo has the static files generated for the docs https://github.com/techjoomla/techjoomla.github.io
+1. This repo containts the source code of the docs https://github.com/techjoomla/docs.github.io 
+2. This repo has the static files generated for the docs https://github.com/techjoomla/techjoomla.github.io 
 
 Repo 1. is where you will work on
 
-## Fork and clone repos on local machine
+## Fork and clone https://github.com/techjoomla/docs.github.io on local machine
 
 1. Fork repo https://github.com/techjoomla/docs.github.io
 2. Git clone your fork to your machine. Command Syntax - `git clone fork-link`
@@ -125,3 +126,33 @@ nav:
   - TJReports:
     - Introduction: tj-reports/tjreports-introduction.md
 ```
+
+### Sending Pull request
+
+- Once you are OK with all changes seen on http://127.0.0.1:8000/ , commit the files changed
+- Push changes to you fork/branch
+- Send PR to https://github.com/techjoomla/docs.github.io
+
+### For maintainers
+
+1. Clone these repos locally lets say under `~/git/techjoomla` folder
+https://github.com/techjoomla/docs.github.io 
+https://github.com/techjoomla/techjoomla.github.io
+
+2. Merge new PRs at https://github.com/techjoomla/docs.github.io
+
+3. Switch to repo `cd docs.github.io`. Update local repo code by pulling lastest code
+
+4. Activate this virtual environment by running command
+
+`user@pc:~$ source ~/Python_environments/docs.github.io-mkdoks/bin/activate`
+
+5. Switch to repo `cd ../techjoomla.github.io`
+
+6. Run command to add static files to this repo from docs reports, and push those to master branch
+
+`mkdocs gh-deploy --config-file ../docs.github.io/mkdocs.yml --remote-branch master`
+
+7. Since, we are using a custom domain, we might need to this do
+Goto https://github.com/techjoomla/techjoomla.github.io/settings
+GitHub Pages -> Custom domain -> add `docs.techjoomla.com` and hit `save`
