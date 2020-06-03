@@ -1,0 +1,137 @@
+# Project information
+site_name: Techjoomla Docs
+site_description: A documentation site for Techjoomla extensions
+site_author: Techjoomla
+site_url: https://docs.techjoomla.com/
+
+# Repository
+repo_name: techjoomla.github.io
+repo_url: https://github.com/techjoomla/techjoomla.github.io
+edit_uri: ""
+
+# Copyright
+copyright: Copyright &copy; 2008 - 2020 Techjoomla
+
+# Configuration
+theme:
+  name: material
+
+  # 404 page
+  static_templates:
+    - 404.html
+
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: en
+  features:
+    - tabs
+    #- instant
+  palette:
+    primary: indigo
+    accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/images/techjoomla-favicon.ico
+  logo: assets/images/techjoomla-logo.png
+
+# Extras
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/techjoomla
+    - icon: fontawesome/brands/facebook
+      link: https://facebook.com/techjoomla
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/techjoomla
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/techjoomla
+
+# Google Analytics
+google_analytics:
+  - UA-106743603-1
+  - auto
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.attr_list
+  - markdown.extensions.codehilite:
+      guess_lang: false
+      linenums: true
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  # - pymdownx.highlight:
+  #     linenums_style: pymdownx-inline
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+  - git-revision-date-localized:
+      type: date
+
+# Page tree
+nav:
+  - Home: index.md
+  - Joomla Rest API:
+    - Introduction: joomla-rest-api/com-api-introduction.md
+    - Writing your own API Plugin: joomla-rest-api/com-api-plugin-development.md
+    - Making calls to API resources: joomla-rest-api/com-api-making-api-calls.md
+    - Impersonating another user: joomla-rest-api/com-api-impersonation.md
+    - Mobile App Use Case: joomla-rest-api/com-api-mobile-app-use-case.md
+  - TJReports:
+    - Introduction: tj-reports/tjreports-introduction.md
+    - Architecture Overview: tj-reports/tjreports-architecture-overview.md
+    - Integration guide: tj-reports/tjreports-integration-guide.md
+    - Writing a report plugin: tj-reports/tjreports-write-report-plugin.md
+    - Reports with dyanamic columns: tj-reports/tjreports-reports-with-dynamic-columns.md
+    - Custom fields (com_fields) support in TJReports plugins: tj-reports/tjreports-plugin-add-custom-fields-support.md
+  - TJQueue:
+    - Introduction: tj-queue/tjqueue-introduction.md
+    - Integrating with extensions: tj-queue/tjqueue-integrating-with-extensions.md
+  - TJVendors:
+    - Introduction: tj-vendors/tjvendors-introduction.md
+    - Integrating TJ Vendors with CPG Plugin: tj-vendors/tjvendors-integrating-with-cpg-plugin.md
+  - TJFields:
+    - Introduction: tj-fields/tjfields-introduction.md
+    - Integrating with extensions: tj-fields/com-tjfields-integrating-with-extensions.md
+    - Add new field Type: tj-fields/com-tjfields-add-new-field-type.md
+  - TJUCM:
+    - Introduction: tj-ucm/tjucm-introduction.md
+    - Features: tj-ucm/tjucm-features.md
+  - Other Horizontal Extensions:
+    - Hierarchy Management:
+      - Introduction: hierarchy-management/hierarchy-manager-introduction.md
+    - Terms & Conditions Manager:
+      - Introduction: tnc-manager/tncmanager-introduction.md
