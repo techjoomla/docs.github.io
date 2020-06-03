@@ -1,18 +1,18 @@
 ---
-date: 2019-04-13
-title: Impersonating another user
+title:       Impersonating another user
+description: Impersonating another user using REST API framework for Joomla (com_api)
+path:        docs/joomla-rest-api
+source:      com-api-impersonation.md
+hero:        Joomla REST API - Impersonating another user
+date:        2019-04-13
 categories:
   - Joomla REST API
 tags:
   - Joomla
   - REST API
-type: Document
-showSidebar: true
-published: true
-nav_ordering: 3
-pageTitle: "Impersonating another user"
-permalink: joomla-rest-api/com-api-impersonation.html
+  - com_api
 ---
+
 
 ## Overview
 
@@ -49,35 +49,62 @@ Consider the example below
 
 **Case 1**
 ```
-GET /jgive/campaign
+GET /jgive/campaign/619
 "Authorization": "Bearer rrrrrr"
 "X-Impersonate": "21"
+```
+
+``` bash
+curl --location --request GET 'http://{{host}}/index.php?option=com_api&app=jgive&resource=campaign&id=619&format=raw' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--header 'Authorization: Bearer rrrrrr'
+--header 'X-Impersonate: 21'
 ```
 
 In this case the user object available to the campaign resource will be that of userid 21.
 
 **Case 2**
 ```
-GET /jgive/campaign
+GET /jgive/campaign/619
 "Authorization": "Bearer jjjjjj"
 "X-Impersonate": "22"
+```
+
+``` bash
+curl --location --request GET 'http://{{host}}/index.php?option=com_api&app=jgive&resource=campaign&id=619&format=raw' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--header 'Authorization: Bearer jjjjjj'
+--header 'X-Impersonate: 22'
 ```
 
 This API call will return a 403 error since the user with token jjjjjj is not allowed to use impersonation.
 
 **Case 3**
 ```
-GET /jgive/campaign
+GET /jgive/campaign/619
 "Authorization": "Bearer rrrrrr"
 "X-Impersonate": "email:kevin@mail.com"
+```
+
+``` bash
+curl --location --request GET 'http://{{host}}/index.php?option=com_api&app=jgive&resource=campaign&id=619&format=raw' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--header 'Authorization: Bearer rrrrrr'
+--header 'X-Impersonate: email:kevin@mail.com'
 ```
 
 In this case the user object available to the campaign resource will be that of userid 22 i.e. the user with the email kevin@mail.com
 
 **Case 4**
 ```
-GET /jgive/campaign
+GET /jgive/campaign/619
 "Authorization": "Bearer jjjjjj"
+```
+
+``` bash
+curl --location --request GET 'http://{{host}}/index.php?option=com_api&app=jgive&resource=campaign&id=619&format=raw' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--header 'Authorization: Bearer jjjjjj'
 ```
 
 This is how com_api works as of today, the campaign resource will receive the user object for userid 21

@@ -1,21 +1,20 @@
 ---
-date: 2017-01-15
-title: Introduction
-description: REST API framework for Joomla
+title:       Joomla REST API Introduction
+description: Quick introduction to REST API framework for Joomla (com_api)
+path:        docs/joomla-rest-api
+source:      com-api-introduction.md
+hero:        Joomla REST API - Introduction
+date:        2017-01-15
 categories:
   - Joomla REST API
 tags:
   - Joomla
   - REST API
-type: Document
-nav_ordering: 1
-showSidebar: true
-published: true
-pageTitle: "REST API framework for Joomla"
-permalink: joomla-rest-api/com-api-introduction.html
+  - com_api
 ---
 
-## Intro - what is `com_api`?
+
+## What is `com_api`?
 
 `com_api` is a quick and easy way to add REST APIs to Joomla. Extendible via plugins, you can easily add support for more Joomla extensions. To get started, download the component and install the API plugins you need. Enable the plugins and you are ready to fetch your content via APIs.
 

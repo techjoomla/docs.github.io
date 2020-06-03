@@ -1,17 +1,16 @@
-# Welcome to MkDocs
+# Welcome to Techjoomla Docs
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Find developer friendly documentation of our Open Sourced Joomla extensions.
 
-## Commands
+## Docs Index
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+| Project                                                                      | Description |
+| -                                                                            |-|
+| [Hierarchy Management](hierarchy-management/hierarchy-manager-introduction) | Allows setting up general or context specific hierarchical relations between users|
+| [Joomla Rest API](joomla-rest-api/com-api-introduction.md)                  | This is a quick and easy way to add REST APIs to Joomla|
+| [Terms & Conditions Manager](tnc-manager/tncmanager-introduction)           | This is used to force users to accept the T&C before they can start using the site, or a part of the site. |
+| [TJFields](tj-fields/tjfields-introduction)	                                | TJ-Fields is a horizontal extension used to extend the existing forms (Adding custom fields) of any component|
+| [TJReports](tj-reports/tjreports-introduction)                              | Easy to extend reports manager|
+| [TJQueue](tj-queue/tjqueue-introduction)                                    | Queue for Joomla extensions |
+| [TJUCM](tj-ucm/tjucm-introduction)                                          | Universal Content Manager (UCM) is an application built on top of TJ-Fields.|
+| [TJVendors](tj-vendors/tjvendors-introduction)                              | Vendor profile and payouts manager for E-commerce extensions |

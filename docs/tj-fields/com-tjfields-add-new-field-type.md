@@ -1,34 +1,33 @@
 ---
-date: 2020-04-22
-title: Add new field Type 
-description: Steps to add support of new field type
+title:       Add new field Type
+description: TJFields - Steps to add support of new field type
+path:        docs/tj-fields
+source:      com-tjfields-add-new-field-type.md
+hero:        TJFields - Steps to add support of new field type
+date:        2020-04-22
 categories:
-  - TJ - Fields
+  - TJFields
 tags:
   - Joomla
   - Fields
-  - TJ - Fields
-type: Document
-nav_ordering: 3
-showSidebar: true
-published: true
-pageTitle: "Add new field Type "
-permalink: tj-fields/com-tjfields-add-new-field-type.html
+  - Fields Manager for Joomla
+  - com_tjfields
 ---
 
 ## How to add new field type?
 
-TJ-Fields supports many of the core field types provided by Joomla and it provides a way to easily add new field type or any new custom field type as per the requirement. 
+TJ-Fields supports many of the core field types provided by Joomla and it provides a way to easily add new field type or any new custom field type as per the requirement.
 
 Follow the steps given below to add new field type support in TJ-Fields.
 
-#### 1) Add entry of new field type in “tjfieldfields” field
+### 1. Add entry of new field type in “tjfieldfields” field
 
 This is to add the new field type in the list of available field types. The field “tjfieldfields” is a custom field in TJ-Fields which is used to generate the HTML of dropdown to show the list of available field types.
 
 To add option of the new field type in the “tjfieldfields” field add the code given below in the function **getInput()** which is in the file on the path specified below. (Replace the ‘FIELD_TYPE' and ‘LANGUAGE_CONSTANT’ with field type name and language constant for the label of field type respectively.
 
 ```php
+<?php
 $options[] = JHtml::_('select.option', 'FIELD_TYPE', JText::_('LANGUAGE_CONSTANT'));
 ```
 
@@ -36,7 +35,9 @@ File Path
 
 `YOUR_JOOMLA/administrator/components/com_tjfields/models/fields/tjfieldfields.php`
 
-#### 2) Add XML to define attributes of the new field type (Only if your field type has any attribute)
+### 2. Add XML to define attributes of the new field type
+
+(Neeed only if your field type has any attribute)
 
 Attributes of the field are the properties of field type which defines it e.g (For input type text name, size, value, maxlength etc are the attributes)
 
@@ -66,7 +67,9 @@ Add all the required attributes of new field under **fieldset** named **params**
 !!! note
 	There is **no need** to add basic attributes like “name”, “type”, “label” and “description” in the XML file.
 
-#### 3) Create form field file (Only if you are creating custom field which is not supported by Joomla)
+### 3. Create form field file
+
+(Needed only if you are creating custom field which is not supported by Joomla)
 
 Create the form field file in the folder on path given below to define the rendering of the field on the form.
 
@@ -80,7 +83,7 @@ Sample field file (Textarea Counter)
 <?php
 /**
  * @package    TJFields
- * 
+ *
  * @author     Techjoomla <extensions@techjoomla.com>
  * @copyright  Copyright (c) 2009-2019 TechJoomla. All rights reserved
  * @license    GNU General Public License version 2, or later

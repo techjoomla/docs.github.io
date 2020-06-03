@@ -1,25 +1,23 @@
 ---
-date: 2020-04-22
-title: Introduction to TJ Queue
-description: Message queue for Joomla
+title:       TJQueue Introduction
+description: Introduction to TJQueue, a Message queue for Joomla
+path:        docs/tj-queue
+source:      tjqueue-introduction.md
+hero:        TJQueue - Introduction
+date:        2020-04-22
 categories:
-  - TJ Queue
+  - TJQueue
 tags:
   - Joomla
   - queue
   - message
-type: Document
-nav_ordering: 1
-showSidebar: true
-published: true
-pageTitle: "Introduction to TJ Queue"
-permalink: tj-queue/tjqueue-introduction.html
+  - com_tjqueue
 ---
 
 ## Background
 Several extensions have the need to do some heavy processing (inserting/updating lots of DB records, complex queries). A lot of this can be moved to background processing. TJ Queue allows creating these background jobs.
 
-Any extension that wishes to use the background job queue can create a consumer that implements the 'job' they wish to perform. They can then 'produce' a message with the inputs needed by the job. The TJ Queue cron job will take care of fetching the messages and executing the job. 
+Any extension that wishes to use the background job queue can create a consumer that implements the 'job' they wish to perform. They can then 'produce' a message with the inputs needed by the job. The TJ Queue cron job will take care of fetching the messages and executing the job.
 
 ## Solution
 This extension will provide facility to queue data and process queue as per priority.

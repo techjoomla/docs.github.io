@@ -1,47 +1,35 @@
 ---
-date: 2020-04-22
-title: Custom fields (com_fields) support in TJReports plugins
+title:       Custom fields (com_fields) support in TJReports plugins
+description: Custom fields (com_fields) support in TJReports plugins
+path:        docs/tj-reports
+source:      tjreports-plugin-add-custom-fields-support.md
+hero:        TJReports - Custom fields (com_fields) support in TJReports plugins
+date:        2020-04-22
 categories:
-  - TJ Reports
+  - TJReports
 tags:
   - Joomla
-  - tjreports
+  - TJReports
+  - com_tjreports
   - com_fields
-type: Document
-showSidebar: true
-published: true
-nav_ordering: 5
-pageTitle: "Custom fields (com_fields) support in TJReports plugins"
-permalink: tj-reports/tjreports-plugin-add-custom-fields-support.html
 ---
 
-**Content**
 
-- [A. Background](#a-background)
-    - [Core TJReports plugins to index data created using com_fields](#core-tjreports-plugins-to-index-data-created-using-com_fields)
-- [B. Which all com_fields's field types are supported in TJReports?](#b-which-all-com_fieldss-field-types-are-support-in-tjreports)
-  	- [Database table used for this (indexed data)](#database-table-used-for-this-indexed-data)
-- [C. How to add user fields to any tjreports plugin?](#c-how-to-add-user-fields-to-any-tjreports-plugin)
-  	- [Steps](#steps)
-    	- [Step 1: Setup custom fields columns](#step-1-setup-custom-fields-columns)
-    	- [Step 2: Setup custom fields filters](#step-2-setup-custom-fields-filters)
-
-
-### A. Background
+## 1. Background
 
 TJReport has plugins that let you index the custom fields data created using Joomla's `com_fields` component.
 
-#### Core TJReports plugins to index data created using com_fields
+### Core TJReports plugins to index data created using com_fields
 
 | Plugin group  | Plugin name | What does this plugin do |
 | ------------- | ------------- | ------------- |
-| content | tjreportsfields | This plugin adds / updates / deletse columns for *`#__tjreports_context` tables |
+| content | tjreportsfields | This plugin adds / updates / deletes columns for *`#__tjreports_context` tables |
 | user | tjreportsindexer | This plugin adds / updates / deletes user-data for `#__tjreports_com_users_user` table|
 
 *In case of if you are using com_fields for com_users context table name will be as
 `#__tjreports_context` = `#__tjreports_com_users_user`
 
-### B. Which all com_fields's field types are supported in TJReports?
+## 2. Which all com_fields's field types are supported in TJReports?
 
 | com_field field type  | tjreport indexer table column type | how / what indexer stores values for this | what type of filter in tjreports used for this |
 | ------------- | ------------- | ------------- | ------------- |
@@ -62,19 +50,19 @@ TJReport has plugins that let you index the custom fields data created using Joo
 | user | varchar (400) [based on joomla user table] | store user's name  | select / equal match  |
 | usergrouplist | varchar (100) [based on joomla usergroups table]  | store usergorup title  | select / equal match  |
 
-#### Database table used for this (indexed data)
+### Database table used for this (indexed data)
 
 * Every `tjreport` plugin will rely on a certain table where custom fields data is stored in rows (1 record per row)
 	- eg. If `context` is `com_users.user` -> table name should be `#__tjreports_com_users_user`
 * Column which is needed here in this example is
   	- `record_id` *int (11)*
 
-### C. How to add user fields to any tjreports plugin?
+## 3. How to add user fields to any tjreports plugin?
 
 Below are steps for adding those user fields data columns into an existing report.
 Eg: For a plugin named `mytjreportplugin`, open plugin entry file `mytjreportplugin.php`
 
-#### Steps
+### Steps
 1. [Setup custom fields columns](#step-1-setup-custom-fields-columns)
 1. [Setup custom fields filters](#step-2-setup-custom-fields-filters)
 
@@ -83,6 +71,7 @@ Eg: For a plugin named `mytjreportplugin`, open plugin entry file `mytjreportplu
 Change constructor from
 
 ```php
+<?php
 public function __construct($config = array())
 {
 	$this->columns = array (
@@ -96,6 +85,7 @@ public function __construct($config = array())
 to below
 
 ```php
+<?php
 public function __construct($config = array())
 {
 	// Joomla fields integration
@@ -113,7 +103,7 @@ public function __construct($config = array())
 ```
 
 In step 1, we define
-	
+
 - `customFieldsTable`- Custom field's indexed table in which we store duplicated data
 - `customFieldsTableAlias`  - Alias for above table
 - `customFieldsQueryJoinOn` - Table name and column name on which TJReport will do database query join on (TJReports' model will do query join on the custom fields table's **`record_id`** column and with the other DB table which plugin mainly runs the report on.)
@@ -124,6 +114,7 @@ In step 1, we define
 Change code from
 
 ```php
+<?php
 public function displayFilters()
 {
 	// Set filters code here
@@ -143,6 +134,7 @@ public function displayFilters()
 to
 
 ```php
+<?php
 public function displayFilters()
 {
 	// Set filters code here
@@ -168,6 +160,6 @@ public function displayFilters()
 
 In step 2, we call the parent method `setCustomFieldsDisplayFilters()`, which sets up filters for columns from custom fields to be displayed on the report.
 
-**Conclusion**
+## 4. Conclusion
 
 That's it, with these 2 simple steps, you will be able to easily add columns, filters, sorting on the columns form the Joomla user's custom fields.

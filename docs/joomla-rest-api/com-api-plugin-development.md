@@ -1,31 +1,31 @@
 ---
-date: 2017-01-15
-title: Writing your own API Plugin
-description: API framework for Joomla
+title:       Writing your own API Plugin
+description: Writing your own API Plugin for REST API framework for Joomla (com_api)
+path:        docs/joomla-rest-api
+source:      com-api-plugin-development.md
+hero:        Joomla REST API - Writing your own API Plugin
+date:        2017-01-15
 categories:
   - Joomla REST API
 tags:
   - Joomla
   - REST API
-type: Document
-nav_ordering: 2
-showSidebar: true
-published: true
-pageTitle: "Writing your own API Plugin"
-permalink: joomla-rest-api/com-api-plugin-development.html
+  - com_api
 ---
+
+You can add new APIs by creating plugins for your own components. Plugin needs to be of 'api' type. Each plugin can have multiple API resources.
 
 Each resource supports the GET, POST and DELETE operations. These are exposed by creating methods of the same name, i.e. `get()` `post()` and `delete()` in each of the resources. If a resouce URL is accessed via HTTP POST, the post() method is called, and similarly for the rest.
 
 ## API plugin file structure
-* language/en-GB *(Resource folder having resource file, keep name same as plugin name)*
-	- en-GB.plg_api_users.ini *(add plugin language constant)*
-	- en-GB.plg_api_users.sys.ini
+* users.php *(plugin entry file)*
+* users.xml *(plugin manifest file)*
 * users *(**Resources** folder having resource file, keep name same as plugin name)*
 	- login.php *(Resource file)*
 	- users.php *(Resource file)*
-* users.php *(plugin entry file)*
-* users.xml *(plugin manifest file)*
+* language/en-GB *(Resource folder having resource file, keep name same as plugin name)*
+	- en-GB.plg_api_users.ini *(add plugin language constant)*
+	- en-GB.plg_api_users.sys.ini
 
 !!! note
     You can add multiple resource in resource folder and use them for different purpose. Usually, each resource will map to an object type for your extension.

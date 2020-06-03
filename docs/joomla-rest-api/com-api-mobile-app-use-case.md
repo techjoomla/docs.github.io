@@ -1,19 +1,18 @@
 ---
-date: 2019-08-29
-title: Mobile App Use Case
+title:       Mobile App Use Case
+description: Using REST API framework for Joomla (com_api) for Mobile App Use Case
+path:        docs/joomla-rest-api
+source:      com-api-mobile-app-use-case.md
+hero:        Joomla REST API - Mobile App Use Case
+date:        2019-08-29
 categories:
   - Joomla REST API
 tags:
   - Joomla
   - REST API
-  - Mobile App
-type: Document
-showSidebar: true
-published: true
-nav_ordering: 5
-pageTitle: "Mobile App Use Case"
-permalink: joomla-rest-api/com-api-mobile-app-use-case.html
+  - com_api
 ---
+
 
 Let's consider you are building a mobile app with Joomla as backend for APIs.
 You can use com_api, plg_api_users, and create your own API plugins as needed.

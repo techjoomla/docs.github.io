@@ -1,27 +1,29 @@
 ---
-date: 2020-04-22
-title: Reports with dynamic columns
-description: Reports with dynamic columns
+title:       Reports with dynamic columns
+description: Reports with dynamic columns for TJReports (com_tjreports), a reports manager for Joomla
+path:        docs/tj-reports
+source:      reports-with-dynamic-columns.md
+hero:        TJReports - Reports with dynamic columns
+date:        2020-04-22
 categories:
-  - TJ Reports
+  - TJReports
 tags:
   - Joomla
-  - tjreports
-type: Document
-showSidebar: true
-published: true
-nav_ordering: 4
-pageTitle: "Reports with dynamic columns"
-permalink: tj-reports/reports-with-dynamic-columns.html
+  - TJReports
+  - com_tjreports
 ---
 
-In this type of a report, there may be one or more fixed columns and one or more columns that change based on a filter value. An example is the plugin for RSForm, where the report shows the list of responses once a form is selected. There are a few of fixed columns like date and submitter, but the rest of the columns are dynamically shown based on the fields in the selected form. 
+
+In this type of a report, there may be one or more fixed columns and one or more columns that change based on a filter value.
+
+An example is the plugin for RSForm, where the report shows the list of responses once a form is selected. There are a few of fixed columns like date and submitter, but the rest of the columns are dynamically shown based on the fields in the selected form.
 
 Such a report can be easily achieved by setting or overriding the `columns` property after knowing the results, say in the `getItems()` method. A limitation for such report is that one cannot set the default config from the administrator as columns are not known.
 
 Below is sample code from the RS Form plugin to demonstrate how this can work.
 
 ```php
+<?php
 public function getItems()
 {
 	// Fetch Results
@@ -70,10 +72,17 @@ onchange="document.getElementById('ul-columns-name').remove(); tjrContentUI.repo
 
 Example for how it’s done in the RS Form field
 ```php
+<?php
 $filterHtml  = '<div class="input-append input-group">';
-$filterHtml .= JHtml::_('select.genericlist', $formToshow, 'filters[formid]',
-					'class="filter-input" size="1" onchange="document.getElementById(\'ul-columns-name\').remove();tjrContentUI.report.submitTJRData();"', 'value', 'text', $searchValue);
+$filterHtml .= JHtml::_(
+	'select.genericlist',
+	$formToshow,
+	'filters[formid]',
+	'class="filter-input" size="1" onchange="document.getElementById(\'ul-columns-name\').remove(); tjrContentUI.report.submitTJRData();"',
+	'value',
+	'text',
+	$searchValue
+);
+
 $filterHtml	.= '</div>';
 ```
-
-

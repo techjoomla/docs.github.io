@@ -1,6 +1,6 @@
 # Project information
 site_name: Techjoomla Docs
-site_description: A documentation site for techjoomla extensions
+site_description: A documentation site for Techjoomla extensions
 site_author: Techjoomla
 site_url: https://docs.techjoomla.com/
 
@@ -19,10 +19,6 @@ theme:
   # 404 page
   static_templates:
     - 404.html
-
-  # Don't include MkDocs' JavaScript
-  include_search_page: false
-  search_index_only: true
 
   # Don't include MkDocs' JavaScript
   include_search_page: false
@@ -56,7 +52,7 @@ extra:
 
 # Google Analytics
 google_analytics:
-  - UA-XXXXXXXX-X
+  - UA-106743603-1
   - auto
 
 # Extensions
@@ -98,33 +94,44 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
 
-  # Page tree
+plugins:
+  - search
+  - minify:
+      minify_html: true
+  - git-revision-date-localized:
+      type: date
+
+# Page tree
 nav:
   - Home: index.md
-  - Hierarchy Management:
-    - Overview: hierarchy-management/hierarchy-manager-overview.md
   - Joomla Rest API:
     - Introduction: joomla-rest-api/com-api-introduction.md
     - Writing your own API Plugin: joomla-rest-api/com-api-plugin-development.md
     - Making calls to API resources: joomla-rest-api/com-api-making-api-calls.md
     - Impersonating another user: joomla-rest-api/com-api-impersonation.md
     - Mobile App Use Case: joomla-rest-api/com-api-mobile-app-use-case.md
-  - Terms & Conditions Manager:
-    - T & C Manager Overview: tnc-manager/tnc-manager-overview.md
-  - TJ Fields:
-    - Introduction: tj-fields/com-tjfields-introduction.md
-    - Integrating with extensions: tj-fields/com-tjfields-integrating-with-extensions.md
-    - Add new field Type: tj-fields/com-tjfields-add-new-field-type.md
-  - TJ Queue :
+  - TJReports:
+    - Introduction: tj-reports/tjreports-introduction.md
+    - Architecture Overview: tj-reports/tjreports-architecture-overview.md
+    - Integration guide: tj-reports/tjreports-integration-guide.md
+    - Writing a report plugin: tj-reports/tjreports-write-report-plugin.md
+    - Reports with dyanamic columns: tj-reports/tjreports-reports-with-dynamic-columns.md
+    - Custom fields (com_fields) support in TJReports plugins: tj-reports/tjreports-plugin-add-custom-fields-support.md
+  - TJQueue:
     - Introduction: tj-queue/tjqueue-introduction.md
     - Integrating with extensions: tj-queue/tjqueue-integrating-with-extensions.md
-  - TJ Reports :
-    - Introduction: tj-reports/tjreports-architecture-overview.md
-    - Integration guide: tj-reports/tjreports-integration-guide.md    
-    - Writing a report plugin: tj-reports/tjreports-write-report-plugin.md
-    - Reports with dyanamic columns: tj-reports/tjreports-reports-with-dynamic-columns.md    
-    - Custom fields (com_fields) support in TJReports plugins: tj-reports/tjreports-plugin-add-custom-fields-support.md
-  - TJ Vendors :
-    - Integrating TJ Vendors with CPG Plugin: tj-vendors/tjvendors-integrating-with-cpg-plugin.md  
-  - TJ UCM :
-    - Introduction: tj-ucm/com-tjucm-introduction.md
+  - TJVendors:
+    - Introduction: tj-vendors/tjvendors-introduction.md
+    - Integrating TJ Vendors with CPG Plugin: tj-vendors/tjvendors-integrating-with-cpg-plugin.md
+  - TJFields:
+    - Introduction: tj-fields/tjfields-introduction.md
+    - Integrating with extensions: tj-fields/com-tjfields-integrating-with-extensions.md
+    - Add new field Type: tj-fields/com-tjfields-add-new-field-type.md
+  - TJUCM:
+    - Introduction: tj-ucm/tjucm-introduction.md
+    - Features: tj-ucm/tjucm-features.md
+  - Other Horizontal Extensions:
+    - Hierarchy Management:
+      - Introduction: hierarchy-management/hierarchy-manager-introduction.md
+    - Terms & Conditions Manager:
+      - Introduction: tnc-manager/tncmanager-introduction.md
