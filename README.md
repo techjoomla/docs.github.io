@@ -1,72 +1,158 @@
+# Guide for `How to contribute to https://docs.techjoomla.com site?`
 
-# Techjoomla Documentation Site
+## Pre-requisites
 
-Steps to contribute documentation to the Techjoomla Site. 
+1. This site runs on Python based mkdocs framework, to use that install Python, pip. [Refer for details](https://www.mkdocs.org/#manual-installation)
 
-## Git Fork Setup on local machine
+2. Check python and pip installed correctly by command -
 
-1. Fork the repo <a href="https://github.com/techjoomla/techjoomla.github.io" target="_blank">Techjoomla Documentation Repo</a>
-2. Git clone your fork to your machine. Command Syntax - ```git clone fork-link```
-3. Add remote upstream by command ```git remote add upstream git@github.com:techjoomla/techjoomla.github.io.git```
-4. Check upstream with command ```git remote -v```
-5. Make filemode off in config file. File Path - ```/techjoomla.github.io.git/.git/config``` . Make sure you can see the .git hidden folder by ```Ctrl + h```
+`user@pc:~$ python --version` Python versions 3.5, 3.6, 3.7, 3.8 are supported
 
-## Installing requirements
+and
 
-1. Install python, pip.
-2. Check python and pip installed correctly by command - ```python --version and pip --version```. It should be ```minimum 2.7```
-3. Install mkdocs- ```$ sudo pip3 install mkdocs```.
-4. Check mkdocs installed correctly by command - ```mkdocs --version```. 
-5. Install mkdocs Theme by command -```$ sudo pip3 install mkdocs-material```.
+`user@pc:~$ pip --version`.
 
+
+3. Create folder for Python virtual environments in lets say home folder.
+
+`user@pc:~$ cd ~/`
+
+`user@pc:~$ mkdir Python_environments`
+
+4. Create a virtual environment in above folder.
+
+`user@pc:~$ python3 -m venv ~/Python_environments/docs.github.io-mkdoks`
+
+5. Activate this virtual environment by running command
+
+`user@pc:~$ source ~/Python_environments/docs.github.io-mkdoks/bin/activate`
+
+6. Install wheel, mkdocs on this virtual env.
+
+`(docs.github.io-mkdoks) user@pc:~$ python3 -m pip install wheel`
+
+`(docs.github.io-mkdoks) user@pc:~$ python3 -m pip install mkdocs`.
+
+7. Check mkdocs installed correctly by command
+
+`(docs.github.io-mkdoks) user@pc:~$ mkdocs --version`
+
+8. Install mkdocs-material Theme by command
+
+`(docs.github.io-mkdoks) user@pc:~$ python3 -m pip install mkdocs-material`
+
+9. Install other plugins needed
+
+`(docs.github.io-mkdoks) user@pc:~$ python3 -m pip install mkdocs-minify-plugin`
+
+`(docs.github.io-mkdoks) user@pc:~$ python3 -m pip install mkdocs-git-revision-date-localized-plugin`
+
+Steps to contribute documentation to the Techjoomla Site.
+
+## Understanding repos
+
+1. This repo containts the source code of the docs https://github.com/techjoomla/docs.github.io 
+2. This repo has the static files generated for the docs https://github.com/techjoomla/techjoomla.github.io 
+
+Repo 1. is where you will work on
+
+## Fork and clone https://github.com/techjoomla/docs.github.io on local machine
+
+1. Fork repo https://github.com/techjoomla/docs.github.io
+2. Git clone your fork to your machine. Command Syntax - `git clone fork-link`
+3. Add remote upstream by command `git remote add upstream git@github.com:techjoomla/docs.github.io.git`
+4. Make filemode to false `git config core.filemode false`
 
 ## Basic Usage
 
-### Adding a New Post
+### Start local development server
+1. Open the terminal Go to the folder where the cloned project is stored.
 
-1.  Open the terminal Go to the folder where the cloned project is stored. 
-1. Start the development server with command ```mkdocs serve```
-2. It will give you the link where you can see the changes. In most of the cases it is ```http://127.0.0.1:8000/```
-3. Inside docs folder create a new folder and in that folder create md file format ```filename.md```
-4. Open the .md file you created and add front matter 
-     ``` 
-        ---
-        date: 2017-01-15
-        title: Post Title
-        description: Post Description
-        categories:
-          - CategoryName
-        Tags:
- - Tag 1
-            - Tag 2
-        type: Document
-        nav_ordering: 2
-        showSidebar: true
-        published: true
-        pageTitle:”Page Title”
-        permalink:foldername/filename.html
+2. Activate this virtual environment by running command
 
-        --- 
-     ```
-    title & description are used as meta data of page and also used on homepage and related post data. showSidebar adds page on homepage and sidebar, in case of its absence or false value it will not be added. nav_ordering is the ordering value of the menu under its category. 
-5. This will add a section on homepage with Category name and a post under it. The post will be generated with url - ```domainname.com/categoryname/filename```
+`user@pc:~$ source ~/Python_environments/docs.github.io-mkdoks/bin/activate`
 
- ### Adding a Menu Item
+3. Start the development server with command
 
-1. Open ```mkdocs.yml``` file.
-2. Add Menu item - 
-    ```
-	Nav:
-		MenuTtitle: foldername/.md file name
-    ```
-## Understanding Folder Structure
+`(docs.github.io-mkdoks) user@pc:~$ mkdocs serve`
 
-| **Folder Name** | Description                                                 |
-|:----------------------:|:-------------------------------------------------------:|
-| **docs**              | Contains documentation source files         |
-| **site**                | Contains all folders                                     |
-| **mkdocs.yml**   | Contains folders/Subfolders from docs dir |
+4. It will give you the link where you can see the changes. In most of the cases it is `http://127.0.0.1:8000/`
 
+### Understanding folder structure of docs.github.io.git
 
+| **Folder Name** | Description                                      |
+|:---------------:|:------------------------------------------------:|
+| **docs**        | Contains documentation source files              |
+| **site**        | Contains generated static files to render site   |
+| **mkdocs.yml**  | Contains folders/Subfolders from docs dir        |
 
+### To add a new post
+1. Inside docs folder create a new folder and in that folder create md file format `filename.md`
 
+lets say you added as
+`~/repo/docs/tj-reports/tjreports-introduction.md`
+
+4. Open the .md file you created and add front matter
+
+```
+---
+title:       TJReports Introduction
+description: Introduction to TJReports (com_tjreports), a reports manager for Joomla
+path:        blob/master/docs/tj-reports
+source:      tjreports-introduction.md
+hero:        TJReports - Introduction
+date:        2020-04-22
+categories:
+  - TJReports
+tags:
+  - Joomla
+  - TJReports
+  - com_tjreports
+---
+
+# Add your doc changes here
+```
+
+### To add a navaigation link
+
+1. Open `mkdocs.yml` file.
+
+2. Add Menu item -
+
+For example
+
+```
+nav:
+  - TJReports:
+    - Introduction: tj-reports/tjreports-introduction.md
+```
+
+### Sending Pull request
+
+- Once you are OK with all changes seen on http://127.0.0.1:8000/ , commit the files changed
+- Push changes to you fork/branch
+- Send PR to https://github.com/techjoomla/docs.github.io
+
+### For maintainers
+
+1. Clone these repos locally lets say under `~/git/techjoomla` folder
+https://github.com/techjoomla/docs.github.io 
+https://github.com/techjoomla/techjoomla.github.io
+
+2. Merge new PRs at https://github.com/techjoomla/docs.github.io
+
+3. Switch to repo `cd docs.github.io`. Update local repo code by pulling lastest code
+
+4. Activate this virtual environment by running command
+
+`user@pc:~$ source ~/Python_environments/docs.github.io-mkdoks/bin/activate`
+
+5. Switch to repo `cd ../techjoomla.github.io`
+
+6. Run command to add static files to this repo from docs reports, and push those to master branch
+
+`mkdocs gh-deploy --config-file ../docs.github.io/mkdocs.yml --remote-branch master`
+
+7. Since, we are using a custom domain, we might need to this do
+Goto https://github.com/techjoomla/techjoomla.github.io/settings
+GitHub Pages -> Custom domain -> add `docs.techjoomla.com` and hit `save`
