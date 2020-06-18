@@ -117,6 +117,10 @@ nav:
     - Writing a report plugin: tj-reports/tjreports-write-report-plugin.md
     - Reports with dyanamic columns: tj-reports/tjreports-reports-with-dynamic-columns.md
     - Custom fields (com_fields) support in TJReports plugins: tj-reports/tjreports-plugin-add-custom-fields-support.md
+  - TJNotifications:
+    - Introduction: tjnotifications/tjnotifications-introduction.md
+    - Database Schema: tjnotifications/tjnotifications-database-schema.md
+    - Integrating with Extensions: tjnotifications/tjnotifications-integrating-with-extensions.md
   - TJQueue:
     - Introduction: tj-queue/tjqueue-introduction.md
     - Integrating with extensions: tj-queue/tjqueue-integrating-with-extensions.md
