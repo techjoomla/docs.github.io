@@ -228,15 +228,16 @@ $property         = $message->getProperty('propertyName');
 TjQueue comes with Joomla CLI script which dequeues the message and sends it to the consumer class.
 
 ```bash
-php JOOMLA_SITE/cli/tjqueue.php -t TOPIC_NAME -n MESSAGES_LIMIT
+php JOOMLA_SITE/cli/tjqueue.php -t TOPIC_NAME -n MESSAGES_LIMIT -s TIMEOUT
 ```
 
 OR
 
 ```bash
-php JOOMLA_SITE/cli/tjqueue.php --topic="TOPIC_NAME" --n="MESSAGES_LIMIT"
+php JOOMLA_SITE/cli/tjqueue.php --topic="TOPIC_NAME" --n="MESSAGES_LIMIT" --timeout="TIMEOUT"
 ```
 
 #### Cron parameters
   - TOPIC_NAME: Name of the topic from which messages to read. (In case of *AWS SQS* this is the queue name)
   - MESSAGES_LIMIT (optional): Number of Messages to read from the queue(Default 50).
+  - TIMEOUT (optional): Timeout is in milliseconds( default 2 seconds). Receives the next message that arrives within the specified timeout interval. This call blocks until a message arrives, the timeout expires, or this message consumer is closed. A timeout of zero never expires, and the call blocks indefinitely.
