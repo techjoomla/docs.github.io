@@ -4,7 +4,7 @@ description: TJNotifications (com_tjnotifications) APIs
 path:        blob/master/docs/tjnotifications
 source:      tjnotifications-apis.md
 hero:        TJNotifications - APIs
-date:        2020-06-18
+date:        2021-01-25
 categories:
   - TJNotifications
 tags:
@@ -14,7 +14,7 @@ tags:
   - apis
 ---
 
-# TJ Notifications
+# TJ Notifications APIs
 
 ## API: Subscribe to notification
 
@@ -92,7 +92,7 @@ tags:
     }
     ```
 
-## API: Onsite Notification Messages - Get List
+## API: Onsite Notification Messages - Get Undelivered (New) Messages List
 
 === "Method"
     ``` json

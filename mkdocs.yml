@@ -120,6 +120,7 @@ nav:
   - TJNotifications:
     - Introduction: tjnotifications/tjnotifications-introduction.md
     - Database Schema: tjnotifications/tjnotifications-database-schema.md
+    - Onsite Notifications: tjnotifications/tjnotifications-onsite-notifications.md
     - Integrating with Extensions: tjnotifications/tjnotifications-integrating-with-extensions.md
     - APIs: tjnotifications/tjnotifications-apis.md
   - TJQueue:
